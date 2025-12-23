@@ -1,90 +1,119 @@
 using UnityEngine;
-using Fusion; // We now use Fusion
-using System.Collections;
+using Fusion;
 
-// Change 1: Inherit from NetworkBehaviour, not MonoBehaviour
 public class TwinController : NetworkBehaviour
 {
-    [Header("Hardware Link")]
-    public SerialController serialController;
+    // We hide this from Inspector so you don't have to drag it manually anymore
+    private SerialController serialController;
 
     [Header("Game Logic")]
     public float targetValue = 512; 
-    public float tolerance = 50; 
+    public float tolerance = 100; 
     
-    [Header("Visuals")]
-    public Transform virtualNeedle; 
-
-    // Change 2: The Magic "Cloud Variable"
-    // This variable automatically copies itself from Host to Clients.
     [Networked] public float NetKnobValue { get; set; }
 
-    // Local variable (Hardware only knows this)
     private float hardwareRawValue = 0;
 
-    // Change 3: FixedUpdateNetwork is the new "Update" for multiplayer
-    public override void FixedUpdateNetwork()
+    // --- 1. AUTO-CONNECT ON START ---
+    public override void Spawned()
     {
-        // LOGIC FOR THE HOST (The one with the Arduino)
-        if (Object.HasStateAuthority) 
+        // HOST ONLY: Find the physical connection
+        if (Object.HasStateAuthority)
         {
-            // Take the raw hardware value and put it into the Cloud Variable
-            NetKnobValue = hardwareRawValue;
+            serialController = FindObjectOfType<SerialController>();
+            
+            if (serialController == null)
+            {
+                Debug.LogError("CRITICAL ERROR: No 'SerialController' found in the scene!");
+            }
+            else
+            {
+                Debug.Log("Network Host connected to Serial Port successfully.");
+            }
         }
-
-        // LOGIC FOR EVERYONE (Host + Clients)
-        // We ALL update the visual needle based on the Cloud Variable
-        AnimateNeedle();
     }
 
-    void AnimateNeedle()
+    public override void FixedUpdateNetwork()
     {
-        // Smoothly move needle based on NET_KNOB_VALUE (not hardware value)
-        // This ensures Clients see exactly what Host sees
-        float angle = Mathf.InverseLerp(0, 1023, NetKnobValue); 
-        float finalRotation = Mathf.Lerp(-90, 90, angle);
-        
-        if (virtualNeedle != null)
-            virtualNeedle.localRotation = Quaternion.Euler(0, 0, -finalRotation);
+        if (Object.HasStateAuthority) 
+        {
+            NetKnobValue = hardwareRawValue;
+        }
     }
 
     void Update()
     {
-        // KEYBOARD INPUT (Only Host can control LEDs)
-        if (Object != null && Object.HasStateAuthority)
+        // Listen for Spacebar on ALL computers (PC or Laptop)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Space)) CheckAlignment();
+            RPC_CheckAlignment(); 
         }
     }
 
-    void CheckAlignment()
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    public void RPC_CheckAlignment()
     {
-        // Compare Cloud Value vs Target
+        // 2. SAFETY CHECK
+        if (serialController == null)
+        {
+            Debug.LogError("Cannot light LED: Serial Controller is missing!");
+            // Try to find it one last time just in case
+            serialController = FindObjectOfType<SerialController>();
+            if (serialController == null) return;
+        }
+
+        Debug.Log("Host received 'Check Alignment' signal!");
+
         float difference = Mathf.Abs(NetKnobValue - targetValue);
 
+        // LOGIC: Green if Close, Red if Far
         if (difference <= tolerance)
         {
-            Debug.Log("Synced!");
+            Debug.Log("Result: SAFE (Green)");
             serialController.SendSerialMessage("G"); 
         }
         else
         {
-            Debug.Log("Failed!");
+            Debug.Log("Result: UNSAFE (Red)");
             serialController.SendSerialMessage("R"); 
         }
     }
 
-    // ARDITY LISTENER (Only runs on Host PC)
+    // ARDITY LISTENER
     void OnMessageArrived(string msg)
     {
-        // Only the Host listens to Serial Port
         if (float.TryParse(msg, out float result))
         {
             hardwareRawValue = result;
         }
     }
-    void OnConnectionEvent(bool success)
+    
+    void OnConnectionEvent(bool success) {}
+
+    void OnGUI()
     {
-        Debug.Log(success ? "ARDUINO HARDWARE CONNECTED" : "ARDUINO CONNECTION FAILED");
+        // Define the box style
+        GUIStyle style = new GUIStyle("box");
+        style.fontSize = 20;
+        style.normal.textColor = Color.white;
+        style.alignment = TextAnchor.MiddleLeft;
+
+        // Calculate limits
+        float minGreen = targetValue - tolerance;
+        float maxGreen = targetValue + tolerance;
+        string status = (NetKnobValue >= minGreen && NetKnobValue <= maxGreen) ? "SAFE (GREEN)" : "UNSAFE (RED)";
+
+        // Create the string to display
+        string debugText = 
+            $"--- DEBUG INFO ---\n" +
+            $"Current Knob Value: {NetKnobValue:F0}\n" +
+            $"Target Center:      {targetValue}\n" +
+            $"Safe Zone (+/-):    {tolerance}\n" +
+            $"------------------\n" +
+            $"Turn Green Between: {minGreen} - {maxGreen}\n" +
+            $"CURRENT STATUS:     {status}";
+
+        // Draw the box on screen (Top Left)
+        GUI.Box(new Rect(10, 10, 300, 160), debugText, style);
     }
 }

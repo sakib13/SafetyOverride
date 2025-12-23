@@ -32,17 +32,17 @@ public class ConnectionManager : MonoBehaviour
         // Prevent double-starting
         if (runner.IsRunning) return;
 
-        Debug.Log("Starting Host...");
+        Debug.Log("Connecting...");
 
-        // FIX: wrap the buildIndex in SceneRef.FromIndex()
+        // FIX: Use 'AutoHostOrClient' so the 2nd window joins the 1st
         await runner.StartGame(new StartGameArgs()
         {
-            GameMode = GameMode.Host,
+            GameMode = GameMode.AutoHostOrClient, // <--- CHANGED THIS
             SessionName = "SafetyRoom",
-            Scene = SceneRef.FromIndex(SceneManager.GetActiveScene().buildIndex), 
+            Scene = SceneRef.FromIndex(SceneManager.GetActiveScene().buildIndex),
             SceneManager = runner.gameObject.AddComponent<NetworkSceneManagerDefault>()
         });
         
-        Debug.Log("Host Started!");
+        Debug.Log("Connected!");
     }
 }
