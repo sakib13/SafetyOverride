@@ -5,6 +5,7 @@ public class TwinController : NetworkBehaviour
 {
     // We hide this from Inspector so you don't have to drag it manually anymore
     private SerialController serialController;
+    private bool _isReady = false;
 
     [Header("Game Logic")]
     public float targetValue = 512; 
@@ -17,6 +18,7 @@ public class TwinController : NetworkBehaviour
     // --- 1. AUTO-CONNECT ON START ---
     public override void Spawned()
     {
+        _isReady = true;
         // HOST ONLY: Find the physical connection
         if (Object.HasStateAuthority)
         {
@@ -92,6 +94,9 @@ public class TwinController : NetworkBehaviour
 
     void OnGUI()
     {
+        // ADD THIS LINE FIRST:
+        if (!_isReady) return;
+
         // Define the box style
         GUIStyle style = new GUIStyle("box");
         style.fontSize = 20;
