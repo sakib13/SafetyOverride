@@ -1,117 +1,97 @@
 using UnityEngine;
-using UnityEngine.UI; 
 using Fusion;
 
 public class SafetyGameManager : NetworkBehaviour
 {
     [Header("Hardware Link")]
-    // This connects to your existing Arduino script
-    public TwinController arduinoController;
+    public TwinController arduinoController; // Drag ArduinoManager here
 
     [Header("Scene Objects")]
-    public Transform greenZone;     // The Green Cube
-    public Transform needle;        // Your Sliding Needle
-    public Button confirmButton;    // The 2D Button
+    public Transform greenZone;     // Drag GreenZone here
+    public Transform needle;        // Drag Needle here
+    public UnityEngine.UI.Button confirmButton; // Drag Button here
 
     [Header("Game Logic")]
-    // This variable syncs the target position across the network
-    [Networked] public float TargetCenterX { get; set; } 
-    
-    // Logic Settings: These match the size of your 3D cubes
-    private float trackWidth = 1.0f; 
-    private float zoneWidth = 0.15f; 
+    public float zoneWidth = 0.15f;
+    public float TargetCenterX = 0f;
 
-    // This runs automatically when the network starts
+    // --- THESE WERE MISSING IN YOUR CODE ---
+    // They define how far left/right the needle can go
+    private float minX = -0.418f; 
+    private float maxX = 0.418f;
+    // ---------------------------------------
+
     public override void Spawned()
     {
-       /// FOR TESTING: We comment out the "if/else" so EVERYONE sees EVERYTHING.
-        
-        // if (Runner.IsServer) 
-        // {
+        // 1. SEPARATE ROLES
+        if (Runner.IsServer) // SUPERVISOR (Host)
+        {
             if(greenZone) greenZone.gameObject.SetActive(true);
             if(confirmButton) confirmButton.gameObject.SetActive(true);
-            if(needle) needle.gameObject.SetActive(true); // <--- CHANGED TO TRUE for testing
-        // }
-        // else 
-        // {
-        //     if(greenZone) greenZone.gameObject.SetActive(false);
-        //     if(confirmButton) confirmButton.gameObject.SetActive(false);
-        //     if(needle) needle.gameObject.SetActive(true);
-        // }
-
-        // Start the round logic immediately
-        if (Runner.IsServer)
-        {
+            
+            // Supervisor sees the needle too so they can judge
+            if(needle) needle.gameObject.SetActive(true); 
+            
             StartNewRound();
         }
-    }
-
-    public override void FixedUpdateNetwork()
-    {
-        // Only move the needle if we have a connection to the Arduino script
-        if (needle != null && arduinoController != null)
+        else // TECHNICIAN (Client)
         {
-            // 1. Get Knob Value (0 to 100) from your TwinController
-            float knobValue = arduinoController.NetKnobValue; 
-
-            // 2. Normalize the value (0.0 to 1.0)
-            float normalized = Mathf.Clamp(knobValue, 0f, 100f) / 100f;
-
-            // 3. Map it to the Track coordinates
-            // Since Track is 1.0 wide, center is 0. Range is -0.5 to +0.5.
-            float targetX = (normalized * trackWidth) - (trackWidth / 2f);
-
-            // 4. Apply the new position to the Needle
-            needle.localPosition = new Vector3(targetX, needle.localPosition.y, needle.localPosition.z);
+            if(needle) needle.gameObject.SetActive(true);
+            
+            // Hide secrets from Technician
+            if(greenZone) greenZone.gameObject.SetActive(false);
+            if(confirmButton) confirmButton.gameObject.SetActive(false);
         }
     }
 
-    void StartNewRound()
-    {
-        // Calculate the safe area so the Green Zone doesn't stick out of the track
-        float halfTrack = trackWidth / 2f;
-        float halfZone = zoneWidth / 2f;
-        float minX = -halfTrack + halfZone;
-        float maxX = halfTrack - halfZone;
-
-        // Pick a random X position
-        TargetCenterX = Random.Range(minX, maxX);
-        
-        UpdateGreenZonePosition();
-    }
-
-    void UpdateGreenZonePosition()
+    public void StartNewRound()
     {
         if (greenZone != null)
         {
-            // Move the Green Cube to the new hidden target spot
-            greenZone.localPosition = new Vector3(TargetCenterX, greenZone.localPosition.y, greenZone.localPosition.z);
+            float randomX = Random.Range(minX + 0.5f, maxX - 0.5f);
+            greenZone.localPosition = new Vector3(randomX, greenZone.localPosition.y, greenZone.localPosition.z);
+            TargetCenterX = randomX;
         }
     }
 
-    // This function will be triggered by your On-Screen Button
     public void OnConfirmButtonPressed()
     {
+        if (!arduinoController) return;
+
         float currentNeedleX = needle.localPosition.x;
         float halfZone = zoneWidth / 2f;
         
-        // Check if needle is inside the zone bounds
         if (currentNeedleX >= (TargetCenterX - halfZone) && currentNeedleX <= (TargetCenterX + halfZone))
         {
-            Debug.Log("SUCCESS! Sending 'G' to Arduino.");
-            
-            // CORRECT PASSWORD: Send "G" (must match Arduino code)
+            Debug.Log("SUCCESS! Sending 'G'");
             arduinoController.SendLedCommand("G"); 
-            
-            // Wait 5 seconds before resetting so you can see the light
             Invoke("StartNewRound", 5.0f);
         }
         else
         {
-            Debug.Log("FAIL! Sending 'R' to Arduino.");
-            
-            // CORRECT PASSWORD: Send "R" (must match Arduino code)
+            Debug.Log("FAIL! Sending 'R'");
             arduinoController.SendLedCommand("R"); 
         }
+    }
+
+    // This function moves the needle on the Client side
+    public override void Render()
+    {
+        if (needle != null && arduinoController != null)
+        {
+            // 1. Get the Networked Value (Synced from Host)
+            float syncedValue = arduinoController.NetKnobValue;
+
+            // 2. Convert Arduino (0-1023) to Screen Position (-4 to +4)
+            float targetX = Remap(syncedValue, 0, 1023, minX, maxX);
+
+            // 3. Move the Needle
+            needle.localPosition = new Vector3(targetX, needle.localPosition.y, needle.localPosition.z);
+        }
+    }
+
+    private float Remap(float value, float from1, float to1, float from2, float to2)
+    {
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 }

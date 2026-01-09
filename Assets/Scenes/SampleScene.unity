@@ -268,7 +268,6 @@ GameObject:
   - component: {fileID: 344122509}
   - component: {fileID: 344122508}
   - component: {fileID: 344122507}
-  - component: {fileID: 344122511}
   m_Layer: 0
   m_Name: Needle
   m_TagString: Untagged
@@ -368,18 +367,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2131918401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &344122511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344122506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 033030d56aa3041468ce20bce5b14f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NeedleVisuals
 --- !u!1 &364323673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1035,7 @@ MonoBehaviour:
   baudRate: 115200
   messageListener: {fileID: 0}
   reconnectionDelay: 1000
-  maxUnreadMessages: 1
+  maxUnreadMessages: 20
 --- !u!114 &1474390044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,7 +1089,8 @@ MonoBehaviour:
   greenZone: {fileID: 364323677}
   needle: {fileID: 344122510}
   confirmButton: {fileID: 1698978576}
-  _TargetCenterX: 0
+  zoneWidth: 0.15
+  TargetCenterX: 0
 --- !u!4 &1508756329
 Transform:
   m_ObjectHideFlags: 0
