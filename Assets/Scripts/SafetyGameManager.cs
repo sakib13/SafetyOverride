@@ -4,43 +4,35 @@ using Fusion;
 public class SafetyGameManager : NetworkBehaviour
 {
     [Header("Hardware Link")]
-    public TwinController arduinoController; // Drag ArduinoManager here
+    public TwinController arduinoController;
 
     [Header("Scene Objects")]
-    public Transform greenZone;     // Drag GreenZone here
-    public Transform needle;        // Drag Needle here
-    public UnityEngine.UI.Button confirmButton; // Drag Button here
+    public Transform greenZone;
+    public Transform needle;
+    public GameObject confirmButton;
 
     [Header("Game Logic")]
     public float zoneWidth = 0.15f;
     public float TargetCenterX = 0f;
 
-    // --- THESE WERE MISSING IN YOUR CODE ---
-    // They define how far left/right the needle can go
-    private float minX = -0.418f; 
+    private float minX = -0.418f;
     private float maxX = 0.418f;
-    // ---------------------------------------
 
     public override void Spawned()
     {
-        // 1. SEPARATE ROLES
         if (Runner.IsServer) // SUPERVISOR (Host)
         {
-            if(greenZone) greenZone.gameObject.SetActive(true);
-            if(confirmButton) confirmButton.gameObject.SetActive(true);
-            
-            // Supervisor sees the needle too so they can judge
-            if(needle) needle.gameObject.SetActive(true); 
-            
+            if (greenZone) greenZone.gameObject.SetActive(true);
+            if (confirmButton) confirmButton.SetActive(true);
+            if (needle) needle.gameObject.SetActive(false);
+
             StartNewRound();
         }
         else // TECHNICIAN (Client)
         {
-            if(needle) needle.gameObject.SetActive(true);
-            
-            // Hide secrets from Technician
-            if(greenZone) greenZone.gameObject.SetActive(false);
-            if(confirmButton) confirmButton.gameObject.SetActive(false);
+            if (needle) needle.gameObject.SetActive(true);
+            if (greenZone) greenZone.gameObject.SetActive(false);
+            if (confirmButton) confirmButton.SetActive(false);
         }
     }
 
@@ -60,32 +52,26 @@ public class SafetyGameManager : NetworkBehaviour
 
         float currentNeedleX = needle.localPosition.x;
         float halfZone = zoneWidth / 2f;
-        
+
         if (currentNeedleX >= (TargetCenterX - halfZone) && currentNeedleX <= (TargetCenterX + halfZone))
         {
             Debug.Log("SUCCESS! Sending 'G'");
-            arduinoController.SendLedCommand("G"); 
+            arduinoController.Rpc_SendLedCommand("G");
             Invoke("StartNewRound", 5.0f);
         }
         else
         {
             Debug.Log("FAIL! Sending 'R'");
-            arduinoController.SendLedCommand("R"); 
+            arduinoController.Rpc_SendLedCommand("R");
         }
     }
 
-    // This function moves the needle on the Client side
     public override void Render()
     {
         if (needle != null && arduinoController != null)
         {
-            // 1. Get the Networked Value (Synced from Host)
             float syncedValue = arduinoController.NetKnobValue;
-
-            // 2. Convert Arduino (0-1023) to Screen Position (-4 to +4)
             float targetX = Remap(syncedValue, 0, 1023, minX, maxX);
-
-            // 3. Move the Needle
             needle.localPosition = new Vector3(targetX, needle.localPosition.y, needle.localPosition.z);
         }
     }

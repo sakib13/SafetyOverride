@@ -1873,7 +1873,7 @@ MonoBehaviour:
   arduinoController: {fileID: 1474390042}
   greenZone: {fileID: 364323677}
   needle: {fileID: 344122510}
-  confirmButton: {fileID: 0}
+  confirmButton: {fileID: 6328583757663073177}
   zoneWidth: 0.15
   TargetCenterX: 0
 --- !u!4 &1508756329
