@@ -22,6 +22,14 @@
     },
     {
       "Type": 0,
+      "Text": "[Fusion.Unity] - System.Void Fusion.Statistics.FusionStatsGraphBase::.cctor() - High Instruction Count of 54019"
+    },
+    {
+      "Type": 0,
+      "Text": "[Fusion.Unity] - System.Void Fusion.Statistics.FusionStatsGraphBase::.cctor() - High CodeSize of 117843"
+    },
+    {
+      "Type": 0,
       "Text": "[Unity.InputSystem] - System.Void UnityEngine.InputSystem.FastTouchscreen::.ctor() - High Variable Count of 315"
     },
     {
@@ -55,14 +63,6 @@
     {
       "Type": 0,
       "Text": "[Unity.TextMeshPro] - System.Void TMPro.TMP_TextParsingUtilities::.cctor() - High CodeSize of 31711"
-    },
-    {
-      "Type": 0,
-      "Text": "[Fusion.Unity] - System.Void Fusion.Statistics.FusionStatsGraphBase::.cctor() - High Instruction Count of 54019"
-    },
-    {
-      "Type": 0,
-      "Text": "[Fusion.Unity] - System.Void Fusion.Statistics.FusionStatsGraphBase::.cctor() - High CodeSize of 117843"
     },
     {
       "Type": 0,

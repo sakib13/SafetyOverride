@@ -24,6 +24,9 @@ public class ManualCalibrationManager : MonoBehaviour
     [Tooltip("The OVRCameraRig - auto-found if not set")]
     public OVRCameraRig cameraRig;
 
+    [Tooltip("Instruction canvas shown before calibration - hidden on trigger press")]
+    public GameObject instructionCanvas;
+
     [Header("Calibration Settings")]
     [Tooltip("Distance in front of user where content appears (arm reach ~0.5m)")]
     public float contentDistance = 0.5f;
@@ -115,6 +118,10 @@ public class ManualCalibrationManager : MonoBehaviour
         }
 
         _isCalibrated = true;
+
+        // Hide instruction canvas
+        if (instructionCanvas != null)
+            instructionCanvas.SetActive(false);
 
         Transform head = cameraRig.centerEyeAnchor;
 

@@ -12266,7 +12266,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DistantCandidateComputer_2__ctor_mC5251F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m3FC02F2E5577013D6CDA1E96015241131BF3C258_gshared (DumpDeferredPtr_1_tC423247B3ED641D3234B4BB344A78E5EC654B4D4* __this, NetBitBuffer_tBEB68A1CA787BE64683700CD6C1E5CCE484430D2* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -12282,7 +12282,7 @@ IL2CPP_EXTERN_C  void DumpDeferredPtr_1__ctor_m3FC02F2E5577013D6CDA1E96015241131
 	_thisAdjusted = reinterpret_cast<DumpDeferredPtr_1_tC423247B3ED641D3234B4BB344A78E5EC654B4D4*>(__this + _offset);
 	DumpDeferredPtr_1__ctor_m3FC02F2E5577013D6CDA1E96015241131BF3C258_inline(_thisAdjusted, ___0_ptr, method);
 }
-// Method Definition Index: 126888
+// Method Definition Index: 127020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DumpDeferredPtr_1_ToString_m2E505B4E0A4D928E025146FA6C70AEF555120383_gshared (DumpDeferredPtr_1_tC423247B3ED641D3234B4BB344A78E5EC654B4D4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12336,7 +12336,7 @@ IL2CPP_EXTERN_C  String_t* DumpDeferredPtr_1_ToString_m2E505B4E0A4D928E025146FA6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_mFC9F8A6E10FE56338059C68172CAA3CE80BE13A3_gshared (DumpDeferredPtr_1_tA0A1A598D2544B504233758A97A11457C5D959FE* __this, SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -12352,7 +12352,7 @@ IL2CPP_EXTERN_C  void DumpDeferredPtr_1__ctor_mFC9F8A6E10FE56338059C68172CAA3CE8
 	_thisAdjusted = reinterpret_cast<DumpDeferredPtr_1_tA0A1A598D2544B504233758A97A11457C5D959FE*>(__this + _offset);
 	DumpDeferredPtr_1__ctor_mFC9F8A6E10FE56338059C68172CAA3CE80BE13A3_inline(_thisAdjusted, ___0_ptr, method);
 }
-// Method Definition Index: 126888
+// Method Definition Index: 127020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DumpDeferredPtr_1_ToString_m4C0CBBD66B1809CDE2FB253CE1F38F00F5F2E4DE_gshared (DumpDeferredPtr_1_tA0A1A598D2544B504233758A97A11457C5D959FE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12406,7 +12406,7 @@ IL2CPP_EXTERN_C  String_t* DumpDeferredPtr_1_ToString_m4C0CBBD66B1809CDE2FB253CE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m420A395D46868980EA03FC0F537FF39861A0CF88_gshared (DumpDeferredPtr_1_t52B1A2D8A4E6A2B6D365C28970FD4C40C954C52F* __this, SimulationMessageEnvelope_t0E224E45F2073A42F1F24C8E22CBE0AD4595F9F8* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -12422,7 +12422,7 @@ IL2CPP_EXTERN_C  void DumpDeferredPtr_1__ctor_m420A395D46868980EA03FC0F537FF3986
 	_thisAdjusted = reinterpret_cast<DumpDeferredPtr_1_t52B1A2D8A4E6A2B6D365C28970FD4C40C954C52F*>(__this + _offset);
 	DumpDeferredPtr_1__ctor_m420A395D46868980EA03FC0F537FF39861A0CF88_inline(_thisAdjusted, ___0_ptr, method);
 }
-// Method Definition Index: 126888
+// Method Definition Index: 127020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DumpDeferredPtr_1_ToString_mEA17AA534C40568A8960DF78CE9E956E70CB34A1_gshared (DumpDeferredPtr_1_t52B1A2D8A4E6A2B6D365C28970FD4C40C954C52F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12476,7 +12476,7 @@ IL2CPP_EXTERN_C  String_t* DumpDeferredPtr_1_ToString_mEA17AA534C40568A8960DF78C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m89FE0BC03D8C2F62FCD237B363096C3C694E9F17_gshared (DumpDeferredPtr_1_tA797B44C83FEC6141E389ADF5D91CA7DF589DAB3* __this, Il2CppFullySharedGenericStruct* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -12492,7 +12492,7 @@ IL2CPP_EXTERN_C  void DumpDeferredPtr_1__ctor_m89FE0BC03D8C2F62FCD237B363096C3C6
 	_thisAdjusted = reinterpret_cast<DumpDeferredPtr_1_tA797B44C83FEC6141E389ADF5D91CA7DF589DAB3*>(__this + _offset);
 	DumpDeferredPtr_1__ctor_m89FE0BC03D8C2F62FCD237B363096C3C694E9F17_inline(_thisAdjusted, ___0_ptr, method);
 }
-// Method Definition Index: 126888
+// Method Definition Index: 127020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DumpDeferredPtr_1_ToString_m6406202C3F08987D99AD4F7B888FCFC357D7143B_gshared (DumpDeferredPtr_1_tA797B44C83FEC6141E389ADF5D91CA7DF589DAB3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12547,7 +12547,7 @@ IL2CPP_EXTERN_C  String_t* DumpDeferredPtr_1_ToString_m6406202C3F08987D99AD4F7B8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126889
+// Method Definition Index: 127021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DumpDeferredStruct_1__ctor_m0278391A278E428D15A13BBE1268FDF9E537150F_gshared (DumpDeferredStruct_1_tCDBB64D46DDD4B32EDCB6301A621E4DE55C70673* __this, Il2CppFullySharedGenericStruct ___0_obj, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_t3BCA8849B2F58D1215152C5DBF1D5C768266F1BF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0));
@@ -12565,7 +12565,7 @@ IL2CPP_EXTERN_C  void DumpDeferredStruct_1__ctor_m0278391A278E428D15A13BBE1268FD
 	_thisAdjusted = reinterpret_cast<DumpDeferredStruct_1_tCDBB64D46DDD4B32EDCB6301A621E4DE55C70673*>(__this + _offset);
 	DumpDeferredStruct_1__ctor_m0278391A278E428D15A13BBE1268FDF9E537150F_inline(_thisAdjusted, ___0_obj, method);
 }
-// Method Definition Index: 126890
+// Method Definition Index: 127022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DumpDeferredStruct_1_ToString_mAD56343F460FBB1DE2A93B905C18C223158BEDB7_gshared (DumpDeferredStruct_1_tCDBB64D46DDD4B32EDCB6301A621E4DE55C70673* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27132,7 +27132,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DistantPointDetectorFrustums_tD2E
 		return L_0;
 	}
 }
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m3FC02F2E5577013D6CDA1E96015241131BF3C258_gshared_inline (DumpDeferredPtr_1_tC423247B3ED641D3234B4BB344A78E5EC654B4D4* __this, NetBitBuffer_tBEB68A1CA787BE64683700CD6C1E5CCE484430D2* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -27141,7 +27141,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m3FC
 		return;
 	}
 }
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_mFC9F8A6E10FE56338059C68172CAA3CE80BE13A3_gshared_inline (DumpDeferredPtr_1_tA0A1A598D2544B504233758A97A11457C5D959FE* __this, SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -27150,7 +27150,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_mFC9
 		return;
 	}
 }
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m420A395D46868980EA03FC0F537FF39861A0CF88_gshared_inline (DumpDeferredPtr_1_t52B1A2D8A4E6A2B6D365C28970FD4C40C954C52F* __this, SimulationMessageEnvelope_t0E224E45F2073A42F1F24C8E22CBE0AD4595F9F8* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -27159,7 +27159,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m420
 		return;
 	}
 }
-// Method Definition Index: 126887
+// Method Definition Index: 127019
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m89FE0BC03D8C2F62FCD237B363096C3C694E9F17_gshared_inline (DumpDeferredPtr_1_tA797B44C83FEC6141E389ADF5D91CA7DF589DAB3* __this, Il2CppFullySharedGenericStruct* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -27168,7 +27168,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredPtr_1__ctor_m89F
 		return;
 	}
 }
-// Method Definition Index: 126889
+// Method Definition Index: 127021
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DumpDeferredStruct_1__ctor_m0278391A278E428D15A13BBE1268FDF9E537150F_gshared_inline (DumpDeferredStruct_1_tCDBB64D46DDD4B32EDCB6301A621E4DE55C70673* __this, Il2CppFullySharedGenericStruct ___0_obj, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_t3BCA8849B2F58D1215152C5DBF1D5C768266F1BF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 0));
