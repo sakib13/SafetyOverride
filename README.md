@@ -1,87 +1,89 @@
 # Safety Override
 
-A collocated mixed reality training simulation where two users share the same physical space, each with role-specific responsibilities. Built for Meta Quest headsets using Unity, Photon Fusion for real-time networking, and Arduino for physical hardware integration.
+Safety Override is a collocated mixed reality training simulation built for Meta Quest headsets. Two users sit at the same table, each wearing a headset, and they see different virtual objects depending on their role. The project runs on Unity with Photon Fusion for networking and an Arduino for physical input and output.
 
 ## Introduction
 
-Safety Override is a two-player cooperative VR training experience set in a nuclear power reactor scenario. A supervisor and a technician sit at the same table wearing Meta Quest headsets, seeing different virtual objects overlaid on the shared physical environment through mixed reality passthrough.
+The concept behind Safety Override is a nuclear power reactor training scenario. One person plays as the supervisor and the other as the technician. Both sit at the same physical table and see virtual objects through mixed reality passthrough, but each person sees different things based on their role.
 
-The supervisor monitors a pressure gauge and guides the technician using a hand-tracked laser pointer. The technician adjusts a needle on the gauge using a physical potentiometer (Arduino) and confirms their reading. The supervisor then validates whether the needle is correctly positioned within a moving green zone, with the result communicated back to the Arduino as a physical LED response (green for success, red for failure).
+The supervisor has a pressure gauge with a green zone that keeps moving, and they can point at it with a laser that comes from their hand. The technician has a physical knob (Arduino potentiometer) that controls a needle on the gauge. The technician needs to line up the needle with the green zone, then poke a virtual button to confirm. After that the supervisor checks if the needle is actually in the right spot and presses their own button. If the needle is inside the green zone the Arduino lights up green, otherwise it lights up red.
 
-This project explores how mixed reality, real-time networking, hand tracking, and physical computing can combine to create a shared, hands-on training experience with educational value in safety-critical decision making under time pressure.
+The project was built to explore how far the combination of mixed reality, networking, hand tracking, and physical hardware can be pushed into one shared experience. The training scenario adds time pressure because the green zone keeps moving and pausing randomly, so both players have to communicate and act fast.
 
 ## Design Process
 
 ### Goals
 
-- Create a collocated VR experience where two users share the same physical space
-- Assign distinct roles (supervisor/technician) with role-specific virtual objects
-- Integrate physical hardware (Arduino potentiometer and LED) as tangible input/output
-- Use hand tracking for natural interaction (laser pointing, button poking)
+The project set out to achieve the following:
+
+- Get two people into the same physical space with collocated VR
+- Give each person a different role with their own set of virtual objects
+- Use a real physical device (Arduino with a potentiometer and LED) instead of keeping everything virtual
+- Make the interaction feel natural by using hand tracking instead of controllers
 
 ### Challenges and Solutions
 
-**Colocation without Shared Spatial Anchors:**
-Meta's Colocation Discovery API returned persistent -1002 errors during development. Instead of relying on the API, a manual calibration system was implemented. Each user presses a controller button to place the game content relative to their head position, achieving spatial alignment without shared anchors.
+**Colocation was the hardest part.**
+The project originally attempted to use Meta's Colocation Discovery API to align both headsets automatically. But it kept throwing error code 1002 and no fix could be found despite extensive troubleshooting. So the project went with a manual approach instead. Each user presses a button on their controller and the game content gets placed in front of them relative to where their head is. It is simple but it works. The downside is both users need to roughly face the same direction when they calibrate, but since they are sitting at a table this is not really a problem.
 
-**Design Decision — Manual Calibration over Shared Spatial Anchors:**
-Manual calibration was chosen because it provides reliable, predictable results regardless of Meta API availability. The trade-off is that both users must face the same general direction during calibration. For a seated table scenario, this constraint is acceptable and keeps the system simple.
+**Why manual calibration and not shared spatial anchors?**
+Because the API was broken and the project needed something that works reliably every time. Manual calibration is predictable. You press a button, content appears in front of you. No dependency on Meta's cloud services or anchor sharing. For a seated scenario at a table this is more than enough.
 
-**Role-Based Visibility:**
-Rather than spawning separate objects per player, all game objects exist in the scene and are toggled on/off based on the user's role (host = supervisor, client = technician). This simplifies networking since all state lives on a single `NetworkObject`.
+**Handling role based visibility.**
+Instead of spawning separate objects for each player, all the game objects already exist in the scene. When a player connects, the code just turns on or off the relevant objects based on whether they are the host (supervisor) or client (technician). This keeps the networking simple because all the game state lives on one NetworkObject.
 
-**Design Decision — Hand Tracking over Controllers:**
-Hand tracking was chosen for the supervisor's laser pointer because it provides a more natural pointing gesture. The technician interacts through a physical potentiometer (more intuitive for "turning a dial") and pokes a virtual button using hand tracking. Controllers are only used for the initial calibration step.
+**Why hand tracking instead of controllers?**
+For the supervisor, pointing at the gauge with your actual finger feels way more natural than using a controller joystick. For the technician, they already have a physical knob to turn, so using a controller on top of that would be awkward. Controllers are only used at the very beginning for the calibration step, and after that users put them down and switch to hand tracking.
 
-**Design Decision — Physical Potentiometer over Virtual Slider:**
-A physical Arduino potentiometer was chosen over a virtual UI slider because tangible input provides better tactile feedback for precise adjustments, which is important in a training simulation where accuracy matters.
+**Why a physical potentiometer instead of a virtual slider?**
+Turning a real knob just feels better and gives more precise control than dragging a virtual slider in the air. In a training simulation where accuracy matters, having something physical in your hands makes a big difference. Plus it demonstrates hardware integration which was one of the goals of the project.
 
-**Button Color System:**
-The Meta Interaction SDK's `InteractableDebugVisual` component overrides material colors on state changes. To achieve reliable button color changes (red/green/yellow), pre-created materials are swapped at runtime via `renderer.sharedMaterial`, bypassing the SDK's color system entirely.
+**The button color problem.**
+This one took a while to figure out. The Meta Interaction SDK has a component called `InteractableDebugVisual` that keeps overriding the button's material color whenever the button state changes. So no matter what color was set in code, it would get overwritten. The fix was to create separate materials (red, green, yellow) and swap the entire material at runtime using `renderer.sharedMaterial`. That way it does not matter what the SDK tries to do with the color because the whole material is different.
 
-**Face-to-Face Mirroring:**
-Since both users sit opposite each other, the X axis appears mirrored. The needle position is negated on the client (`-targetX`), and the supervisor's laser uses a networked coordinate conversion with X negation so both users see consistent positions relative to their own perspective.
+**Face to face mirroring.**
+When two people sit across from each other, their left and right are flipped. So if the supervisor sees the green zone on their left, the technician should also see it on their left from their own perspective. To fix this the project negates the X position of the needle on the client side. The laser pointer also gets its X coordinate flipped so both users see it pointing at the same spot on the gauge.
 
 ## Features and Functionalities
 
 ### Collocated Mixed Reality
-- Two users share the same physical table with Meta Quest passthrough
-- Virtual objects appear anchored to the real environment
-- Manual calibration positions content at arm's reach, at table height
+- Two users share the same physical table wearing Meta Quest headsets
+- Virtual objects show up on top of the real environment through passthrough
+- Each user calibrates by pressing a button and content appears at table height in front of them
 
-### Role-Based Gameplay
-- **Supervisor (Host):** Sees the pressure gauge with a moving green zone, a confirm button, and a hand-tracked laser pointer
-- **Technician (Client):** Sees the same gauge with a needle (controlled by Arduino potentiometer) and a yellow confirmation button
+### Role Based Gameplay
+- **Supervisor (Host):** Sees the pressure gauge with a moving green zone, a confirm button, and a red laser that follows their right hand
+- **Technician (Client):** Sees the same gauge but with a needle that they control with the Arduino potentiometer, plus a yellow confirmation button
 
 ### Moving Green Zone
-- The green zone oscillates along the gauge using a sine wave
-- Randomly pauses for a configurable duration (default 5 seconds), creating time pressure
-- Speed and pause duration are adjustable in the Unity Inspector
+- The green zone moves back and forth along the gauge in a sine wave pattern
+- It randomly stops for a few seconds then starts moving again, which adds time pressure
+- Both the speed and the pause duration can be changed in the Unity Inspector
 
 ### Supervisor Laser Pointer
-- Red laser ray extends from the supervisor's right hand
-- Hand-tracked using Meta Quest hand tracking
-- Visible to both users through Photon Fusion networking
-- Mirrored for the client's face-to-face perspective
+- A red laser line extends from the supervisor's right hand
+- It uses Meta Quest hand tracking so no controller is needed
+- Both users can see the laser through Photon Fusion networking
+- The X position gets flipped for the client so it looks correct from their side of the table
 
 ### Client Confirmation System
-- Technician pokes a yellow button to signal readiness
-- Supervisor's button changes from red to green via material swap
-- Supervisor then presses their button to validate the needle position
+- The technician pokes a yellow button with their hand when they think the needle is in the right spot
+- This sends a network event and the supervisor's button turns from red to green
+- Then the supervisor can press their button to check the result
 
 ### Arduino Hardware Integration
-- Physical potentiometer controls the needle position via serial communication
-- Arduino LED provides tangible feedback: green (success) or red (failure)
-- Communication bridged through Unity using the Ardity serial library
-- Potentiometer values are networked to all clients via Photon Fusion RPCs
+- A physical potentiometer controls the needle position through serial communication
+- The Arduino LED gives real feedback: green means success, red means failure
+- The serial data goes through the Ardity library in Unity
+- The potentiometer values get sent to all connected clients through Photon Fusion RPCs
 
 ### Instruction Canvas
-- A floating world-space canvas appears before calibration
-- Displays the game narrative and step-by-step instructions for both roles
-- Automatically hidden when the user triggers calibration
+- Before calibration, a floating canvas shows up in front of the user
+- It explains the game story and gives step by step instructions for both roles
+- It disappears automatically once the user calibrates
 
 ### Ambient Sound
-- Background audio with looping playback for immersion
+- There is background audio that loops during gameplay for immersion
 
 ## Installation
 
@@ -94,14 +96,14 @@ Since both users sit opposite each other, the X axis appears mirrored. The needl
 | Meta XR SDK | 83.0.1 |
 | Photon Fusion | 2 (imported via .unitypackage) |
 | Ardity | Included in `Assets/Ardity/` |
-| Arduino IDE | For uploading sketch to Arduino board |
+| Arduino IDE | For uploading the sketch to the Arduino board |
 
 ### Hardware Required
 
-- 2x Meta Quest headsets (Quest 2, Quest Pro, Quest 3, or Quest 3S)
-- 1x Arduino board with potentiometer and LED
-- 1x PC running Unity Editor (serves as Arduino serial bridge)
-- All devices on the same Wi-Fi network
+- 2 Meta Quest headsets (Quest 2, Quest Pro, Quest 3, or Quest 3S)
+- 1 Arduino board with a potentiometer and an LED
+- 1 PC running Unity Editor (this acts as the Arduino serial bridge)
+- All devices need to be on the same Wi-Fi network
 
 ### Setup Steps
 
@@ -112,58 +114,55 @@ Since both users sit opposite each other, the X axis appears mirrored. The needl
 
 2. **Open in Unity:**
    - Open Unity Hub and add the project
-   - Use Unity version **6000.2.10f1**
+   - Make sure you are using Unity version **6000.2.10f1**
    - Open `Assets/Scenes/SampleScene.unity`
 
 3. **Photon Fusion App ID:**
    - Go to [Photon Dashboard](https://dashboard.photonengine.com/) and create a Fusion app
-   - In Unity, go to `Fusion > Fusion Hub > Setup` and paste your App ID
-   - The current App ID is configured for this project's Photon account
+   - In Unity go to `Fusion > Fusion Hub > Setup` and paste your App ID
 
 4. **Arduino Setup:**
    - Upload the Arduino sketch to your board (potentiometer on analog pin, LED on digital pin)
-   - Connect the Arduino to the PC via USB
+   - Connect the Arduino to the PC with USB
    - In Unity, set the correct COM port on the `SerialController` component in the scene
 
 5. **Build for Quest:**
    - Go to `File > Build Settings`
    - Select **Android** platform
-   - Connect Quest headset via USB or use wireless ADB
+   - Connect your Quest headset via USB or wireless ADB
    - Click **Build and Run**
 
 ## Usage
 
 ### Starting a Session
 
-1. **Launch on first Quest headset** — this device becomes the Host (Supervisor)
-2. **Launch on second Quest headset** — this device joins as Client (Technician)
-3. **Start Unity Editor Play Mode** on the PC — this connects as a third client and acts as the Arduino serial bridge
+1. Launch the app on the first Quest headset. This device becomes the Host and takes the Supervisor role.
+2. Launch the app on the second Quest headset. This one joins as the Client and takes the Technician role.
+3. Hit Play in the Unity Editor on the PC. This connects as a third client and handles the Arduino serial communication.
 
 ### Calibration
 
 1. Both headset users sit at opposite sides of a table
-2. Both users press the **A button** or **right trigger** on their controller
-3. Game content appears at table height in front of each user
-4. After calibration, hand tracking activates — users can put down controllers
+2. Each user presses the **A button** or **right trigger** on their controller
+3. The game content shows up at table height in front of each user
+4. After that, hand tracking kicks in and users can put their controllers down
 
 ### Gameplay Flow
 
 1. The green zone starts moving along the gauge
-2. The **supervisor** uses their right hand as a laser pointer to guide the technician toward the green zone
-3. The **technician** turns the physical potentiometer to move the needle
-4. When the technician is satisfied with the needle position, they **poke the yellow button** with their hand
-5. The supervisor's button turns **green** (from red), indicating the technician is ready
-6. The supervisor **pokes the confirm button**
-7. The system checks if the needle is inside the green zone:
-   - **Success:** Arduino LED turns green
-   - **Failure:** Arduino LED turns red
-8. The process repeats
+2. The supervisor points at the gauge with their right hand to show the technician where to aim
+3. The technician turns the physical potentiometer to move the needle
+4. When the technician thinks the needle is lined up, they poke the yellow button
+5. The supervisor's button turns green, meaning the technician is ready
+6. The supervisor pokes their confirm button
+7. If the needle is inside the green zone the Arduino LED lights up green. If not, it lights up red.
+8. The whole thing repeats
 
 ### Editor Testing (Single Headset)
 
-For testing with only one headset:
-- Quest headset runs as **Host/Supervisor**
-- Unity Editor Play Mode runs as **Client/Technician**
+If only one headset is available, most of the functionality can still be tested:
+- The Quest headset runs as Host/Supervisor
+- Unity Editor Play Mode runs as Client/Technician
 - Press **Space** in the Editor to calibrate
 - Press **C** in the Editor to simulate the client button press
 
@@ -171,13 +170,13 @@ For testing with only one headset:
 
 | Parameter | Location | Default | Description |
 |---|---|---|---|
-| Green Zone Speed | DigitalTwin > SafetyGameManager | 0.3 | Speed of green zone oscillation |
-| Pause Duration | DigitalTwin > SafetyGameManager | 5.0 | How long the green zone pauses (seconds) |
-| Zone Width | DigitalTwin > SafetyGameManager | 0.15 | Width of the green zone |
-| Laser Length | DigitalTwin > SupervisorLaser | 3.0 | Length of the supervisor's laser ray |
-| Laser Width | DigitalTwin > SupervisorLaser | 0.005 | Thickness of the laser ray |
-| Content Distance | CalibrationManager | 0.5 | Distance from head to game content (meters) |
-| Height Offset | CalibrationManager | -0.3 | Height below eye level for table placement |
+| Green Zone Speed | DigitalTwin > SafetyGameManager | 0.3 | How fast the green zone moves |
+| Pause Duration | DigitalTwin > SafetyGameManager | 5.0 | How long the green zone stops for (seconds) |
+| Zone Width | DigitalTwin > SafetyGameManager | 0.15 | How wide the green zone is |
+| Laser Length | DigitalTwin > SupervisorLaser | 3.0 | How far the laser extends |
+| Laser Width | DigitalTwin > SupervisorLaser | 0.005 | How thick the laser line is |
+| Content Distance | CalibrationManager | 0.5 | How far from the head the content appears (meters) |
+| Height Offset | CalibrationManager | -0.3 | How far below eye level the content sits |
 
 ## Project Structure
 
@@ -189,7 +188,7 @@ Assets/
 │   ├── ConnectionManager.cs       # Photon Fusion networking setup
 │   ├── ManualCalibrationManager.cs# Manual spatial calibration
 │   ├── SafetyGameManager.cs       # Core game logic, role visibility, green zone
-│   ├── SupervisorLaser.cs         # Networked hand-tracked laser pointer
+│   ├── SupervisorLaser.cs         # Networked hand tracked laser pointer
 │   └── TwinController.cs          # Arduino serial communication bridge
 ├── Materials/
 │   ├── ButtonRed.mat              # Supervisor button default
@@ -205,31 +204,31 @@ Assets/
 ### Scene Hierarchy
 
 ```
-[BuildingBlock] Camera Rig         — OVRCameraRig with Eye Level tracking
-GameContent                        — Parent for all game objects (moved by calibration)
-  ├── LinearGauge                  — The pressure gauge
-  │   ├── Track                    — Gauge background
-  │   ├── GreenZone                — Moving target zone (networked)
-  │   └── Needle                   — Arduino-controlled indicator
-  ├── BigRedButton                 — Supervisor's confirm button
-  └── ClientYellowButton           — Technician's confirm button
-CalibrationManager                 — ManualCalibrationManager component
-[BuildingBlock] Network Manager    — ConnectionManager + Photon NetworkRunner
-DigitalTwin                        — SafetyGameManager + SupervisorLaser + NetworkObject
-ArduinoManager                     — TwinController + SerialController
+[BuildingBlock] Camera Rig         OVRCameraRig with Eye Level tracking
+GameContent                        Parent for all game objects (moved by calibration)
+  ├── LinearGauge                  The pressure gauge
+  │   ├── Track                    Gauge background
+  │   ├── GreenZone                Moving target zone (networked)
+  │   └── Needle                   Arduino controlled indicator
+  ├── BigRedButton                 Supervisor's confirm button
+  └── ClientYellowButton           Technician's confirm button
+CalibrationManager                 ManualCalibrationManager component
+[BuildingBlock] Network Manager    ConnectionManager + Photon NetworkRunner
+DigitalTwin                        SafetyGameManager + SupervisorLaser + NetworkObject
+ArduinoManager                     TwinController + SerialController
 ```
 
 ## References
 
-- [Photon Fusion 2 Documentation](https://doc.photonengine.com/fusion/current/getting-started/fusion-intro) — Networking framework
-- [Meta XR SDK Documentation](https://developer.oculus.com/documentation/unity/unity-overview/) — VR platform SDK
-- [Meta Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) — Hand tracking and poke interactions
-- [Ardity - Arduino Unity Communication](https://github.com/DWilches/Ardity) — Serial communication library
-- [Unity Universal Render Pipeline](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.0/manual/index.html) — Rendering pipeline
+- [Photon Fusion 2 Documentation](https://doc.photonengine.com/fusion/current/getting-started/fusion-intro) for the networking framework
+- [Meta XR SDK Documentation](https://developer.oculus.com/documentation/unity/unity-overview/) for the VR platform
+- [Meta Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) for hand tracking and poke interactions
+- [Ardity](https://github.com/DWilches/Ardity) for Arduino to Unity serial communication
+- [Unity Universal Render Pipeline](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.0/manual/index.html) for rendering
 
 ## Contributors
 
-- **[Your Name]** — Design, development, and implementation
+- **[Your Name]** Design, development, and implementation
 
   MSc in Design for Creative and Immersive Technology
 
