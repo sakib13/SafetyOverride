@@ -267,6 +267,7 @@ IL2CPP_EXTERN_C RuntimeClass* SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4C
 IL2CPP_EXTERN_C RuntimeClass* SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ShutdownReason_t70810C4D2DBBD8592C89DC771ED0008CA44D8017_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringBuilder_t_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ThreadStart_t7662D98F1793EDE90192D7304D1C3C44119328A2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F_il2cpp_TypeInfo_var;
@@ -324,6 +325,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralB10ED381609F280F557DA6725BE0375C0E759723
 IL2CPP_EXTERN_C String_t* _stringLiteralB27D4D4D30F2711988B9BCDE63C6D748D4B53E4D;
 IL2CPP_EXTERN_C String_t* _stringLiteralB916A0DC60EEDEBDB9CF793576A4C38B6A07E1BD;
 IL2CPP_EXTERN_C String_t* _stringLiteralBB334AC334FC183816C18C1AE94FAA057963D622;
+IL2CPP_EXTERN_C String_t* _stringLiteralBB7142D443BE13F18F92B8BBDC356B318308A4E2;
 IL2CPP_EXTERN_C String_t* _stringLiteralC0C7A021B28D426DBCAA2E5BA67B590908484938;
 IL2CPP_EXTERN_C String_t* _stringLiteralC1DF5389064264A99D3AE8DB68A9F2F546D37C93;
 IL2CPP_EXTERN_C String_t* _stringLiteralC70EB1E715A6EED60D6800932F7BF2A2F285153C;
@@ -337,6 +339,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralDADBFF272C1D55814D787F6CB3FC4BBA7C272BA5
 IL2CPP_EXTERN_C String_t* _stringLiteralDE385086914C51AB6EC2664F112BECD8817EC5F1;
 IL2CPP_EXTERN_C String_t* _stringLiteralDF01A6EB1057E7A6B60C2FD92D6C078CE6FEA178;
 IL2CPP_EXTERN_C String_t* _stringLiteralE57BC9ADF1EF0EBB91F8D3C649AF190FE16B9664;
+IL2CPP_EXTERN_C String_t* _stringLiteralE61DD1615047D33FCF4C01D211E47AEF6FFD2A9E;
 IL2CPP_EXTERN_C String_t* _stringLiteralE65B06B028994CAFE6E4708507B5351D865B92D9;
 IL2CPP_EXTERN_C String_t* _stringLiteralE91FE173F59B063D620A934CE1A010F2B114C1F3;
 IL2CPP_EXTERN_C String_t* _stringLiteralE9F5F3217DF70A2DAA2EA559F2870B6E1F432807;
@@ -361,8 +364,10 @@ IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1__ctor_mC18AD0BEAC3C718A4163FA072
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7_mB2792EFE13566BDA44A3DB1573CC859D8A1A3E84_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisOVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9_m8F8D86388D19000F90EB1EB0BDB40AC7F51ECC71_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SafetyGameManager_get_GreenZoneX_mC96562C62623C4C9EA411B942E744416CEB46B1E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SampleTearDown_lightsShutdown_mB7F7A9D92D9C1CB33EE9FA046EE8E32F3D22E783_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SerialThreadBinaryDelimited_IsSeparator_mE89BA9C02347508823EE838BFFCFC89A422DA990_RuntimeMethod_var;
@@ -2328,11 +2333,15 @@ struct SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595  : public Net
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___confirmButton;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___clientButton;
 	float ___greenZoneSpeed;
+	float ___pauseDuration;
 	float ___zoneWidth;
 	float ___minX;
 	float ___maxX;
 	float ____GreenZoneX;
 	NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ____ClientConfirmed;
+	NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ____GreenZonePaused;
+	float ____pauseTimer;
+	float ____nextPauseTime;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___redMaterial;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___greenMaterial;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___yellowMaterial;
@@ -2344,11 +2353,14 @@ struct SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9  : public Netwo
 	float ___laserLength;
 	float ___laserWidth;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___laserColor;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___gameContent;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____LaserOrigin;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____LaserDirection;
 	NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ____LaserActive;
 	LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* ____lineRenderer;
 	OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* ____cameraRig;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____hostGcPosition;
+	bool ____hostGcReceived;
 };
 struct TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12  : public NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3
 {
@@ -2738,10 +2750,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_StartNetworkAfterCalib
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline (SimulationBehaviour_t39725B66BC703470FBE62B427C25F58B3B7054F0* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_exists, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494 (float ___0_minInclusive, float ___1_maxInclusive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float NetworkRunner_get_DeltaTime_m8831827404C94255CD93C9EAD4EECE10C11A5A23 (NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkBool_op_Implicit_mE6D90417352F4F0228B37D536502B777ABECACFC (NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA (bool ___0_val, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float NetworkRunner_get_SimulationTime_mB3E8391A54C9588CE81A6CD7FD5B53B60DDBABC9 (NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Rpc_SetClientConfirmed_mC8D9F44326131106511A292F4023E1DCE63AFCFB (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA (bool ___0_val, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkBehaviourUtils_ThrowIfBehaviourNotInitialized_m2BEDE03C4BA07DE9A61DDCD5997B3F4B198C3362 (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* ___0_behaviour, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NetworkRunner_get_Stage_m961728430F02C6FBE3EBEFCAEFC75828C907404C (NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* __this, const RuntimeMethod* method) ;
@@ -2767,7 +2784,6 @@ inline MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* Component_GetComp
 	return ((  MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkBool_op_Implicit_mE6D90417352F4F0228B37D536502B777ABECACFC (NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_val, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_set_sharedMaterial_m5E842F9A06CFB7B77656EB319881CB4B3E8E4288 (Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* __this, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TwinController_get_NetKnobValue_mF333AA285A5DBD89CC678AED783C6E0275ED94D8 (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafetyGameManager_Remap_mA1A104B702706D2EFD8779839BECAE6D03CF5979 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, float ___0_value, float ___1_from1, float ___2_to1, float ___3_from2, float ___4_to2, const RuntimeMethod* method) ;
@@ -2786,14 +2802,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LineRenderer_set_useWorldSpace_m0204DB2541CC37DC4DC15DA15FD5A66EDC507CE8 (LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8 (Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* __this, bool ___0_value, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool NetworkBehaviour_get_HasStateAuthority_mCE935DFC2641A131EBC006A4FB3F581D6748B633_inline (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* OVRCameraRig_get_rightHandAnchor_mF2D328A04338A8119F3BE6EE09FE66965258A26D_inline (OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_set_LaserOrigin_mB29C10E5B10688CD4BD7342206BC52DC3AF551D8 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_set_LaserDirection_m429E88676FF62D25FBDD72764A78AF9F9AE475DB (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F SupervisorLaser_get_LaserActive_m0AC508E692250B76FCA4215571D4C9E51E7A2039 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Rpc_SendHostGcPosition_m3E2EED9348DC2A757E19FA4675227D5DA0E706E4 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_pos, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_EnsureLineRenderer_m84A2506DA8A6B59E8FE4151D7EE5C171471EBC8E (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 SupervisorLaser_get_LaserOrigin_m556E9C2FEC35920BB8C5993F79C504DD55FDE098 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1 (LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* __this, int32_t ___0_index, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 SupervisorLaser_get_LaserDirection_m0DE5BD210E6D94C5CE0C0D455ED24F2A6DC0F42B (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1 (LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* __this, int32_t ___0_index, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1 (Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TwinController_get_IsSerialBridge_mAEEF4A6CAC9D25D71118960178D7766BEEFC6BCE (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) ;
@@ -2809,6 +2829,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Magnitude_m21652D95
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Division_mCC6BB24E372AB96B8380D1678446EF6A8BAE13BB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Simulation_HasAnyActiveConnections_m49B7514C57B697D6A5D4E00D75B34406BE4A3492 (Simulation_t1D52B02F9D931E87FAEB15A3EE8B13ED014DB584* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BehaviourUtils_IsAlive_mB92FFD328F10E56D6382C21100C0E69E118F7DEE_inline (NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* ___0_obj, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkObject_get_HasStateAuthority_m20DFCBB66C787E2B2ED94B31AC1035B62251CC07 (NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) ;
 #ifdef __clang__
 #pragma clang diagnostic push
@@ -2823,7 +2845,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126617
+// Method Definition Index: 126457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleCustomDelimiter_Start_m651BC0B591BA8940D456E0F9081C1A175B6FAED8 (SampleCustomDelimiter_t89EA2379539676F0DBCF2714745A226F84FB3C10* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2851,7 +2873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleCustomDelimiter_Start_m651BC0B591B
 		return;
 	}
 }
-// Method Definition Index: 126618
+// Method Definition Index: 126458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleCustomDelimiter_Update_m6DF3C3A39061157980E0433E4723129194A7AB32 (SampleCustomDelimiter_t89EA2379539676F0DBCF2714745A226F84FB3C10* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3008,7 +3030,7 @@ IL_0085:
 		return;
 	}
 }
-// Method Definition Index: 126619
+// Method Definition Index: 126459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleCustomDelimiter__ctor_mAAB450FC79DD7822918E9C7073C5A5DBD68C1692 (SampleCustomDelimiter_t89EA2379539676F0DBCF2714745A226F84FB3C10* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3024,7 +3046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleCustomDelimiter__ctor_mAAB450FC79D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126620
+// Method Definition Index: 126460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleMessageListener_OnMessageArrived_mC0E78AC0E841ED25D1E39C3C77C7163B2E375D18 (SampleMessageListener_t247BBCF6C6E353992EFEB8F8BDE97126F1E75B6C* __this, String_t* ___0_msg, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3045,7 +3067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleMessageListener_OnMessageArrived_m
 		return;
 	}
 }
-// Method Definition Index: 126621
+// Method Definition Index: 126461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleMessageListener_OnConnectionEvent_m9DC43DD48D2A0C815A040EEC3800727FBB2DA811 (SampleMessageListener_t247BBCF6C6E353992EFEB8F8BDE97126F1E75B6C* __this, bool ___0_success, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3080,7 +3102,7 @@ IL_000e:
 		return;
 	}
 }
-// Method Definition Index: 126622
+// Method Definition Index: 126462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleMessageListener__ctor_m3ECA4FD82A890A504C76668624A5BED4882DE86A (SampleMessageListener_t247BBCF6C6E353992EFEB8F8BDE97126F1E75B6C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3096,7 +3118,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleMessageListener__ctor_m3ECA4FD82A8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126623
+// Method Definition Index: 126463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown_Start_mD68987E198F65A97B48C0CE7528E23FD8CDD6B4A (SampleTearDown_t601B0471D81EEB39F80F48292A7EF12BDCEB1D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3132,7 +3154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown_Start_mD68987E198F65A97B4
 		return;
 	}
 }
-// Method Definition Index: 126624
+// Method Definition Index: 126464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown_Update_m6CA6BE0EDAF4DCCD18C4E87D5ABCED397ABBF9FE (SampleTearDown_t601B0471D81EEB39F80F48292A7EF12BDCEB1D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3274,7 +3296,7 @@ IL_0094:
 		return;
 	}
 }
-// Method Definition Index: 126625
+// Method Definition Index: 126465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown_lightsShutdown_mB7F7A9D92D9C1CB33EE9FA046EE8E32F3D22E783 (SampleTearDown_t601B0471D81EEB39F80F48292A7EF12BDCEB1D98* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3297,7 +3319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown_lightsShutdown_mB7F7A9D92
 		return;
 	}
 }
-// Method Definition Index: 126626
+// Method Definition Index: 126466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown__ctor_m4418C377164D096DA6609D6AC1A18F96AC1A2995 (SampleTearDown_t601B0471D81EEB39F80F48292A7EF12BDCEB1D98* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3313,7 +3335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleTearDown__ctor_m4418C377164D096DA6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126627
+// Method Definition Index: 126467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_JustRead_Start_mB2A5E874CCE0E991725687EDDA3AD35D49DD15D2 (SampleUserPolling_JustRead_tC1B97AAE77BC237F9E16ACE3566D4121F3AE823A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3336,7 +3358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_JustRead_Start_mB2A5E8
 		return;
 	}
 }
-// Method Definition Index: 126628
+// Method Definition Index: 126468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_JustRead_Update_mE72755B0096E638AAEF6F6D53DAA562E252E59B5 (SampleUserPolling_JustRead_tC1B97AAE77BC237F9E16ACE3566D4121F3AE823A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3414,7 +3436,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 126629
+// Method Definition Index: 126469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_JustRead__ctor_mAABEF8F69F69889FC01BFFB3D589E8FA2D17D4E0 (SampleUserPolling_JustRead_tC1B97AAE77BC237F9E16ACE3566D4121F3AE823A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3430,7 +3452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_JustRead__ctor_mAABEF8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126630
+// Method Definition Index: 126470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_ReadWrite_Start_m4D0306FDAAB0B058DFCE4E450A0FB831433A0604 (SampleUserPolling_ReadWrite_t61B1CD1F017C00B7F1436447ABAD455429ECD952* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3458,7 +3480,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_ReadWrite_Start_m4D030
 		return;
 	}
 }
-// Method Definition Index: 126631
+// Method Definition Index: 126471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_ReadWrite_Update_m7F01C265F3B0F65A67673EF367CCE72B391D5FA8 (SampleUserPolling_ReadWrite_t61B1CD1F017C00B7F1436447ABAD455429ECD952* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3580,7 +3602,7 @@ IL_007c:
 		return;
 	}
 }
-// Method Definition Index: 126632
+// Method Definition Index: 126472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_ReadWrite__ctor_m67FDD7738793368B0667A4FDEC6A69B970C1E69D (SampleUserPolling_ReadWrite_t61B1CD1F017C00B7F1436447ABAD455429ECD952* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3596,7 +3618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleUserPolling_ReadWrite__ctor_m67FDD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126633
+// Method Definition Index: 126473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_OnEnable_m87E8BADB2CBB4565F549ED89CAE94F6DAC4E444F (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3637,7 +3659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_OnEnable_m87E8BADB2CBB4
 		return;
 	}
 }
-// Method Definition Index: 126634
+// Method Definition Index: 126474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_OnDisable_m21EE610982C80DFC9C51877C8633DAE600F31E11 (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3699,7 +3721,7 @@ IL_0047:
 		return;
 	}
 }
-// Method Definition Index: 126635
+// Method Definition Index: 126475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_Update_mEBD45C752D44248AEE8D12B55E2373ED67186824 (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3798,7 +3820,7 @@ IL_0062:
 		return;
 	}
 }
-// Method Definition Index: 126636
+// Method Definition Index: 126476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SerialController_ReadSerialMessage_mF4BE944A60891AE6B205B0A2352162349C1829FE (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3810,7 +3832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SerialController_ReadSerialMessage_
 		return ((String_t*)CastclassSealed((RuntimeObject*)L_1, il2cpp_defaults.string_class));
 	}
 }
-// Method Definition Index: 126637
+// Method Definition Index: 126477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_SendSerialMessage_m902DDC97BF4528E059641CC61EEA322C98BB4795 (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -3823,7 +3845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_SendSerialMessage_m902D
 		return;
 	}
 }
-// Method Definition Index: 126638
+// Method Definition Index: 126478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_SetTearDownFunction_m7B75AC7EA2A8A2E76A03D824BB5E186EC3339DFA (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* ___0_userFunction, const RuntimeMethod* method) 
 {
 	{
@@ -3835,7 +3857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController_SetTearDownFunction_m7B
 		return;
 	}
 }
-// Method Definition Index: 126639
+// Method Definition Index: 126479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialController__ctor_m010DC19B59E244CD6A21616450452DB711C6CB17 (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3894,7 +3916,7 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_TearDownFunction_tA8E266349220E0A92
 	il2cppPInvokeFunc();
 
 }
-// Method Definition Index: 126640
+// Method Definition Index: 126480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction__ctor_m3BA275DE2AF903E31A96DC3152923C7D30FE04AA (TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -3923,19 +3945,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction__ctor_m3BA275DE2AF903E3
 	}
 	__this->___extra_arg = (intptr_t)&TearDownFunction_Invoke_mB25A6A5BA46D717E36C0809D20AA43D937EA23F7_Multicast;
 }
-// Method Definition Index: 126641
+// Method Definition Index: 126481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction_Invoke_mB25A6A5BA46D717E36C0809D20AA43D937EA23F7 (TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* __this, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 126642
+// Method Definition Index: 126482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TearDownFunction_BeginInvoke_mA2953A485521A6403F8F95FC56AEC26EBC244D88 (TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* __this, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___0_callback, RuntimeObject* ___1_object, const RuntimeMethod* method) 
 {
 	void *__d_args[1] = {0};
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___0_callback, (RuntimeObject*)___1_object);
 }
-// Method Definition Index: 126643
+// Method Definition Index: 126483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction_EndInvoke_mC2C9490E45A957C17AF745ABD6A0596EBA3757AF (TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
@@ -3948,7 +3970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction_EndInvoke_mC2C9490E45A9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126644
+// Method Definition Index: 126484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_OnEnable_mD8B1232C2CDA189874DF68301F2485F533674F1C (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3991,7 +4013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_OnEnable
 		return;
 	}
 }
-// Method Definition Index: 126645
+// Method Definition Index: 126485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_OnDisable_m3DD35F5DE32C5427648E90288C7F9202CBF7DA65 (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4053,7 +4075,7 @@ IL_0047:
 		return;
 	}
 }
-// Method Definition Index: 126646
+// Method Definition Index: 126486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_Update_m03F6E851A0162B62415E79D5586A8DD050B7BC95 (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4109,7 +4131,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126647
+// Method Definition Index: 126487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* SerialControllerCustomDelimiter_ReadSerialMessage_mFBEB249B823DBAAB4C36C2BFCFA6A553AC50A32B (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4127,7 +4149,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 126648
+// Method Definition Index: 126488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_SendSerialMessage_mB0F65F575A7F0CCFD88DB1B5F081A300FF46AA10 (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -4140,7 +4162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_SendSeri
 		return;
 	}
 }
-// Method Definition Index: 126649
+// Method Definition Index: 126489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_SetTearDownFunction_m814515D3DD8A3114DFBC11855F31E04F2538FCAE (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* ___0_userFunction, const RuntimeMethod* method) 
 {
 	{
@@ -4152,7 +4174,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter_SetTearD
 		return;
 	}
 }
-// Method Definition Index: 126650
+// Method Definition Index: 126490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialControllerCustomDelimiter__ctor_mDBD0226620C3ED007DD5AD677B39C44A476D6B29 (SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4213,7 +4235,7 @@ IL2CPP_EXTERN_C  void DelegatePInvokeWrapper_TearDownFunction_t47904F87F51E4B9EB
 	il2cppPInvokeFunc();
 
 }
-// Method Definition Index: 126651
+// Method Definition Index: 126491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction__ctor_mE5B63C6C51D8267637C5C2D7594F0A944517D998 (TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -4242,19 +4264,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction__ctor_mE5B63C6C51D82676
 	}
 	__this->___extra_arg = (intptr_t)&TearDownFunction_Invoke_mF30499AB34127C286EA86D8D404EC420B115FE0B_Multicast;
 }
-// Method Definition Index: 126652
+// Method Definition Index: 126492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction_Invoke_mF30499AB34127C286EA86D8D404EC420B115FE0B (TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* __this, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 126653
+// Method Definition Index: 126493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TearDownFunction_BeginInvoke_m176930F818E5A95534CE7DC1085425FD30FCEBBE (TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* __this, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___0_callback, RuntimeObject* ___1_object, const RuntimeMethod* method) 
 {
 	void *__d_args[1] = {0};
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___0_callback, (RuntimeObject*)___1_object);
 }
-// Method Definition Index: 126654
+// Method Definition Index: 126494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction_EndInvoke_m177F7DB42002632BA25E128A6A5B789BA5804971 (TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
@@ -4267,7 +4289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearDownFunction_EndInvoke_m177F7DB42002
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126655
+// Method Definition Index: 126495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread__ctor_m394B0E2B2C44DA7131B6D1A073B33EE9CCAF72CF (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, String_t* ___0_portName, int32_t ___1_baudRate, int32_t ___2_delayBeforeReconnecting, int32_t ___3_maxUnreadMessages, bool ___4_enqueueStatusMessages, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4317,7 +4339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread__ctor_m394B0E2B2C44
 		return;
 	}
 }
-// Method Definition Index: 126656
+// Method Definition Index: 126496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_RequestStop_m16BDEF0A053DCEB7CB1474F362D9DB8AD789CA09 (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* V_0 = NULL;
@@ -4372,7 +4394,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 126657
+// Method Definition Index: 126497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AbstractSerialThread_ReadMessage_m0CC6A2040AAD1D3C1C73124648237224E18486AD (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4401,7 +4423,7 @@ IL_000f:
 		return L_3;
 	}
 }
-// Method Definition Index: 126658
+// Method Definition Index: 126498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_SendMessage_mAD05D23D94B2E91ED7AF2F883BA7D78F6C142D07 (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, RuntimeObject* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -4414,7 +4436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_SendMessage_mAD05D2
 		return;
 	}
 }
-// Method Definition Index: 126659
+// Method Definition Index: 126499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_RunForever_mA06BC10302B37F9C9B41982861A411A2A0DEE809 (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -4597,7 +4619,7 @@ IL_00c0:
 		return;
 	}
 }
-// Method Definition Index: 126660
+// Method Definition Index: 126500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_AttemptConnection_m187A7895D813A4F5F29ECC71EEF6C6A6459C4E83 (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4647,7 +4669,7 @@ IL_0054:
 		return;
 	}
 }
-// Method Definition Index: 126661
+// Method Definition Index: 126501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_CloseDevice_mB931E87B08E5E8F5102E60946B76DE73C2C7902A (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
@@ -4704,7 +4726,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126662
+// Method Definition Index: 126502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AbstractSerialThread_IsStopRequested_m9988F63029DB98097F8B84A65327135CEDDDFB4C (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* V_0 = NULL;
@@ -4761,7 +4783,7 @@ IL_001f:
 		return L_4;
 	}
 }
-// Method Definition Index: 126663
+// Method Definition Index: 126503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AbstractSerialThread_RunOnce_mBE9A5ACE3F1A75B574EE42307EE21DE88030B542 (AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4909,7 +4931,7 @@ IL_0075:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126666
+// Method Definition Index: 126506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThread__ctor_m6D54A8A18B39B7342EBE75E21AE33A984D56F90D (SerialThread_tC16BDEF059CF437D23E6D549FDCCE343ABFB6485* __this, String_t* ___0_portName, int32_t ___1_baudRate, int32_t ___2_delayBeforeReconnecting, int32_t ___3_maxUnreadMessages, const RuntimeMethod* method) 
 {
 	{
@@ -4931,7 +4953,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThread__ctor_m6D54A8A18B39B7342EBE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126667
+// Method Definition Index: 126507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadBinaryDelimited__ctor_mFF243DC7CA574D9B1F78FC393AD0F41CFECF9B97 (SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE* __this, String_t* ___0_portName, int32_t ___1_baudRate, int32_t ___2_delayBeforeReconnecting, int32_t ___3_maxUnreadMessages, uint8_t ___4_separator, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4958,7 +4980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadBinaryDelimited__ctor_mFF243
 		return;
 	}
 }
-// Method Definition Index: 126668
+// Method Definition Index: 126508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadBinaryDelimited_SendToWire_m1C4E6407B441D5B8EC77FD384A6C65E49C017A9B (SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE* __this, RuntimeObject* ___0_message, SerialPort_t4443B0B7B94397C8CD2E0C3534510613EBA2DD82* ___1_serialPort, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4983,7 +5005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadBinaryDelimited_SendToWire_m
 		return;
 	}
 }
-// Method Definition Index: 126669
+// Method Definition Index: 126509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SerialThreadBinaryDelimited_ReadFromWire_m292840751EC9038253CC692216312D47FABC7B97 (SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE* __this, SerialPort_t4443B0B7B94397C8CD2E0C3534510613EBA2DD82* ___0_serialPort, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5057,7 +5079,7 @@ IL_0053:
 		return (RuntimeObject*)L_24;
 	}
 }
-// Method Definition Index: 126670
+// Method Definition Index: 126510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SerialThreadBinaryDelimited_IsSeparator_mE89BA9C02347508823EE838BFFCFC89A422DA990 (SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE* __this, uint8_t ___0_aByte, const RuntimeMethod* method) 
 {
 	{
@@ -5075,7 +5097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SerialThreadBinaryDelimited_IsSeparator_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126671
+// Method Definition Index: 126511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadLines__ctor_m72DB46F16688BEC87BCAFC7B44D225749B754A48 (SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10* __this, String_t* ___0_portName, int32_t ___1_baudRate, int32_t ___2_delayBeforeReconnecting, int32_t ___3_maxUnreadMessages, const RuntimeMethod* method) 
 {
 	{
@@ -5089,7 +5111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadLines__ctor_m72DB46F16688BEC
 		return;
 	}
 }
-// Method Definition Index: 126672
+// Method Definition Index: 126512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadLines_SendToWire_m31760135FAF06B64BB9CB075966A169129A5E55C (SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10* __this, RuntimeObject* ___0_message, SerialPort_t4443B0B7B94397C8CD2E0C3534510613EBA2DD82* ___1_serialPort, const RuntimeMethod* method) 
 {
 	{
@@ -5102,7 +5124,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerialThreadLines_SendToWire_m31760135FA
 		return;
 	}
 }
-// Method Definition Index: 126673
+// Method Definition Index: 126513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SerialThreadLines_ReadFromWire_mCAA7CFD9C505FFC3A29A6ED1E2DC460BEDD6A132 (SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10* __this, SerialPort_t4443B0B7B94397C8CD2E0C3534510613EBA2DD82* ___0_serialPort, const RuntimeMethod* method) 
 {
 	{
@@ -5122,7 +5144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* SerialThreadLines_ReadFromWire
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126674
+// Method Definition Index: 126514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ConnectionManager_get_IsConnected_m357AA54CA353A4E3609F2E0965AF9074C906141F (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5131,7 +5153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ConnectionManager_get_IsConnected_m357AA
 		return L_0;
 	}
 }
-// Method Definition Index: 126675
+// Method Definition Index: 126515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_Start_m898E15A514850DC21941BA2008B0A10D2D2DAE97 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5171,7 +5193,7 @@ IL_002d:
 		return;
 	}
 }
-// Method Definition Index: 126676
+// Method Definition Index: 126516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_StartNetworkAfterCalibration_m1F75A48E653B3C63EE97557DB19A1D31DC3DF1DD (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5207,7 +5229,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 126677
+// Method Definition Index: 126517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_StartConnection_m7A121CD0F31EAFBA0B61C7BD3AB50DAB7A3BA2BB (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5240,7 +5262,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_StartConnection_m7A121
 		return;
 	}
 }
-// Method Definition Index: 126678
+// Method Definition Index: 126518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnConnectedToServer_m9A87F46D338501CBF75CFB213D76AF28FC235B60 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5258,7 +5280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnConnectedToServer_m9
 		return;
 	}
 }
-// Method Definition Index: 126679
+// Method Definition Index: 126519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnDisconnectedFromServer_mFADFB3432E31D5903AD16290EBB5AACD0875F86F (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, uint8_t ___1_reason, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5287,7 +5309,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnDisconnectedFromServ
 		return;
 	}
 }
-// Method Definition Index: 126680
+// Method Definition Index: 126520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnConnectFailed_m4483354EF16ABAE1CA01528FCA67029AC78D4C14 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, NetAddress_t2F585AC7C9A03E60B16A9E6E8E88A330A8283678 ___1_remoteAddress, uint8_t ___2_reason, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5311,7 +5333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnConnectFailed_m44833
 		return;
 	}
 }
-// Method Definition Index: 126681
+// Method Definition Index: 126521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnPlayerJoined_m8CCDD6ED52FD234261CDCA3B6CB10ED57F1D6290 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___1_player, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5335,7 +5357,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnPlayerJoined_m8CCDD6
 		return;
 	}
 }
-// Method Definition Index: 126682
+// Method Definition Index: 126522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnPlayerLeft_m021D0CC5FCAA1446B13932DDF53F90936F5E024F (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___1_player, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5359,7 +5381,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnPlayerLeft_m021D0CC5
 		return;
 	}
 }
-// Method Definition Index: 126683
+// Method Definition Index: 126523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnSessionListUpdated_m41DB283F25305A94CD3750AB7376E361BEDDB526 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, List_1_t1401F7FA1DF1659F914B5A8D1A6B07E195A110AA* ___1_sessionList, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5386,7 +5408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnSessionListUpdated_m
 		return;
 	}
 }
-// Method Definition Index: 126684
+// Method Definition Index: 126524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnInput_mE940563C95F42375D4B0F78F93D1B75F98CD0FB4 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, NetworkInput_t8FB09045785B1BAE178F157ACE2B24EEC7E31231 ___1_input, const RuntimeMethod* method) 
 {
 	{
@@ -5394,7 +5416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnInput_mE940563C95F42
 		return;
 	}
 }
-// Method Definition Index: 126685
+// Method Definition Index: 126525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnInputMissing_mA0DA4671CE810540CEFC4BFBC984DEF9A66226E8 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___1_player, NetworkInput_t8FB09045785B1BAE178F157ACE2B24EEC7E31231 ___2_input, const RuntimeMethod* method) 
 {
 	{
@@ -5402,7 +5424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnInputMissing_mA0DA46
 		return;
 	}
 }
-// Method Definition Index: 126686
+// Method Definition Index: 126526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnShutdown_mF8C737845FDAAA96B86DC506DE797D14CCE01D2F (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, int32_t ___1_shutdownReason, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5428,7 +5450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnShutdown_mF8C737845F
 		return;
 	}
 }
-// Method Definition Index: 126687
+// Method Definition Index: 126527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnConnectRequest_m1B5DA2D2C0D718AEABC779869E10ECEFED050890 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, ConnectRequest_t0B36E883FB21681399384CF1BA965DC577148B66* ___1_request, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___2_token, const RuntimeMethod* method) 
 {
 	{
@@ -5436,7 +5458,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnConnectRequest_m1B5D
 		return;
 	}
 }
-// Method Definition Index: 126688
+// Method Definition Index: 126528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnUserSimulationMessage_mABB4BF88AD1F7F8D40C5742F4172CA954F370AEF (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, SimulationMessagePtr_tADE4FF081CDDA852A76EA6701476D3167449C8FB ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -5444,7 +5466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnUserSimulationMessag
 		return;
 	}
 }
-// Method Definition Index: 126689
+// Method Definition Index: 126529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnCustomAuthenticationResponse_mB262433AE7C3C286EC8E18EE93AFBBED66DB456E (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___1_data, const RuntimeMethod* method) 
 {
 	{
@@ -5452,7 +5474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnCustomAuthentication
 		return;
 	}
 }
-// Method Definition Index: 126690
+// Method Definition Index: 126530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnHostMigration_m0DC7B84BC9D75B01FFA6427CF4ACE6C4625AD289 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, HostMigrationToken_t6249F7ADB7BFF0D8D26E524E085F3912BAA2952D* ___1_hostMigrationToken, const RuntimeMethod* method) 
 {
 	{
@@ -5460,7 +5482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnHostMigration_m0DC7B
 		return;
 	}
 }
-// Method Definition Index: 126691
+// Method Definition Index: 126531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnReliableDataReceived_mB6DE3B35F8492E3DD1735F9F02A068F6D82E8162 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___1_player, ReliableKey_t97653507AEAB3FE5C63D040BC353B9EEC7551256 ___2_key, ArraySegment_1_t3DC888623B720A071D69279F1FCB95A109195093 ___3_data, const RuntimeMethod* method) 
 {
 	{
@@ -5468,7 +5490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnReliableDataReceived
 		return;
 	}
 }
-// Method Definition Index: 126692
+// Method Definition Index: 126532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnReliableDataProgress_m8D8D92F5E34E57535F248ED26009332B9B5F49A2 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___1_player, ReliableKey_t97653507AEAB3FE5C63D040BC353B9EEC7551256 ___2_key, float ___3_progress, const RuntimeMethod* method) 
 {
 	{
@@ -5476,7 +5498,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnReliableDataProgress
 		return;
 	}
 }
-// Method Definition Index: 126693
+// Method Definition Index: 126533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnSceneLoadDone_m0253EAC19EC94409CC4461B4B7BAACA17D29FCCA (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, const RuntimeMethod* method) 
 {
 	{
@@ -5484,7 +5506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnSceneLoadDone_m0253E
 		return;
 	}
 }
-// Method Definition Index: 126694
+// Method Definition Index: 126534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnSceneLoadStart_m8A84A34749BC557B66E74E5305116A0AD01A0146 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, const RuntimeMethod* method) 
 {
 	{
@@ -5492,7 +5514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnSceneLoadStart_m8A84
 		return;
 	}
 }
-// Method Definition Index: 126695
+// Method Definition Index: 126535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnObjectExitAOI_m0FB5A3BFEC8696AFDCA3D41486DE34B76238C769 (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* ___1_obj, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___2_player, const RuntimeMethod* method) 
 {
 	{
@@ -5500,7 +5522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnObjectExitAOI_m0FB5A
 		return;
 	}
 }
-// Method Definition Index: 126696
+// Method Definition Index: 126536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnObjectEnterAOI_mE45D9C370D8BFB198309ADF29D5A2C656942542C (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___0_runner, NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* ___1_obj, PlayerRef_tFAC74D9C43A58F5E8E2959C36FFCB98B7E834EDC ___2_player, const RuntimeMethod* method) 
 {
 	{
@@ -5508,7 +5530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager_OnObjectEnterAOI_mE45D
 		return;
 	}
 }
-// Method Definition Index: 126697
+// Method Definition Index: 126537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager__ctor_mEF06619535EA80CC53733FDBAFCD54A8CC73495B (ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5535,7 +5557,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConnectionManager__ctor_mEF06619535EA80C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126698
+// Method Definition Index: 126538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartConnectionU3Ed__10_MoveNext_mEF4E1A512E8E793174F9E8D45E09F4D4254F2F40 (U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5891,7 +5913,7 @@ IL2CPP_EXTERN_C  void U3CStartConnectionU3Ed__10_MoveNext_mEF4E1A512E8E793174F9E
 	_thisAdjusted = reinterpret_cast<U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410*>(__this + _offset);
 	U3CStartConnectionU3Ed__10_MoveNext_mEF4E1A512E8E793174F9E8D45E09F4D4254F2F40(_thisAdjusted, method);
 }
-// Method Definition Index: 126699
+// Method Definition Index: 126539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartConnectionU3Ed__10_SetStateMachine_m539124B88E626F0D0DDBA59247621C6F193CA49B (U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410* __this, RuntimeObject* ___0_stateMachine, const RuntimeMethod* method) 
 {
 	{
@@ -5916,7 +5938,7 @@ IL2CPP_EXTERN_C  void U3CStartConnectionU3Ed__10_SetStateMachine_m539124B88E626F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126700
+// Method Definition Index: 126540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ManualCalibrationManager_get_IsCalibrated_mA104398CD6B578351E5D7F0154E8280750F542CE (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5925,7 +5947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ManualCalibrationManager_get_IsCalibrate
 		return L_0;
 	}
 }
-// Method Definition Index: 126701
+// Method Definition Index: 126541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager_Start_m17921ECCF411DEF8E8698BF18BF3B8C70556B28C (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6019,7 +6041,7 @@ IL_004b:
 		return;
 	}
 }
-// Method Definition Index: 126702
+// Method Definition Index: 126542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager_SetReady_m2B3B04D622635ED2FEFA6B095FE04B28FF129E27 (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6039,7 +6061,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager_SetReady_m2B3B0
 		return;
 	}
 }
-// Method Definition Index: 126703
+// Method Definition Index: 126543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager_Update_m63BE692E5FF53E46F0E54B3C7AECEFAE07C2AEF3 (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6125,7 +6147,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 126704
+// Method Definition Index: 126544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager_PerformCalibration_m475D58F7D84152044D11C0E75278279ED2ED5FD7 (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6275,7 +6297,7 @@ IL_00d4:
 		return;
 	}
 }
-// Method Definition Index: 126705
+// Method Definition Index: 126545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager_ResetCalibration_m5D58A72A6D60DBA9CC23179EC0162CFD76FABB65 (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6318,7 +6340,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 126706
+// Method Definition Index: 126546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager__ctor_mBEF499C6BFBFF58974680D289CAFFF240B20A15A (ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6338,11 +6360,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ManualCalibrationManager__ctor_mBEF499C6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126707
+// Method Definition Index: 126547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafetyGameManager_get_GreenZoneX_mC96562C62623C4C9EA411B942E744416CEB46B1E (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:25>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:28>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -6362,11 +6384,11 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 126708
+// Method Definition Index: 126548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:25>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:28>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -6387,11 +6409,11 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126709
+// Method Definition Index: 126549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:26>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:29>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -6411,11 +6433,11 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 126710
+// Method Definition Index: 126550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:26>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:29>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -6436,7 +6458,56 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126711
+// Method Definition Index: 126551
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:30>
+		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
+		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_1 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE61DD1615047D33FCF4C01D211E47AEF6FFD2A9E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C_RuntimeMethod_var)));
+	}
+
+IL_001a:
+	{
+		int32_t* L_2 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_3 = (*(NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F*)((int32_t*)il2cpp_codegen_add((intptr_t)L_2, 8)));
+		return L_3;
+	}
+}
+// Method Definition Index: 126552
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_value, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:30>
+		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
+		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_1 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE61DD1615047D33FCF4C01D211E47AEF6FFD2A9E)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD_RuntimeMethod_var)));
+	}
+
+IL_001a:
+	{
+		int32_t* L_2 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_3 = ___0_value;
+		*(NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F*)((int32_t*)il2cpp_codegen_add((intptr_t)L_2, 8)) = L_3;
+		return;
+	}
+}
+// Method Definition Index: 126553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Spawned_m38D4A713150BC13FBF66CA3C82AA2F8AC2211B03 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6446,7 +6517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Spawned_m38D4A713150BC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:38>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:45>
 		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_0;
 		L_0 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		NullCheck(L_0);
@@ -6454,22 +6525,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Spawned_m38D4A713150BC
 		L_1 = NetworkRunner_get_IsServer_mADB2CCEA9E7F7EAFE23CE9BBE640947CEEC0ACDE(L_0, NULL);
 		if (!L_1)
 		{
-			goto IL_007c;
+			goto IL_0094;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:40>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:47>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___greenZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_2, NULL);
 		if (!L_3)
 		{
-			goto IL_002b;
+			goto IL_002e;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:40>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:47>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___greenZone;
 		NullCheck(L_4);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
@@ -6478,39 +6549,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Spawned_m38D4A713150BC
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)1, NULL);
 	}
 
-IL_002b:
+IL_002e:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:41>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:48>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___confirmButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
 		L_7 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_6, NULL);
 		if (!L_7)
 		{
-			goto IL_0044;
+			goto IL_0047;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:41>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:48>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___confirmButton;
 		NullCheck(L_8);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)1, NULL);
 	}
 
-IL_0044:
+IL_0047:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:42>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:49>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9 = __this->___needle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
 		L_10 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_9, NULL);
 		if (!L_10)
 		{
-			goto IL_0062;
+			goto IL_0065;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:42>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:49>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = __this->___needle;
 		NullCheck(L_11);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
@@ -6519,120 +6590,129 @@ IL_0044:
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
 	}
 
-IL_0062:
+IL_0065:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:43>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:50>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___clientButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
 		L_14 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_13, NULL);
 		if (!L_14)
 		{
-			goto IL_00ea;
+			goto IL_007e;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:43>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:50>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___clientButton;
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, (bool)0, NULL);
+	}
+
+IL_007e:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:51>
+		float L_16;
+		L_16 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((3.0f), (8.0f), NULL);
+		__this->____nextPauseTime = L_16;
 		return;
 	}
 
-IL_007c:
+IL_0094:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:47>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = __this->___needle;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:55>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17 = __this->___needle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_17;
-		L_17 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_16, NULL);
-		if (!L_17)
+		bool L_18;
+		L_18 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_17, NULL);
+		if (!L_18)
 		{
-			goto IL_009a;
+			goto IL_00b2;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:47>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_18 = __this->___needle;
-		NullCheck(L_18);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
-		L_19 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_18, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:55>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19 = __this->___needle;
 		NullCheck(L_19);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_19, (bool)1, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20;
+		L_20 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_19, NULL);
+		NullCheck(L_20);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_20, (bool)1, NULL);
 	}
 
-IL_009a:
+IL_00b2:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:48>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = __this->___clientButton;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:56>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = __this->___clientButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_21;
-		L_21 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_20, NULL);
-		if (!L_21)
+		bool L_22;
+		L_22 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_21, NULL);
+		if (!L_22)
 		{
-			goto IL_00b3;
+			goto IL_00cb;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:48>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___clientButton;
-		NullCheck(L_22);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_22, (bool)1, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:56>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = __this->___clientButton;
+		NullCheck(L_23);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_23, (bool)1, NULL);
 	}
 
-IL_00b3:
+IL_00cb:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:49>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23 = __this->___greenZone;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:57>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24 = __this->___greenZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_24;
-		L_24 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_23, NULL);
-		if (!L_24)
+		bool L_25;
+		L_25 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_24, NULL);
+		if (!L_25)
 		{
-			goto IL_00d1;
+			goto IL_00e9;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:49>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25 = __this->___greenZone;
-		NullCheck(L_25);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26;
-		L_26 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_25, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:57>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = __this->___greenZone;
 		NullCheck(L_26);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_26, (bool)0, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27;
+		L_27 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_26, NULL);
+		NullCheck(L_27);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_27, (bool)0, NULL);
 	}
 
-IL_00d1:
+IL_00e9:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:50>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = __this->___confirmButton;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:58>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = __this->___confirmButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_28;
-		L_28 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_27, NULL);
-		if (!L_28)
+		bool L_29;
+		L_29 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_28, NULL);
+		if (!L_29)
 		{
-			goto IL_00ea;
+			goto IL_0102;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:50>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = __this->___confirmButton;
-		NullCheck(L_29);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_29, (bool)0, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:58>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = __this->___confirmButton;
+		NullCheck(L_30);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_30, (bool)0, NULL);
 	}
 
-IL_00ea:
+IL_0102:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:52>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:60>
 		return;
 	}
 }
-// Method Definition Index: 126712
+// Method Definition Index: 126554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_FixedUpdateNetwork_mE6BA78741C104C00A3FD11E98529604366629ED1 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
+	float V_1 = 0.0f;
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:56>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:64>
 		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_0;
 		L_0 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		NullCheck(L_0);
@@ -6644,43 +6724,116 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_FixedUpdateNetwork_mE6
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:56>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:64>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:58>
-		float L_2 = __this->___maxX;
-		float L_3 = __this->___minX;
-		float L_4 = __this->___zoneWidth;
-		V_0 = ((float)il2cpp_codegen_subtract(((float)(((float)il2cpp_codegen_subtract(L_2, L_3))/(2.0f))), ((float)(L_4/(2.0f)))));
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:59>
-		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_5;
-		L_5 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
-		NullCheck(L_5);
-		float L_6;
-		L_6 = NetworkRunner_get_SimulationTime_mB3E8391A54C9588CE81A6CD7FD5B53B60DDBABC9(L_5, NULL);
-		float L_7 = __this->___greenZoneSpeed;
-		float L_8;
-		L_8 = sinf(((float)il2cpp_codegen_multiply(((float)L_6), L_7)));
-		float L_9 = V_0;
-		SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733(__this, ((float)il2cpp_codegen_multiply(L_8, L_9)), NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:60>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:66>
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_2;
+		L_2 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		NullCheck(L_2);
+		float L_3;
+		L_3 = NetworkRunner_get_DeltaTime_m8831827404C94255CD93C9EAD4EECE10C11A5A23(L_2, NULL);
+		V_0 = L_3;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:68>
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_4;
+		L_4 = SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C(__this, NULL);
+		bool L_5;
+		L_5 = NetworkBool_op_Implicit_mE6D90417352F4F0228B37D536502B777ABECACFC(L_4, NULL);
+		if (!L_5)
+		{
+			goto IL_0064;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:71>
+		float L_6 = __this->____pauseTimer;
+		float L_7 = V_0;
+		__this->____pauseTimer = ((float)il2cpp_codegen_subtract(L_6, L_7));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:72>
+		float L_8 = __this->____pauseTimer;
+		if ((!(((float)L_8) <= ((float)(0.0f)))))
+		{
+			goto IL_0063;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:74>
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_9;
+		L_9 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)0, NULL);
+		SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD(__this, L_9, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:75>
+		float L_10;
+		L_10 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((3.0f), (8.0f), NULL);
+		__this->____nextPauseTime = L_10;
+	}
+
+IL_0063:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:77>
+		return;
+	}
+
+IL_0064:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:81>
+		float L_11 = __this->____nextPauseTime;
+		float L_12 = V_0;
+		__this->____nextPauseTime = ((float)il2cpp_codegen_subtract(L_11, L_12));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:82>
+		float L_13 = __this->____nextPauseTime;
+		if ((!(((float)L_13) <= ((float)(0.0f)))))
+		{
+			goto IL_0098;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:84>
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_14;
+		L_14 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)1, NULL);
+		SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD(__this, L_14, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:85>
+		float L_15 = __this->___pauseDuration;
+		__this->____pauseTimer = L_15;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:86>
+		return;
+	}
+
+IL_0098:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:89>
+		float L_16 = __this->___maxX;
+		float L_17 = __this->___minX;
+		float L_18 = __this->___zoneWidth;
+		V_1 = ((float)il2cpp_codegen_subtract(((float)(((float)il2cpp_codegen_subtract(L_16, L_17))/(2.0f))), ((float)(L_18/(2.0f)))));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:90>
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_19;
+		L_19 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		NullCheck(L_19);
+		float L_20;
+		L_20 = NetworkRunner_get_SimulationTime_mB3E8391A54C9588CE81A6CD7FD5B53B60DDBABC9(L_19, NULL);
+		float L_21 = __this->___greenZoneSpeed;
+		float L_22;
+		L_22 = sinf(((float)il2cpp_codegen_multiply(((float)L_20), L_21)));
+		float L_23 = V_1;
+		SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733(__this, ((float)il2cpp_codegen_multiply(L_22, L_23)), NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:91>
 		return;
 	}
 }
-// Method Definition Index: 126713
+// Method Definition Index: 126555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_OnClientButtonPressed_m15327EA421A86B11C98F9E6AC50BF7143DE1D1B8 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:65>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:96>
 		SafetyGameManager_Rpc_SetClientConfirmed_mC8D9F44326131106511A292F4023E1DCE63AFCFB(__this, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:66>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:97>
 		return;
 	}
 }
-// Method Definition Index: 126714
+// Method Definition Index: 126556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Rpc_SetClientConfirmed_mC8D9F44326131106511A292F4023E1DCE63AFCFB (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6710,14 +6863,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Rpc_SetClientConfirmed
 
 IL_0012:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:71>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:102>
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_1;
 		L_1 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)1, NULL);
 		SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1(__this, L_1, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:72>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:103>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralDADBFF272C1D55814D787F6CB3FC4BBA7C272BA5, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:73>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:104>
 		return;
 	}
 
@@ -6864,7 +7017,7 @@ IL_0138:
 		return;
 	}
 }
-// Method Definition Index: 126715
+// Method Definition Index: 126557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_OnConfirmButtonPressed_m773C93077C9A01950BBA1B2E4197B93CDED4D1BB (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6881,7 +7034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_OnConfirmButtonPressed
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:92>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:123>
 		TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* L_0 = __this->___arduinoController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6892,23 +7045,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_OnConfirmButtonPressed
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:92>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:123>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:94>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:125>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___needle;
 		NullCheck(L_2);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_2, NULL);
 		float L_4 = L_3.___x;
 		V_0 = L_4;
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:95>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:126>
 		float L_5 = __this->___zoneWidth;
 		V_1 = ((float)(L_5/(2.0f)));
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:97>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:128>
 		float L_6 = V_0;
 		float L_7;
 		L_7 = SafetyGameManager_get_GreenZoneX_mC96562C62623C4C9EA411B942E744416CEB46B1E(__this, NULL);
@@ -6929,10 +7082,10 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:99>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:130>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE9F5F3217DF70A2DAA2EA559F2870B6E1F432807, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:100>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:131>
 		TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* L_12 = __this->___arduinoController;
 		NullCheck(L_12);
 		TwinController_Rpc_SendLedCommand_m6EBF17AB32F34043A8B5F04F75D2462933E71BF1(L_12, _stringLiteral3DCC6243286938BE75C3FA773B9BA71160A2E869, NULL);
@@ -6941,10 +7094,10 @@ IL_000e:
 
 IL_005e:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:104>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:135>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral679F19682BD51E74FCFAD9626BD12CD561514994, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:105>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:136>
 		TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* L_13 = __this->___arduinoController;
 		NullCheck(L_13);
 		TwinController_Rpc_SendLedCommand_m6EBF17AB32F34043A8B5F04F75D2462933E71BF1(L_13, _stringLiteral2C3D4826D5236B3C9A914C5CE2E3D8CEA48AC7CE, NULL);
@@ -6952,15 +7105,15 @@ IL_005e:
 
 IL_0078:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:109>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:140>
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_14;
 		L_14 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)0, NULL);
 		SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1(__this, L_14, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:110>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:141>
 		return;
 	}
 }
-// Method Definition Index: 126716
+// Method Definition Index: 126558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Render_mEBB890A500A708C051F6E0DFA0FFEFC72FB55391 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6975,12 +7128,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Render_mEBB890A500A708
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_1 = NULL;
 	float V_2 = 0.0f;
 	float V_3 = 0.0f;
+	float V_4 = 0.0f;
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B11_0 = NULL;
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B10_0 = NULL;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* G_B12_0 = NULL;
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B12_1 = NULL;
+	float G_B26_0 = 0.0f;
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:115>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:146>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___greenZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6991,11 +7146,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Render_mEBB890A500A708
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:117>
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:118>
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:119>
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:120>
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:121>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:148>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:149>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:150>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:151>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:152>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___greenZone;
 		float L_3;
 		L_3 = SafetyGameManager_get_GreenZoneX_mC96562C62623C4C9EA411B942E744416CEB46B1E(__this, NULL);
@@ -7018,7 +7173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Render_mEBB890A500A708
 
 IL_0044:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:125>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:156>
 		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_11;
 		L_11 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7051,7 +7206,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:127>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:158>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_17 = __this->____supervisorButtonRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -7062,7 +7217,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:129>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:160>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___confirmButton;
 		NullCheck(L_19);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
@@ -7071,7 +7226,7 @@ IL_0044:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = Transform_Find_m3087032B0E1C5B96A2D2C27020BAEAE2DA08F932(L_20, _stringLiteral5CE7F3385D27BEF27522EFC59E851E1F5DFECD0A, NULL);
 		V_0 = L_21;
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:130>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:161>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_23;
@@ -7082,7 +7237,7 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:131>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:162>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24 = V_0;
 		NullCheck(L_24);
 		MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* L_25;
@@ -7093,7 +7248,7 @@ IL_0044:
 
 IL_00a9:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:134>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:165>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_26 = __this->____supervisorButtonRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -7104,7 +7259,7 @@ IL_00a9:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:135>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:166>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_28 = __this->____supervisorButtonRenderer;
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_29;
 		L_29 = SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2(__this, NULL);
@@ -7139,7 +7294,7 @@ IL_00d8:
 
 IL_00dd:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:139>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:170>
 		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_33;
 		L_33 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7172,7 +7327,7 @@ IL_00dd:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:141>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:172>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_39 = __this->____clientButtonRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_40;
@@ -7183,7 +7338,7 @@ IL_00dd:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:143>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:174>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = __this->___clientButton;
 		NullCheck(L_41);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_42;
@@ -7192,7 +7347,7 @@ IL_00dd:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_43;
 		L_43 = Transform_Find_m3087032B0E1C5B96A2D2C27020BAEAE2DA08F932(L_42, _stringLiteral5CE7F3385D27BEF27522EFC59E851E1F5DFECD0A, NULL);
 		V_1 = L_43;
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:144>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:175>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_44 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_45;
@@ -7203,7 +7358,7 @@ IL_00dd:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:145>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:176>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_46 = V_1;
 		NullCheck(L_46);
 		MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* L_47;
@@ -7214,7 +7369,7 @@ IL_00dd:
 
 IL_013f:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:146>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:177>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_48 = __this->____clientButtonRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_49;
@@ -7225,7 +7380,7 @@ IL_013f:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:147>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:178>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_50 = __this->____clientButtonRenderer;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_51 = __this->___yellowMaterial;
 		NullCheck(L_50);
@@ -7234,14 +7389,14 @@ IL_013f:
 
 IL_015e:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:152>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:183>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_52 = __this->___needle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_53;
 		L_53 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_52, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_53)
 		{
-			goto IL_01d5;
+			goto IL_01ea;
 		}
 	}
 	{
@@ -7251,54 +7406,80 @@ IL_015e:
 		L_55 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_54, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_55)
 		{
-			goto IL_01d5;
+			goto IL_01ea;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:154>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:185>
 		TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* L_56 = __this->___arduinoController;
 		NullCheck(L_56);
 		float L_57;
 		L_57 = TwinController_get_NetKnobValue_mF333AA285A5DBD89CC678AED783C6E0275ED94D8(L_56, NULL);
 		V_2 = L_57;
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:155>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:186>
 		float L_58 = V_2;
 		float L_59 = __this->___minX;
 		float L_60 = __this->___maxX;
 		float L_61;
 		L_61 = SafetyGameManager_Remap_mA1A104B702706D2EFD8779839BECAE6D03CF5979(__this, L_58, (0.0f), (1023.0f), L_59, L_60, NULL);
 		V_3 = L_61;
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:156>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_62 = __this->___needle;
-		float L_63 = V_3;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_64 = __this->___needle;
-		NullCheck(L_64);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_65;
-		L_65 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_64, NULL);
-		float L_66 = L_65.___y;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_67 = __this->___needle;
-		NullCheck(L_67);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_68;
-		L_68 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_67, NULL);
-		float L_69 = L_68.___z;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_70;
-		memset((&L_70), 0, sizeof(L_70));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_70), L_63, L_66, L_69, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:188>
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_62;
+		L_62 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		NullCheck(L_62);
-		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_62, L_70, NULL);
+		bool L_63;
+		L_63 = NetworkRunner_get_IsServer_mADB2CCEA9E7F7EAFE23CE9BBE640947CEEC0ACDE(L_62, NULL);
+		if (L_63)
+		{
+			goto IL_01b5;
+		}
+	}
+	{
+		float L_64 = V_3;
+		G_B26_0 = ((-L_64));
+		goto IL_01b6;
 	}
 
-IL_01d5:
+IL_01b5:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:158>
+		float L_65 = V_3;
+		G_B26_0 = L_65;
+	}
+
+IL_01b6:
+	{
+		V_4 = G_B26_0;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:189>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_66 = __this->___needle;
+		float L_67 = V_4;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_68 = __this->___needle;
+		NullCheck(L_68);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_69;
+		L_69 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_68, NULL);
+		float L_70 = L_69.___y;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_71 = __this->___needle;
+		NullCheck(L_71);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72;
+		L_72 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_71, NULL);
+		float L_73 = L_72.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_74;
+		memset((&L_74), 0, sizeof(L_74));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_74), L_67, L_70, L_73, NULL);
+		NullCheck(L_66);
+		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_66, L_74, NULL);
+	}
+
+IL_01ea:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:191>
 		return;
 	}
 }
-// Method Definition Index: 126717
+// Method Definition Index: 126559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafetyGameManager_Remap_mA1A104B702706D2EFD8779839BECAE6D03CF5979 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, float ___0_value, float ___1_from1, float ___2_to1, float ___3_from2, float ___4_to2, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:162>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:195>
 		float L_0 = ___0_value;
 		float L_1 = ___1_from1;
 		float L_2 = ___2_to1;
@@ -7309,23 +7490,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SafetyGameManager_Remap_mA1A104B702706D
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)(((float)il2cpp_codegen_subtract(L_0, L_1))/((float)il2cpp_codegen_subtract(L_2, L_3)))), ((float)il2cpp_codegen_subtract(L_4, L_5)))), L_6));
 	}
 }
-// Method Definition Index: 126718
+// Method Definition Index: 126560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager__ctor_m17E1A8D31742C1793044B52E877F62A7DB02283D (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	{
 		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:17>
 		__this->___greenZoneSpeed = (0.300000012f);
 		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:20>
-		__this->___zoneWidth = (0.150000006f);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:22>
-		__this->___minX = (-0.418000013f);
+		__this->___pauseDuration = (5.0f);
 		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:23>
+		__this->___zoneWidth = (0.150000006f);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:25>
+		__this->___minX = (-0.418000013f);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SafetyGameManager.cs:26>
 		__this->___maxX = (0.418000013f);
 		NetworkBehaviour__ctor_m80B5DC72F7815EEC5B6DDF46B9AF965112268053(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 126719
+// Method Definition Index: 126561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_CopyBackingFieldsToState_m224D90C1E1B3A5356166CCC2FACB34D1E45F16D3 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, bool ___0_p, const RuntimeMethod* method) 
 {
 	{
@@ -7333,10 +7516,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_CopyBackingFieldsToSta
 		SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733(__this, L_0, NULL);
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_1 = __this->____ClientConfirmed;
 		SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1(__this, L_1, NULL);
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_2 = __this->____GreenZonePaused;
+		SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD(__this, L_2, NULL);
 		return;
 	}
 }
-// Method Definition Index: 126720
+// Method Definition Index: 126562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_CopyStateToBackingFields_m8F73B8D2F4C8EDD5DB7C15B2A1816640FDD8ED71 (SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7346,10 +7531,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_CopyStateToBackingFiel
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_1;
 		L_1 = SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2(__this, NULL);
 		__this->____ClientConfirmed = L_1;
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_2;
+		L_2 = SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C(__this, NULL);
+		__this->____GreenZonePaused = L_2;
 		return;
 	}
 }
-// Method Definition Index: 126721
+// Method Definition Index: 126563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Rpc_SetClientConfirmedU40Invoker_m76F77F5FD1796380D7C7537782BA2561294C1DBC (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* ___0_behaviour, SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7381,11 +7569,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafetyGameManager_Rpc_SetClientConfirmed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126722
+// Method Definition Index: 126564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 SupervisorLaser_get_LaserOrigin_m556E9C2FEC35920BB8C5993F79C504DD55FDE098 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:16>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:20>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -7405,11 +7593,11 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 126723
+// Method Definition Index: 126565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_set_LaserOrigin_mB29C10E5B10688CD4BD7342206BC52DC3AF551D8 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:16>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:20>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -7430,11 +7618,11 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126724
+// Method Definition Index: 126566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 SupervisorLaser_get_LaserDirection_m0DE5BD210E6D94C5CE0C0D455ED24F2A6DC0F42B (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:17>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:21>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -7454,11 +7642,11 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 126725
+// Method Definition Index: 126567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_set_LaserDirection_m429E88676FF62D25FBDD72764A78AF9F9AE475DB (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:17>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:21>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -7479,11 +7667,11 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126726
+// Method Definition Index: 126568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F SupervisorLaser_get_LaserActive_m0AC508E692250B76FCA4215571D4C9E51E7A2039 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:18>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:22>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -7503,11 +7691,11 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 126727
+// Method Definition Index: 126569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:18>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:22>
 		int32_t* L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___Ptr;
 		if (!((((intptr_t)L_0) == ((intptr_t)((uintptr_t)0)))? 1 : 0))
 		{
@@ -7528,7 +7716,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126728
+// Method Definition Index: 126570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Spawned_m35301E609DD4A7A9335C0BF116ACC4B53614B6A9 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7542,13 +7730,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Spawned_m35301E609DD4A7A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:25>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:31>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* L_0;
 		L_0 = Object_FindFirstObjectByType_TisOVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9_m8F8D86388D19000F90EB1EB0BDB40AC7F51ECC71(Object_FindFirstObjectByType_TisOVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9_m8F8D86388D19000F90EB1EB0BDB40AC7F51ECC71_RuntimeMethod_var);
 		__this->____cameraRig = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____cameraRig), (void*)L_0);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:28>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:34>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_1);
@@ -7556,21 +7744,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Spawned_m35301E609DD4A7A
 		L_2 = GameObject_AddComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mF8C0D953BCBFDD5A01A09ADB67EB04F0D677A056(L_1, GameObject_AddComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mF8C0D953BCBFDD5A01A09ADB67EB04F0D677A056_RuntimeMethod_var);
 		__this->____lineRenderer = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____lineRenderer), (void*)L_2);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:29>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:35>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_3 = __this->____lineRenderer;
 		NullCheck(L_3);
 		LineRenderer_set_positionCount_m2001FB4044053895ECBE897AB833284F3300B205(L_3, 2, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:30>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:36>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_4 = __this->____lineRenderer;
 		float L_5 = __this->___laserWidth;
 		NullCheck(L_4);
 		LineRenderer_set_startWidth_m3899722E198D636DB216CB61C980214707069F4A(L_4, L_5, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:31>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:37>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_6 = __this->____lineRenderer;
 		float L_7 = __this->___laserWidth;
 		NullCheck(L_6);
 		LineRenderer_set_endWidth_mC7260401655C8BE1CBDFB832009295C89613F81D(L_6, ((float)il2cpp_codegen_multiply(L_7, (0.5f))), NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:32>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:38>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_8 = __this->____lineRenderer;
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_9;
 		L_9 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(_stringLiteral3D93A89666F831FB9324883A9347EA29365E69DF, NULL);
@@ -7578,7 +7766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Spawned_m35301E609DD4A7A
 		Material__ctor_m7FDF47105D66D19591BE505A0C42B0F90D88C9BF(L_10, L_9, NULL);
 		NullCheck(L_8);
 		Renderer_set_material_m21E88977071E0A914D62F3D9CFF0193B3117C45A(L_8, L_10, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:33>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:39>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_11 = __this->____lineRenderer;
 		NullCheck(L_11);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_12;
@@ -7586,23 +7774,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Spawned_m35301E609DD4A7A
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = __this->___laserColor;
 		NullCheck(L_12);
 		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_12, L_13, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:34>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:40>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_14 = __this->____lineRenderer;
 		NullCheck(L_14);
 		LineRenderer_set_useWorldSpace_m0204DB2541CC37DC4DC15DA15FD5A66EDC507CE8(L_14, (bool)1, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:35>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:41>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_15 = __this->____lineRenderer;
 		NullCheck(L_15);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_15, (bool)0, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:38>
-		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_16;
-		L_16 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)0, NULL);
-		SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F(__this, L_16, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:39>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:44>
+		bool L_16;
+		L_16 = NetworkBehaviour_get_HasStateAuthority_mCE935DFC2641A131EBC006A4FB3F581D6748B633_inline(__this, NULL);
+		if (!L_16)
+		{
+			goto IL_00ac;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:45>
+		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_17;
+		L_17 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)0, NULL);
+		SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F(__this, L_17, NULL);
+	}
+
+IL_00ac:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:46>
 		return;
 	}
 }
-// Method Definition Index: 126729
+// Method Definition Index: 126571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_FixedUpdateNetwork_m66ECD8675CBAC790D895122634618BB7EC7204E7 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7613,7 +7814,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_FixedUpdateNetwork_m66EC
 	}
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_0 = NULL;
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:43>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:50>
 		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_0;
 		L_0 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		NullCheck(L_0);
@@ -7625,13 +7826,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_FixedUpdateNetwork_m66EC
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:43>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:50>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:44>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:51>
 		OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* L_2 = __this->____cameraRig;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -7642,54 +7843,328 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:44>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:51>
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:46>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:53>
 		OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* L_4 = __this->____cameraRig;
 		NullCheck(L_4);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
 		L_5 = OVRCameraRig_get_rightHandAnchor_mF2D328A04338A8119F3BE6EE09FE66965258A26D_inline(L_4, NULL);
 		V_0 = L_5;
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:47>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:56>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = V_0;
 		NullCheck(L_6);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
 		L_7 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_6, NULL);
 		SupervisorLaser_set_LaserOrigin_mB29C10E5B10688CD4BD7342206BC52DC3AF551D8(__this, L_7, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:48>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:57>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = V_0;
 		NullCheck(L_8);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
 		L_9 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_8, NULL);
 		SupervisorLaser_set_LaserDirection_m429E88676FF62D25FBDD72764A78AF9F9AE475DB(__this, L_9, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:51>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:60>
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_10;
 		L_10 = SupervisorLaser_get_LaserActive_m0AC508E692250B76FCA4215571D4C9E51E7A2039(__this, NULL);
 		bool L_11;
 		L_11 = NetworkBool_op_Implicit_mE6D90417352F4F0228B37D536502B777ABECACFC(L_10, NULL);
 		if (L_11)
 		{
-			goto IL_005a;
+			goto IL_0079;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:52>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:62>
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_12;
 		L_12 = NetworkBool_op_Implicit_m7FC6912C1C135146C4625634C995C253C71817AA((bool)1, NULL);
 		SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F(__this, L_12, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:63>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = __this->___gameContent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_14;
+		L_14 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_13, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_14)
+		{
+			goto IL_0079;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:64>
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15 = __this->___gameContent;
+		NullCheck(L_15);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_15, NULL);
+		SupervisorLaser_Rpc_SendHostGcPosition_m3E2EED9348DC2A757E19FA4675227D5DA0E706E4(__this, L_16, NULL);
 	}
 
-IL_005a:
+IL_0079:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:53>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:66>
 		return;
 	}
 }
-// Method Definition Index: 126730
+// Method Definition Index: 126572
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Rpc_SendHostGcPosition_m3E2EED9348DC2A757E19FA4675227D5DA0E706E4 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_pos, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NetworkBehaviourUtils_tDE75448D488A676E05E89DBE1250E2C833173376_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBB7142D443BE13F18F92B8BBDC356B318308A4E2);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint8_t* V_0 = NULL;
+	int32_t V_1 = 0;
+	SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* V_2 = NULL;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	{
+		bool L_0 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___InvokeRpc;
+		if (!L_0)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___InvokeRpc = (bool)0;
+	}
+
+IL_0012:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:71>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___0_pos;
+		__this->____hostGcPosition = L_1;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:72>
+		__this->____hostGcReceived = (bool)1;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:73>
+		return;
+	}
+
+IL_0022:
+	{
+		il2cpp_codegen_runtime_class_init_inline(NetworkBehaviourUtils_tDE75448D488A676E05E89DBE1250E2C833173376_il2cpp_TypeInfo_var);
+		NetworkBehaviourUtils_ThrowIfBehaviourNotInitialized_m2BEDE03C4BA07DE9A61DDCD5997B3F4B198C3362(__this, NULL);
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_2;
+		L_2 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = NetworkRunner_get_Stage_m961728430F02C6FBE3EBEFCAEFC75828C907404C(L_2, NULL);
+		if ((!(((uint32_t)L_3) == ((uint32_t)4))))
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		goto IL_0152;
+	}
+
+IL_003c:
+	{
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_4;
+		L_4 = SimulationBehaviour_get_Object_m7409CB99EA711621E81D066834FF3E4A3A84E8C9_inline(__this, NULL);
+		NullCheck(L_4);
+		int32_t L_5;
+		L_5 = NetworkObject_GetLocalAuthorityMask_mC2A20DCE9DDEA78D6E107FF8B24F390F5BDC9C7D(L_4, NULL);
+		V_3 = L_5;
+		int32_t L_6 = V_3;
+		if (((int32_t)(L_6&1)))
+		{
+			goto IL_006a;
+		}
+	}
+	{
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_7;
+		L_7 = SimulationBehaviour_get_Object_m7409CB99EA711621E81D066834FF3E4A3A84E8C9_inline(__this, NULL);
+		il2cpp_codegen_runtime_class_init_inline(NetworkBehaviourUtils_tDE75448D488A676E05E89DBE1250E2C833173376_il2cpp_TypeInfo_var);
+		NetworkBehaviourUtils_NotifyLocalSimulationNotAllowedToSendRpc_m11342B47A478C283338839367A59D871BB05DD15(_stringLiteralBB7142D443BE13F18F92B8BBDC356B318308A4E2, L_7, 1, NULL);
+		goto IL_0152;
+	}
+
+IL_006a:
+	{
+		V_4 = 8;
+		int32_t L_8 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_8, ((int32_t)12)));
+		int32_t L_9 = V_4;
+		bool L_10;
+		L_10 = SimulationMessage_CanAllocateUserPayload_m6916E13C807DD821E5C85FE6FA77A9E67817A43C_inline(L_9, NULL);
+		if (L_10)
+		{
+			goto IL_009c;
+		}
+	}
+	{
+		int32_t L_11 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(NetworkBehaviourUtils_tDE75448D488A676E05E89DBE1250E2C833173376_il2cpp_TypeInfo_var);
+		NetworkBehaviourUtils_NotifyRpcPayloadSizeExceeded_m0493393E6955A2658084D442596AF73E1A5336A4(_stringLiteralBB7142D443BE13F18F92B8BBDC356B318308A4E2, L_11, NULL);
+		goto IL_0152;
+	}
+
+IL_009c:
+	{
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_12;
+		L_12 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		NullCheck(L_12);
+		bool L_13;
+		L_13 = NetworkRunner_HasAnyActiveConnections_m12F8302F6C6AB6B21A2AE65CA39F9437E24D2BA5_inline(L_12, NULL);
+		if (L_13)
+		{
+			goto IL_00b2;
+		}
+	}
+	{
+		goto IL_013d;
+	}
+
+IL_00b2:
+	{
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_14;
+		L_14 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		NullCheck(L_14);
+		Simulation_t1D52B02F9D931E87FAEB15A3EE8B13ED014DB584* L_15;
+		L_15 = NetworkRunner_get_Simulation_mD1C020356F2EB686E409D3DA244EC4F24DE4ED68_inline(L_14, NULL);
+		int32_t L_16 = V_4;
+		SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* L_17;
+		L_17 = SimulationMessage_Allocate_m0DE8713201A0AFDEE63D927C4A83C54583A93F1E(L_15, L_16, NULL);
+		V_2 = L_17;
+		SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* L_18 = V_2;
+		V_0 = (uint8_t*)((SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C*)il2cpp_codegen_add((intptr_t)L_18, ((int32_t)28)));
+		uint8_t* L_19 = V_0;
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_20;
+		L_20 = SimulationBehaviour_get_Object_m7409CB99EA711621E81D066834FF3E4A3A84E8C9_inline(__this, NULL);
+		NullCheck(L_20);
+		NetworkId_t55BD78F35465C7B51581907AC1DB01F8568237F2 L_21;
+		L_21 = NetworkObject_get_Id_m3A2FB6E53BA3ACA5D9D531213A7CD61A25D776D8_inline(L_20, NULL);
+		int32_t L_22 = ((NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3*)__this)->___ObjectIndex;
+		RpcHeader_tC731C0C3DE7BE8F75F84C19A181318A5354E3551 L_23;
+		L_23 = RpcHeader_Create_mAB72A14FC99AC554E48D78475F0986442F4BD370(L_21, L_22, 1, NULL);
+		*(RpcHeader_tC731C0C3DE7BE8F75F84C19A181318A5354E3551*)L_19 = L_23;
+		V_1 = 8;
+		uint8_t* L_24 = V_0;
+		int32_t L_25 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = ___0_pos;
+		*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)((uint8_t*)il2cpp_codegen_add((intptr_t)L_24, L_25)) = L_26;
+		int32_t L_27 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_27, ((int32_t)12)));
+		SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* L_28 = V_2;
+		NullCheck(L_28);
+		int32_t* L_29 = (int32_t*)(&L_28->___Offset);
+		int32_t L_30 = V_1;
+		*((int32_t*)L_29) = (int32_t)((int32_t)il2cpp_codegen_multiply(L_30, 8));
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_31;
+		L_31 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* L_32 = V_2;
+		NullCheck(L_31);
+		NetworkRunner_SendRpc_m3E93A7CC29DEE31AF7C70FD15120DDF2B514F2A6(L_31, L_32, NULL);
+	}
+
+IL_013d:
+	{
+		int32_t L_33 = V_3;
+		if (((int32_t)(L_33&7)))
+		{
+			goto IL_014b;
+		}
+	}
+	{
+		goto IL_0152;
+	}
+
+IL_014b:
+	{
+		goto IL_0012;
+	}
+
+IL_0152:
+	{
+		return;
+	}
+}
+// Method Definition Index: 126573
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_EnsureLineRenderer_m84A2506DA8A6B59E8FE4151D7EE5C171471EBC8E (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_AddComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mF8C0D953BCBFDD5A01A09ADB67EB04F0D677A056_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3D93A89666F831FB9324883A9347EA29365E69DF);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:77>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_0 = __this->____lineRenderer;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:77>
+		return;
+	}
+
+IL_000f:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:79>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
+		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_2);
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_3;
+		L_3 = GameObject_AddComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mF8C0D953BCBFDD5A01A09ADB67EB04F0D677A056(L_2, GameObject_AddComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mF8C0D953BCBFDD5A01A09ADB67EB04F0D677A056_RuntimeMethod_var);
+		__this->____lineRenderer = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____lineRenderer), (void*)L_3);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:80>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_4 = __this->____lineRenderer;
+		NullCheck(L_4);
+		LineRenderer_set_positionCount_m2001FB4044053895ECBE897AB833284F3300B205(L_4, 2, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:81>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_5 = __this->____lineRenderer;
+		float L_6 = __this->___laserWidth;
+		NullCheck(L_5);
+		LineRenderer_set_startWidth_m3899722E198D636DB216CB61C980214707069F4A(L_5, L_6, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:82>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_7 = __this->____lineRenderer;
+		float L_8 = __this->___laserWidth;
+		NullCheck(L_7);
+		LineRenderer_set_endWidth_mC7260401655C8BE1CBDFB832009295C89613F81D(L_7, ((float)il2cpp_codegen_multiply(L_8, (0.5f))), NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:83>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_9 = __this->____lineRenderer;
+		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_10;
+		L_10 = Shader_Find_m183AA54F78320212DDEC811592F98456898A41C5(_stringLiteral3D93A89666F831FB9324883A9347EA29365E69DF, NULL);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_11 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
+		Material__ctor_m7FDF47105D66D19591BE505A0C42B0F90D88C9BF(L_11, L_10, NULL);
+		NullCheck(L_9);
+		Renderer_set_material_m21E88977071E0A914D62F3D9CFF0193B3117C45A(L_9, L_11, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:84>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_12 = __this->____lineRenderer;
+		NullCheck(L_12);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_13;
+		L_13 = Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656(L_12, NULL);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = __this->___laserColor;
+		NullCheck(L_13);
+		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_13, L_14, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:85>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_15 = __this->____lineRenderer;
+		NullCheck(L_15);
+		LineRenderer_set_useWorldSpace_m0204DB2541CC37DC4DC15DA15FD5A66EDC507CE8(L_15, (bool)1, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:86>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_16 = __this->____lineRenderer;
+		NullCheck(L_16);
+		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_16, (bool)0, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:87>
+		return;
+	}
+}
+// Method Definition Index: 126574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Render_m3386910F95B678632B2732DBC3268954B7D1E93F (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7698,25 +8173,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Render_m3386910F95B67863
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:57>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:91>
+		SupervisorLaser_EnsureLineRenderer_m84A2506DA8A6B59E8FE4151D7EE5C171471EBC8E(__this, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:92>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_0 = __this->____lineRenderer;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_000f;
+			goto IL_0015;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:57>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:92>
 		return;
 	}
 
-IL_000f:
+IL_0015:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:59>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:94>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_2 = __this->____lineRenderer;
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_3;
 		L_3 = SupervisorLaser_get_LaserActive_m0AC508E692250B76FCA4215571D4C9E51E7A2039(__this, NULL);
@@ -7724,45 +8207,139 @@ IL_000f:
 		L_4 = NetworkBool_op_Implicit_mE6D90417352F4F0228B37D536502B777ABECACFC(L_3, NULL);
 		NullCheck(L_2);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_2, L_4, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:61>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:96>
 		NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F L_5;
 		L_5 = SupervisorLaser_get_LaserActive_m0AC508E692250B76FCA4215571D4C9E51E7A2039(__this, NULL);
 		bool L_6;
 		L_6 = NetworkBool_op_Implicit_mE6D90417352F4F0228B37D536502B777ABECACFC(L_5, NULL);
 		if (!L_6)
 		{
-			goto IL_006c;
+			goto IL_0119;
 		}
 	}
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:63>
-		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_7 = __this->____lineRenderer;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:98>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = SupervisorLaser_get_LaserOrigin_m556E9C2FEC35920BB8C5993F79C504DD55FDE098(__this, NULL);
+		V_0 = L_7;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:99>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
-		L_8 = SupervisorLaser_get_LaserOrigin_m556E9C2FEC35920BB8C5993F79C504DD55FDE098(__this, NULL);
-		NullCheck(L_7);
-		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_7, 0, L_8, NULL);
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:64>
-		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_9 = __this->____lineRenderer;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
-		L_10 = SupervisorLaser_get_LaserOrigin_m556E9C2FEC35920BB8C5993F79C504DD55FDE098(__this, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
-		L_11 = SupervisorLaser_get_LaserDirection_m0DE5BD210E6D94C5CE0C0D455ED24F2A6DC0F42B(__this, NULL);
-		float L_12 = __this->___laserLength;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
-		L_13 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_11, L_12, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
-		L_14 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_10, L_13, NULL);
+		L_8 = SupervisorLaser_get_LaserDirection_m0DE5BD210E6D94C5CE0C0D455ED24F2A6DC0F42B(__this, NULL);
+		V_1 = L_8;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:102>
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_9;
+		L_9 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
 		NullCheck(L_9);
-		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_9, 1, L_14, NULL);
+		bool L_10;
+		L_10 = NetworkRunner_get_IsServer_mADB2CCEA9E7F7EAFE23CE9BBE640947CEEC0ACDE(L_9, NULL);
+		if (L_10)
+		{
+			goto IL_00c5;
+		}
+	}
+	{
+		bool L_11 = __this->____hostGcReceived;
+		if (!L_11)
+		{
+			goto IL_00c5;
+		}
+	}
+	{
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = __this->___gameContent;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_13;
+		L_13 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_12, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_13)
+		{
+			goto IL_00c5;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:105>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = __this->____hostGcPosition;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		L_16 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_14, L_15, NULL);
+		V_2 = L_16;
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:108>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = V_2;
+		float L_18 = L_17.___x;
+		(&V_2)->___x = ((-L_18));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:109>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_2;
+		float L_20 = L_19.___z;
+		(&V_2)->___z = ((-L_20));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:110>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = V_1;
+		float L_22 = L_21.___x;
+		(&V_1)->___x = ((-L_22));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:111>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_1;
+		float L_24 = L_23.___z;
+		(&V_1)->___z = ((-L_24));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:114>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = __this->___gameContent;
+		NullCheck(L_26);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
+		L_27 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_26, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
+		L_28 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_25, L_27, NULL);
+		V_0 = L_28;
+		goto IL_00ee;
 	}
 
-IL_006c:
+IL_00c5:
 	{
-		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:66>
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:116>
+		NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* L_29;
+		L_29 = SimulationBehaviour_get_Runner_m8D7107E8BE26590918B009087E49A2AB7B6432E3_inline(__this, NULL);
+		NullCheck(L_29);
+		bool L_30;
+		L_30 = NetworkRunner_get_IsServer_mADB2CCEA9E7F7EAFE23CE9BBE640947CEEC0ACDE(L_29, NULL);
+		if (L_30)
+		{
+			goto IL_00ee;
+		}
+	}
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:119>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_0;
+		float L_32 = L_31.___x;
+		(&V_0)->___x = ((-L_32));
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:120>
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33 = V_1;
+		float L_34 = L_33.___x;
+		(&V_1)->___x = ((-L_34));
+	}
+
+IL_00ee:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:123>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_35 = __this->____lineRenderer;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = V_0;
+		NullCheck(L_35);
+		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_35, 0, L_36, NULL);
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:124>
+		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_37 = __this->____lineRenderer;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39 = V_1;
+		float L_40 = __this->___laserLength;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41;
+		L_41 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_39, L_40, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
+		L_42 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_38, L_41, NULL);
+		NullCheck(L_37);
+		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_37, 1, L_42, NULL);
+	}
+
+IL_0119:
+	{
+		//<source_info:D:/Msc in design for creative and immersive techology/Unity module/Unity Projects/SafetyOverride/Assets/Scripts/SupervisorLaser.cs:126>
 		return;
 	}
 }
-// Method Definition Index: 126731
+// Method Definition Index: 126575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser__ctor_m7E6D7DA03DB3E64C07D296D33301515E29041361 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7778,7 +8355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser__ctor_m7E6D7DA03DB3E64C0
 		return;
 	}
 }
-// Method Definition Index: 126732
+// Method Definition Index: 126576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_CopyBackingFieldsToState_m5734DD0B07DB53C2F9748BAC7218A2DDAA1B81DB (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, bool ___0_p, const RuntimeMethod* method) 
 {
 	{
@@ -7791,7 +8368,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_CopyBackingFieldsToState
 		return;
 	}
 }
-// Method Definition Index: 126733
+// Method Definition Index: 126577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_CopyStateToBackingFields_m65CA43E7E95C8B00C2A81C7299E9952F816D6284 (SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7807,6 +8384,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_CopyStateToBackingFields
 		return;
 	}
 }
+// Method Definition Index: 126578
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_Rpc_SendHostGcPositionU40Invoker_mA1A5C9AAFE8CADEB4E1F6917F0F5B02CC741F9BB (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* ___0_behaviour, SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* ___1_message, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	uint8_t* V_1 = NULL;
+	int32_t V_2 = 0;
+	{
+		SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* L_0 = ___1_message;
+		V_1 = (uint8_t*)((SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C*)il2cpp_codegen_add((intptr_t)L_0, ((int32_t)28)));
+		V_2 = 8;
+		uint8_t* L_1 = V_1;
+		int32_t L_2 = V_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = (*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)((uint8_t*)il2cpp_codegen_add((intptr_t)L_1, L_2)));
+		int32_t L_4 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_4, ((int32_t)12)));
+		V_0 = L_3;
+		NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* L_5 = ___0_behaviour;
+		NullCheck(L_5);
+		L_5->___InvokeRpc = (bool)1;
+		NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* L_6 = ___0_behaviour;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = V_0;
+		NullCheck(((SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9*)CastclassClass((RuntimeObject*)L_6, SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9_il2cpp_TypeInfo_var)));
+		SupervisorLaser_Rpc_SendHostGcPosition_m3E2EED9348DC2A757E19FA4675227D5DA0E706E4(((SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9*)CastclassClass((RuntimeObject*)L_6, SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9_il2cpp_TypeInfo_var)), L_7, NULL);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -7815,7 +8425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupervisorLaser_CopyStateToBackingFields
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126734
+// Method Definition Index: 126579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TwinController_get_NetKnobValue_mF333AA285A5DBD89CC678AED783C6E0275ED94D8 (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7839,7 +8449,7 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 126735
+// Method Definition Index: 126580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_set_NetKnobValue_m9BBBAD44E95C16F523E384AAFB10E01E2CD1138D (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -7864,7 +8474,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 126736
+// Method Definition Index: 126581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TwinController_get_IsSerialBridge_mAEEF4A6CAC9D25D71118960178D7766BEEFC6BCE (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7897,7 +8507,7 @@ IL_001a:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 126737
+// Method Definition Index: 126582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Update_m8F9EF2C92559FA95FA71BAF2CB59FBE52970635C (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7970,7 +8580,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 126738
+// Method Definition Index: 126583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Rpc_UpdateKnobValue_m6E1D94E1E9AF3437B7EBA2B7EB37DA786294B415 (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8156,7 +8766,7 @@ IL_014b:
 		return;
 	}
 }
-// Method Definition Index: 126739
+// Method Definition Index: 126584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Rpc_SendLedCommand_m6EBF17AB32F34043A8B5F04F75D2462933E71BF1 (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, String_t* ___0_command, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8369,7 +8979,7 @@ IL_0185:
 		return;
 	}
 }
-// Method Definition Index: 126740
+// Method Definition Index: 126585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController__ctor_m708972066C5042CEDA72CE3D921B400E2FFBA06D (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8377,7 +8987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController__ctor_m708972066C5042CEDA
 		return;
 	}
 }
-// Method Definition Index: 126741
+// Method Definition Index: 126586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_CopyBackingFieldsToState_m59B922C5A854FA173763E94A52793A5DB0891F36 (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, bool ___0_p, const RuntimeMethod* method) 
 {
 	{
@@ -8386,7 +8996,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_CopyBackingFieldsToState_
 		return;
 	}
 }
-// Method Definition Index: 126742
+// Method Definition Index: 126587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_CopyStateToBackingFields_m7E530EBDE28F43753EB796323D98F4C82CDDB193 (TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8396,7 +9006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_CopyStateToBackingFields_
 		return;
 	}
 }
-// Method Definition Index: 126743
+// Method Definition Index: 126588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Rpc_UpdateKnobValueU40Invoker_mA4613CBF313478007B2C7F19F3F27B1343F2CA0B (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* ___0_behaviour, SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8428,7 +9038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Rpc_UpdateKnobValueU40Inv
 		return;
 	}
 }
-// Method Definition Index: 126744
+// Method Definition Index: 126589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Rpc_SendLedCommandU40Invoker_mAD7458D8228225E8A1EFFC005B1400A304DD768D (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* ___0_behaviour, SimulationMessage_t741F8FBD24BEECD63F62791520B0C4EB9C1D101C* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8468,7 +9078,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TwinController_Rpc_SendLedCommandU40Invo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126745
+// Method Definition Index: 126590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8484,7 +9094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Readme__ctor_m69C325C4C171DCB0312B646A90
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126746
+// Method Definition Index: 126591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8500,7 +9110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 126747
+// Method Definition Index: 126592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8534,7 +9144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 126748
+// Method Definition Index: 126593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8639,7 +9249,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 126638
+// Method Definition Index: 126478
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SerialController_SetTearDownFunction_m7B75AC7EA2A8A2E76A03D824BB5E186EC3339DFA_inline (SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* __this, TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* ___0_userFunction, const RuntimeMethod* method) 
 {
 	{
@@ -8651,13 +9261,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SerialController_SetTearDown
 		return;
 	}
 }
-// Method Definition Index: 126641
+// Method Definition Index: 126481
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearDownFunction_Invoke_mB25A6A5BA46D717E36C0809D20AA43D937EA23F7_inline (TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* __this, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 126652
+// Method Definition Index: 126492
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearDownFunction_Invoke_mF30499AB34127C286EA86D8D404EC420B115FE0B_inline (TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* __this, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
@@ -8897,6 +9507,40 @@ IL_0021:
 		return L_5;
 	}
 }
+// Method Definition Index: 67505
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool NetworkBehaviour_get_HasStateAuthority_mCE935DFC2641A131EBC006A4FB3F581D6748B633_inline (NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3* __this, const RuntimeMethod* method) 
+{
+	int32_t G_B3_0 = 0;
+	{
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_0;
+		L_0 = SimulationBehaviour_get_Object_m7409CB99EA711621E81D066834FF3E4A3A84E8C9_inline(__this, NULL);
+		bool L_1;
+		L_1 = BehaviourUtils_IsAlive_mB92FFD328F10E56D6382C21100C0E69E118F7DEE_inline(L_0, NULL);
+		if (L_1)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		goto IL_001b;
+	}
+
+IL_0010:
+	{
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_2;
+		L_2 = SimulationBehaviour_get_Object_m7409CB99EA711621E81D066834FF3E4A3A84E8C9_inline(__this, NULL);
+		NullCheck(L_2);
+		bool L_3;
+		L_3 = NetworkObject_get_HasStateAuthority_m20DFCBB66C787E2B2ED94B31AC1035B62251CC07(L_2, NULL);
+		G_B3_0 = ((int32_t)(L_3));
+	}
+
+IL_001b:
+	{
+		return (bool)G_B3_0;
+	}
+}
 // Method Definition Index: 24802
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* OVRCameraRig_get_rightHandAnchor_mF2D328A04338A8119F3BE6EE09FE66965258A26D_inline (OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* __this, const RuntimeMethod* method) 
 {
@@ -8904,6 +9548,37 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A
 		//<source_info:./Library/PackageCache/com.meta.xr.sdk.core@06273138c40d/Scripts/OVRCameraRig.cs:90>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___U3CrightHandAnchorU3Ek__BackingField;
 		return L_0;
+	}
+}
+// Method Definition Index: 63857
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
+{
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_a;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_b;
+		float L_3 = L_2.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_a;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_b;
+		float L_7 = L_6.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_a;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_b;
+		float L_11 = L_10.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), ((float)il2cpp_codegen_subtract(L_1, L_3)), ((float)il2cpp_codegen_subtract(L_5, L_7)), ((float)il2cpp_codegen_subtract(L_9, L_11)), NULL);
+		V_0 = L_12;
+		goto IL_0030;
+	}
+
+IL_0030:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = V_0;
+		return L_13;
 	}
 }
 // Method Definition Index: 63711
@@ -9009,6 +9684,43 @@ IL_0009:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		return L_1;
+	}
+}
+// Method Definition Index: 68056
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BehaviourUtils_IsAlive_mB92FFD328F10E56D6382C21100C0E69E118F7DEE_inline (NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* ___0_obj, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	int32_t G_B3_0 = 0;
+	{
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_0 = ___0_obj;
+		if (!L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		NetworkObject_t6AA3B74338F725B9B1C05D73EBC12AF9E9CC0E5C* L_1 = ___0_obj;
+		NullCheck(L_1);
+		int32_t L_2 = L_1->___RuntimeFlags;
+		G_B3_0 = ((((int32_t)((int32_t)((int32_t)L_2&2))) == ((int32_t)0))? 1 : 0);
+		goto IL_0012;
+	}
+
+IL_0011:
+	{
+		G_B3_0 = 0;
+	}
+
+IL_0012:
+	{
+		V_0 = (bool)G_B3_0;
+		goto IL_0015;
+	}
+
+IL_0015:
+	{
+		bool L_3 = V_0;
+		return L_3;
 	}
 }
 // Method Definition Index: 63678

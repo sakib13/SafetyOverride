@@ -16,6 +16,9 @@ public class SafetyGameManager : NetworkBehaviour
     [Tooltip("Speed of green zone oscillation. Higher = faster.")]
     public float greenZoneSpeed = 0.3f;
 
+    [Tooltip("How long the green zone pauses when it stops (seconds).")]
+    public float pauseDuration = 5f;
+
     [Header("Game Logic")]
     public float zoneWidth = 0.15f;
 
@@ -24,6 +27,10 @@ public class SafetyGameManager : NetworkBehaviour
 
     [Networked] private float GreenZoneX { get; set; }
     [Networked] public NetworkBool ClientConfirmed { get; set; }
+    [Networked] private NetworkBool GreenZonePaused { get; set; }
+
+    private float _pauseTimer;
+    private float _nextPauseTime;
 
     [Header("Button Materials")]
     public Material redMaterial;
@@ -41,6 +48,7 @@ public class SafetyGameManager : NetworkBehaviour
             if (confirmButton) confirmButton.SetActive(true);
             if (needle) needle.gameObject.SetActive(false);
             if (clientButton) clientButton.SetActive(false);
+            _nextPauseTime = Random.Range(3f, 8f);
         }
         else // TECHNICIAN (Client)
         {
@@ -54,6 +62,29 @@ public class SafetyGameManager : NetworkBehaviour
     public override void FixedUpdateNetwork()
     {
         if (!Runner.IsServer) return;
+
+        float dt = Runner.DeltaTime;
+
+        if (GreenZonePaused)
+        {
+            // Count down pause timer
+            _pauseTimer -= dt;
+            if (_pauseTimer <= 0f)
+            {
+                GreenZonePaused = false;
+                _nextPauseTime = Random.Range(3f, 8f);
+            }
+            return;
+        }
+
+        // Count down until next pause
+        _nextPauseTime -= dt;
+        if (_nextPauseTime <= 0f)
+        {
+            GreenZonePaused = true;
+            _pauseTimer = pauseDuration;
+            return;
+        }
 
         float amplitude = (maxX - minX) / 2f - zoneWidth / 2f;
         GreenZoneX = Mathf.Sin((float)Runner.SimulationTime * greenZoneSpeed) * amplitude;
@@ -153,7 +184,9 @@ public class SafetyGameManager : NetworkBehaviour
         {
             float syncedValue = arduinoController.NetKnobValue;
             float targetX = Remap(syncedValue, 0, 1023, minX, maxX);
-            needle.localPosition = new Vector3(targetX, needle.localPosition.y, needle.localPosition.z);
+            // Negate X for client to fix face-to-face mirroring
+            float displayX = Runner.IsServer ? targetX : -targetX;
+            needle.localPosition = new Vector3(displayX, needle.localPosition.y, needle.localPosition.z);
         }
     }
 

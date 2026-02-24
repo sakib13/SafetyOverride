@@ -32419,7 +32419,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FusionCoroutine_set_Error_m2
 		return;
 	}
 }
-// Method Definition Index: 126860
+// Method Definition Index: 126865
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Log_get_IsInitialized_m9EC1BEF019B3EF832547265368B4AB19959639ED_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32433,7 +32433,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Log_get_IsInitialized_m9EC1B
 		return L_0;
 	}
 }
-// Method Definition Index: 126954
+// Method Definition Index: 126959
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringBuilder_t* FusionUnityLoggerBase_GetThreadSafeStringBuilder_mC711ADE49722B94156F1ABAFB37BA1310E303D4C_inline (FusionUnityLoggerBase_t1843BA4DFEF65FBFB41887AB273AF1C3AFBB76A2* __this, bool* ___0_isMainThread, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32821,7 +32821,7 @@ IL_000d:
 		return L_6;
 	}
 }
-// Method Definition Index: 126876
+// Method Definition Index: 126881
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Log_Warn_mEB9C881BB834B0FC579AF7DDD0E75537A9220828_inline (String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33480,7 +33480,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* NetworkRunner_get_
 		return L_0;
 	}
 }
-// Method Definition Index: 126878
+// Method Definition Index: 126883
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Log_Error_m16A66800D5C791B420BC15132587EC386E1289FC_inline (String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33572,7 +33572,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Scene_tA1DC762B79745EB5140F054C88
 		return L_0;
 	}
 }
-// Method Definition Index: 126877
+// Method Definition Index: 126882
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Log_Warn_m02010666BF346CE4CAE0F976F4D15E8D1905C3D2_inline (RuntimeObject* ___0_logSource, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33606,7 +33606,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 126879
+// Method Definition Index: 126884
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Log_Error_mD70FD5D0A3B27D0766202832DA4B43DB0BDA2226_inline (RuntimeObject* ___0_logSource, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

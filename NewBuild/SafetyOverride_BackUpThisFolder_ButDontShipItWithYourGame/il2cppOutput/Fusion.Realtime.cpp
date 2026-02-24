@@ -24764,7 +24764,7 @@ IL_0043:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 126853
+// Method Definition Index: 126858
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugLogStream_Warn_m6A7E40AC8F989DDF607E73636D6560AE304704EB_inline (DebugLogStream_t5286222338FBE750E9E56E264790C4D9049CED3D* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -24827,7 +24827,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LoadBalancingPeer_tB526A8ADA9408D
 		return L_0;
 	}
 }
-// Method Definition Index: 126979
+// Method Definition Index: 126984
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Info_m812E13432F98809129DD11D5335318D9854C731D_inline (TraceLogStream_t692663C7D2E548141B50389D7E67977C44FE6A5C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -24922,7 +24922,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 126862
+// Method Definition Index: 126867
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogSettings_tB39391AE7B127A7B916B50F50E95AC2D6FF939E0 Log_get_Settings_m3D516AC5AA9C8E52BBCA677AF5FD2213B186E955_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

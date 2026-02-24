@@ -99,6 +99,8 @@ extern void SafetyGameManager_get_GreenZoneX_mC96562C62623C4C9EA411B942E744416CE
 extern void SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733 (void);
 extern void SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2 (void);
 extern void SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1 (void);
+extern void SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C (void);
+extern void SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD (void);
 extern void SafetyGameManager_Spawned_m38D4A713150BC13FBF66CA3C82AA2F8AC2211B03 (void);
 extern void SafetyGameManager_FixedUpdateNetwork_mE6BA78741C104C00A3FD11E98529604366629ED1 (void);
 extern void SafetyGameManager_OnClientButtonPressed_m15327EA421A86B11C98F9E6AC50BF7143DE1D1B8 (void);
@@ -118,10 +120,13 @@ extern void SupervisorLaser_get_LaserActive_m0AC508E692250B76FCA4215571D4C9E51E7
 extern void SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F (void);
 extern void SupervisorLaser_Spawned_m35301E609DD4A7A9335C0BF116ACC4B53614B6A9 (void);
 extern void SupervisorLaser_FixedUpdateNetwork_m66ECD8675CBAC790D895122634618BB7EC7204E7 (void);
+extern void SupervisorLaser_Rpc_SendHostGcPosition_m3E2EED9348DC2A757E19FA4675227D5DA0E706E4 (void);
+extern void SupervisorLaser_EnsureLineRenderer_m84A2506DA8A6B59E8FE4151D7EE5C171471EBC8E (void);
 extern void SupervisorLaser_Render_m3386910F95B678632B2732DBC3268954B7D1E93F (void);
 extern void SupervisorLaser__ctor_m7E6D7DA03DB3E64C07D296D33301515E29041361 (void);
 extern void SupervisorLaser_CopyBackingFieldsToState_m5734DD0B07DB53C2F9748BAC7218A2DDAA1B81DB (void);
 extern void SupervisorLaser_CopyStateToBackingFields_m65CA43E7E95C8B00C2A81C7299E9952F816D6284 (void);
+extern void SupervisorLaser_Rpc_SendHostGcPositionU40Invoker_mA1A5C9AAFE8CADEB4E1F6917F0F5B02CC741F9BB (void);
 extern void TwinController_get_NetKnobValue_mF333AA285A5DBD89CC678AED783C6E0275ED94D8 (void);
 extern void TwinController_set_NetKnobValue_m9BBBAD44E95C16F523E384AAFB10E01E2CD1138D (void);
 extern void TwinController_get_IsSerialBridge_mAEEF4A6CAC9D25D71118960178D7766BEEFC6BCE (void);
@@ -137,7 +142,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[132] = 
+static Il2CppMethodPointer s_methodPointers[137] = 
 {
 	SampleCustomDelimiter_Start_m651BC0B591BA8940D456E0F9081C1A175B6FAED8,
 	SampleCustomDelimiter_Update_m6DF3C3A39061157980E0433E4723129194A7AB32,
@@ -233,6 +238,8 @@ static Il2CppMethodPointer s_methodPointers[132] =
 	SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733,
 	SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2,
 	SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1,
+	SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C,
+	SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD,
 	SafetyGameManager_Spawned_m38D4A713150BC13FBF66CA3C82AA2F8AC2211B03,
 	SafetyGameManager_FixedUpdateNetwork_mE6BA78741C104C00A3FD11E98529604366629ED1,
 	SafetyGameManager_OnClientButtonPressed_m15327EA421A86B11C98F9E6AC50BF7143DE1D1B8,
@@ -252,10 +259,13 @@ static Il2CppMethodPointer s_methodPointers[132] =
 	SupervisorLaser_set_LaserActive_mE7F1F8D31F4C965118E5A4CF8DC7880FCCF3849F,
 	SupervisorLaser_Spawned_m35301E609DD4A7A9335C0BF116ACC4B53614B6A9,
 	SupervisorLaser_FixedUpdateNetwork_m66ECD8675CBAC790D895122634618BB7EC7204E7,
+	SupervisorLaser_Rpc_SendHostGcPosition_m3E2EED9348DC2A757E19FA4675227D5DA0E706E4,
+	SupervisorLaser_EnsureLineRenderer_m84A2506DA8A6B59E8FE4151D7EE5C171471EBC8E,
 	SupervisorLaser_Render_m3386910F95B678632B2732DBC3268954B7D1E93F,
 	SupervisorLaser__ctor_m7E6D7DA03DB3E64C07D296D33301515E29041361,
 	SupervisorLaser_CopyBackingFieldsToState_m5734DD0B07DB53C2F9748BAC7218A2DDAA1B81DB,
 	SupervisorLaser_CopyStateToBackingFields_m65CA43E7E95C8B00C2A81C7299E9952F816D6284,
+	SupervisorLaser_Rpc_SendHostGcPositionU40Invoker_mA1A5C9AAFE8CADEB4E1F6917F0F5B02CC741F9BB,
 	TwinController_get_NetKnobValue_mF333AA285A5DBD89CC678AED783C6E0275ED94D8,
 	TwinController_set_NetKnobValue_m9BBBAD44E95C16F523E384AAFB10E01E2CD1138D,
 	TwinController_get_IsSerialBridge_mAEEF4A6CAC9D25D71118960178D7766BEEFC6BCE,
@@ -279,7 +289,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 	{ 0x06000052, U3CStartConnectionU3Ed__10_MoveNext_mEF4E1A512E8E793174F9E8D45E09F4D4254F2F40_AdjustorThunk },
 	{ 0x06000053, U3CStartConnectionU3Ed__10_SetStateMachine_m539124B88E626F0D0DDBA59247621C6F193CA49B_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[132] = 
+static const int32_t s_InvokerIndices[137] = 
 {
 	20865,
 	20865,
@@ -375,6 +385,8 @@ static const int32_t s_InvokerIndices[132] =
 	16171,
 	20598,
 	16033,
+	20598,
+	16033,
 	20865,
 	20865,
 	20865,
@@ -394,10 +406,13 @@ static const int32_t s_InvokerIndices[132] =
 	16033,
 	20865,
 	20865,
+	16284,
+	20865,
 	20865,
 	20865,
 	15803,
 	20865,
+	28804,
 	20741,
 	16171,
 	20362,
@@ -418,7 +433,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	132,
+	137,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,

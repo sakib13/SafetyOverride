@@ -8099,7 +8099,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 126878
+// Method Definition Index: 126883
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Log_Error_m16A66800D5C791B420BC15132587EC386E1289FC_inline (String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8132,7 +8132,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 126876
+// Method Definition Index: 126881
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Log_Warn_mEB9C881BB834B0FC579AF7DDD0E75537A9220828_inline (String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
