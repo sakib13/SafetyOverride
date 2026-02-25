@@ -43,10 +43,10 @@ to sync the choices, and extra complexity that does not add any real value in a 
 **Why a physical potentiometer instead of a virtual slider?**
 Turning a real knob is more realistic in consideration with an actual nuclear power plant based scenario and gives more precise control than dragging a virtual slider in the air. In a nuclear power plant training simulation where tangibility matters, having something physical in your hands makes a big difference. Plus it demonstrates hardware integration which was one of the goals of the project.
 
-**The button color problem.**
+**The button color problem**
 This one took a while to figure out. The Meta Interaction SDK has a component called `InteractableDebugVisual` that keeps overriding the button's material color whenever the button state changes. So no matter what color was set in code, it would get overwritten. The fix was to create separate materials (red, green, yellow) and swap the entire material at runtime using `renderer.sharedMaterial`. That way it does not matter what the SDK tries to do with the color because the whole material is different.
 
-**Face to face mirroring.**
+**Face to face mirroring**
 When two people sit across from each other, their left and right are flipped. So if the supervisor sees the green zone on their left, the technician should also see it on their left from their own perspective. To fix this the project negates the X position of the needle on the client side. The laser pointer also gets its X coordinate flipped so both users see it pointing at the same spot on the gauge.
 
 ## Features and Functionalities
@@ -244,7 +244,7 @@ ArduinoManager                     TwinController + SerialController
 
 ## Contributors
 
-- **Sakib Ahsan Dipto** -- Design, development, and implementation
-  MSc in Design for Creative and Immersive Technology, Stockholm University
+Design, development, and implementation - Sakib Ahsan Dipto
+MSc in Design for Creative and Immersive Technology, Stockholm University
 
-  Contact: sakibahsandipto@gmail.com
+Contact: sakibahsandipto@gmail.com
