@@ -21,7 +21,7 @@ The project set out to achieve the following:
 - Use a real physical device (Arduino with a potentiometer and LED) instead of keeping everything virtual
 - Make the interaction feel natural by using hand tracking instead of controllers
 
-### Design Process
+### Challenges and Solutions
 
 **Colocation was the hardest part.**
 The project originally attempted to use Meta's Colocation Discovery API to align both headsets automatically. But it kept throwing error code 1002 and no fix could be found despite extensive troubleshooting. So the project went with a manual approach instead. Each user presses a button on their controller and the game content gets placed in front of them relative to where their head is. It is simple but it works. The downside is both users need to roughly face the same direction when they calibrate, but since they are sitting at a table this is not really a problem.
@@ -41,7 +41,7 @@ menu or role selection UI. Since both users are sitting at the same table, they 
 to sync the choices, and extra complexity that does not add any real value in a two person seated scenario where the users can just talk to each other
 
 **Why a physical potentiometer instead of a virtual slider?**
-Turning a real knob is more realistic in comparison with an actual nuclear power plant based scenario and gives more precise control than dragging a virtual slider in the air. In a nuclear power plant training simulation where tangibility matters, having something physical in your hands makes a big difference. Plus it demonstrates hardware integration which was one of the goals of the project.
+Turning a real knob is more realistic in consideration with an actual nuclear power plant based scenario and gives more precise control than dragging a virtual slider in the air. In a nuclear power plant training simulation where tangibility matters, having something physical in your hands makes a big difference. Plus it demonstrates hardware integration which was one of the goals of the project.
 
 **The button color problem.**
 This one took a while to figure out. The Meta Interaction SDK has a component called `InteractableDebugVisual` that keeps overriding the button's material color whenever the button state changes. So no matter what color was set in code, it would get overwritten. The fix was to create separate materials (red, green, yellow) and swap the entire material at runtime using `renderer.sharedMaterial`. That way it does not matter what the SDK tries to do with the color because the whole material is different.
@@ -58,6 +58,7 @@ When two people sit across from each other, their left and right are flipped. So
 
 ### Role Based Gameplay
 - **Supervisor (Host):** Sees the pressure gauge with a moving green zone, a confirm button, and a red laser that follows their right hand
+![Supervisor View](Images/supervisorview.png)
 - **Technician (Client):** Sees the same gauge but with a needle that they control with the Arduino potentiometer, plus a yellow confirmation button
 
 ### Moving Green Zone
