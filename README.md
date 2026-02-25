@@ -59,7 +59,10 @@ When two people sit across from each other, their left and right are flipped. So
 ### Role Based Gameplay
 - **Supervisor (Host):** Sees the pressure gauge with a moving green zone, a confirm button, and a red laser that follows their right hand
 ![Supervisor View](Images/supervisorview.png)
+*Supervisor's View*
 - **Technician (Client):** Sees the same gauge but with a needle that they control with the Arduino potentiometer, plus a yellow confirmation button
+![Client View](Images/hostview.png)
+*Client's View*
 
 ### Moving Green Zone
 - The green zone moves back and forth along the gauge in a sine wave pattern
@@ -76,17 +79,22 @@ When two people sit across from each other, their left and right are flipped. So
 - The technician pokes a yellow button with their hand when they think the needle is in the right spot
 - This sends a network event and the supervisor's button turns from red to green
 - Then the supervisor can press their button to check the result
+![Green Button](Images/buttongreen.png)
+*Supervisor can now press the button to check status*
 
 ### Arduino Hardware Integration
 - A physical potentiometer controls the needle position through serial communication
 - The Arduino LED gives real feedback: green means success, red means failure
 - The serial data goes through the Ardity library in Unity
 - The potentiometer values get sent to all connected clients through Photon Fusion RPCs
+![Arduino Hardware](Images/arduinosetup.png)
 
 ### Instruction Canvas
 - Before calibration, a floating canvas shows up in front of the user
 - It explains the game story and gives step by step instructions for both roles
 - It disappears once the user calibrates with the controller
+![Instruction window](Images/instructioncanvas.png)
+*Story narrative/Instuction window before calibration*
 
 ## Installation
 
