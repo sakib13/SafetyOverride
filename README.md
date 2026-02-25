@@ -244,7 +244,7 @@ ArduinoManager                     TwinController + SerialController
 
 ## Contributors
 
-Design, development, and implementation - Sakib Ahsan Dipto
+Design, development, and implementation - Sakib Ahsan Dipto |
 MSc in Design for Creative and Immersive Technology, Stockholm University
 
 Contact: sakibahsandipto@gmail.com
