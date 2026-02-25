@@ -88,13 +88,14 @@ When two people sit across from each other, their left and right are flipped. So
 - The serial data goes through the Ardity library in Unity
 - The potentiometer values get sent to all connected clients through Photon Fusion RPCs
 ![Arduino Hardware](Images/arduinosetup.png)
+*Arduino hardware setup*
 
 ### Instruction Canvas
 - Before calibration, a floating canvas shows up in front of the user
 - It explains the game story and gives step by step instructions for both roles
 - It disappears once the user calibrates with the controller
 ![Instruction window](Images/instructioncanvas.png)
-*Story narrative/Instuction window before calibration*
+*Story narrative/Instruction window before calibration*
 
 ## Installation
 
