@@ -533,8 +533,8 @@ MonoBehaviour:
   connectionManager: {fileID: 346390607}
   cameraRig: {fileID: 0}
   instructionCanvas: {fileID: 2065835202}
-  contentDistance: 0.2
-  heightOffset: -0.3
+  contentDistance: 0.1
+  heightOffset: -0.45
 --- !u!4 &194892688
 Transform:
   m_ObjectHideFlags: 0
