@@ -46,6 +46,9 @@ Turning a real knob is more realistic in consideration with an actual nuclear po
 **The button color problem**
 This one took a while to figure out. The Meta Interaction SDK has a component called `InteractableDebugVisual` that keeps overriding the button's material color whenever the button state changes. So no matter what color was set in code, it would get overwritten. The fix was to create separate materials (red, green, yellow) and swap the entire material at runtime using `renderer.sharedMaterial`. That way it does not matter what the SDK tries to do with the color because the whole material is different.
 
+**Why audio feedback on button pokes?**
+The virtual buttons have a poke sound effect wired to them. Over the Fusion network, button pokes do not always register smoothly and there is no visual animation that clearly shows a press happened. The audio feedback acts as confirmation that the button was actually pressed. Without it, users would be unsure whether their poke went through or not. Background music or ambient sound was not added because the training scenario depends on verbal communication between the supervisor and technician, and background audio would interfere with that.
+
 **Face to face mirroring**
 When two people sit across from each other, their left and right are flipped. So if the supervisor sees the green zone on their left, the technician should also see it on their left from their own perspective. To fix this the project negates the X position of the needle on the client side. The laser pointer also gets its X coordinate flipped so both users see it pointing at the same spot on the gauge.
 
@@ -87,6 +90,18 @@ When two people sit across from each other, their left and right are flipped. So
 - The Arduino LED gives real feedback: green means success, red means failure
 - The serial data goes through the Ardity library in Unity
 - The potentiometer values get sent to all connected clients through Photon Fusion RPCs
+- Serial communication runs at 115200 baud rate, with potentiometer values sent every 20ms
+
+**Wiring:**
+
+| Component | Arduino Pin |
+|---|---|
+| Potentiometer signal (middle pin) | A0 |
+| Green LED (+) | Digital pin 2 |
+| Red LED (+) | Digital pin 3 |
+| Potentiometer outer pins | 5V and GND |
+| LED ground legs | GND (through resistor) |
+
 ![Arduino Hardware](Images/arduinosetup.png)
 *Arduino hardware setup*
 
@@ -134,7 +149,8 @@ When two people sit across from each other, their left and right are flipped. So
    - In Unity go to `Fusion > Fusion Hub > Setup` and paste your App ID
 
 4. **Arduino Setup:**
-   - Upload the Arduino sketch to your board (potentiometer on analog pin, LED on digital pin)
+   - Upload the Arduino sketch to your board (potentiometer on A0, green LED on pin 2, red LED on pin 3)
+   - Set the baud rate to **115200** in the Arduino sketch
    - Connect the Arduino to the PC with USB
    - In Unity, set the correct COM port on the `SerialController` component in the scene
 
@@ -145,6 +161,14 @@ When two people sit across from each other, their left and right are flipped. So
    - Click **Build and Run**
 
 ## Usage
+
+### Physical Setup
+
+1. Place a table in the middle with two chairs on opposite sides, facing each other
+2. The Arduino board with the potentiometer and LEDs should be placed on the table within arm's reach of the technician's seat
+3. The Arduino connects via USB to the PC, which should be nearby on or beside the table
+4. Both Quest headsets should be charged and connected to the same Wi-Fi network as the PC
+5. Each user sits in their chair and puts on their headset before launching the app
 
 ### Starting a Session
 
@@ -241,6 +265,10 @@ ArduinoManager                     TwinController + SerialController
 - [Meta Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) for hand tracking and poke interactions
 - [Ardity](https://github.com/DWilches/Ardity) for Arduino to Unity serial communication
 - [Unity Universal Render Pipeline](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@17.0/manual/index.html) for rendering
+
+## License
+
+This project was developed as part of a university course assignment at Stockholm University. It is intended for educational and demonstration purposes only and is not licensed for commercial use.
 
 ## Contributors
 
