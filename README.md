@@ -12,8 +12,14 @@ The project was built to explore how far the combination of mixed reality, netwo
 
 ## Design Process
 
+### Inspiration
+
+The training scenario was inspired by how real nuclear power plants use [full scope control room simulators](https://www.iaea.org/topics/nuclear-power-reactors/nuclear-reactor-simulators-for-education-and-training) to train operators in a safe environment before they handle actual equipment. The project takes that same idea and brings it into mixed reality, where the virtual gauge and physical potentiometer stand in for the control panel instruments that operators would interact with during training.
+
+The asymmetric collaboration design was inspired by [Keep Talking and Nobody Explodes](https://keeptalkinggame.com/), a game where one player sees a bomb and the other has a manual with defusal instructions. Neither player can complete the task alone and they must communicate constantly. Safety Override follows the same principle where the supervisor sees the target zone and guides the technician, while the technician operates the physical controls but cannot see where to aim without the supervisor's direction.
+
 ### Goals
-, 
+
 The project set out to achieve the following:
 
 - Get two people into the same physical space with collocated MR
