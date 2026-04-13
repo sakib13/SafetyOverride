@@ -149,7 +149,7 @@ public class ManualCalibrationManager : MonoBehaviour
         Debug.Log("[Calibration] Calibration complete!");
     }
 
-    /// <summary>
+    /// CONTENT IS NOT USED CURRENTLY USED ANYWHERE
     /// Call this to reset calibration (for testing)
     /// </summary>
     public void ResetCalibration()
