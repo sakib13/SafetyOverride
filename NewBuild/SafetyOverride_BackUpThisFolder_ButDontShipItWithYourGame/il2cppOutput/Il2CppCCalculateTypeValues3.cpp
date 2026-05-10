@@ -4259,7 +4259,7 @@ struct XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A
 	int32_t ___m_Tracked;
 	uint64_t ___m_UniqueID;
 };
-struct U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410 
+struct U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759 
 {
 	int32_t ___U3CU3E1__state;
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder;
@@ -5427,10 +5427,8 @@ struct ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7  : public Mon
 {
 	NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___runner;
 	String_t* ___sessionName;
-	bool ___waitForCalibration;
 	bool ____isConnecting;
 	bool ____isConnected;
-	bool ____calibrationComplete;
 };
 struct CustomIntegrationConfigBase_tA2D5A7EC89347EEAC98055070E9D360EC4715BDC  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -6311,7 +6309,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize16312 = { sizeof(SerialThrea
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16313;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize16313 = { sizeof(SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16314;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16314 = { sizeof(U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410)+ sizeof(RuntimeObject), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16314 = { sizeof(U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759)+ sizeof(RuntimeObject), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16315;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize16315 = { sizeof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16316;

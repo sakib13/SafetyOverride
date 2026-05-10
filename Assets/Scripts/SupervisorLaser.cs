@@ -47,7 +47,7 @@ public class SupervisorLaser : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-        if (!Runner.IsServer) return;
+        if (!Runner.IsSharedModeMasterClient) return;
         if (_cameraRig == null) return;
 
         Transform rightHand = _cameraRig.rightHandAnchor;
@@ -99,7 +99,7 @@ public class SupervisorLaser : NetworkBehaviour
             Vector3 dir = LaserDirection;
 
             // Client: proper local-space conversion for face-to-face mirroring
-            if (!Runner.IsServer && _hostGcReceived && gameContent != null)
+            if (!Runner.IsSharedModeMasterClient && _hostGcReceived && gameContent != null)
             {
                 // Convert host world-space to local offset
                 Vector3 localOrigin = origin - _hostGcPosition;
@@ -113,7 +113,7 @@ public class SupervisorLaser : NetworkBehaviour
                 // Convert back using client's gameContent position
                 origin = localOrigin + gameContent.position;
             }
-            else if (!Runner.IsServer)
+            else if (!Runner.IsSharedModeMasterClient)
             {
                 // Fallback: simple X negation if host GC not received yet
                 origin.x = -origin.x;

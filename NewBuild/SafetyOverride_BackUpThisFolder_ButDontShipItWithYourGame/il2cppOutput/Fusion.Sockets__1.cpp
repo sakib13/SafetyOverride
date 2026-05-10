@@ -23395,7 +23395,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR NetConnection_tB10E71962B9B7AF32F
 		return L_0;
 	}
 }
-// Method Definition Index: 126982
+// Method Definition Index: 126983
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Log_mE8713379CD1590C59657552F174D511A183E566E_inline (TraceLogStream_t692663C7D2E548141B50389D7E67977C44FE6A5C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23406,7 +23406,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Log_mE8713379
 		return;
 	}
 }
-// Method Definition Index: 126850
+// Method Definition Index: 126851
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugLogStream_Log_m6916CAA3151A08E4B8B727A9AEA8E6725B3591FC_inline (DebugLogStream_t5286222338FBE750E9E56E264790C4D9049CED3D* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23462,7 +23462,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 126990
+// Method Definition Index: 126991
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Warn_m6C9D643491EEA2270CA22F3B51A7296748740BD3_inline (TraceLogStream_t692663C7D2E548141B50389D7E67977C44FE6A5C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23507,7 +23507,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NetBitBuffer_get_LengthBy
 		return L_0;
 	}
 }
-// Method Definition Index: 126854
+// Method Definition Index: 126855
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugLogStream_Error_m1EDF2221CD9E85784C53B45B3B6013B26178C0C3_inline (DebugLogStream_t5286222338FBE750E9E56E264790C4D9049CED3D* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23546,7 +23546,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NetBitBuffer_set_Data_m11B14
 		return;
 	}
 }
-// Method Definition Index: 126986
+// Method Definition Index: 126987
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Error_mC5E38072A26F846657EEB6D8824CD2C8FA7202F8_inline (TraceLogStream_t692663C7D2E548141B50389D7E67977C44FE6A5C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23598,7 +23598,7 @@ IL_003d:
 		return L_5;
 	}
 }
-// Method Definition Index: 128517
+// Method Definition Index: 128518
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int64_t Socket_op_Implicit_m4A8C4A66658531E284B8918B73AF89CB7D6BEE9E_inline (Socket_t46CD8CA395215449BFCC033F0B1B802E1DC42CF6 ___0_socket, const RuntimeMethod* method) 
 {
 	{
@@ -23623,7 +23623,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR IPAddress_t2F4486449B0D73FF2D3B36
 		return L_0;
 	}
 }
-// Method Definition Index: 126987
+// Method Definition Index: 126988
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Error_mF351BB8AF06701C05488E9AD6E23C38EF83BB7C5_inline (TraceLogStream_t692663C7D2E548141B50389D7E67977C44FE6A5C* __this, Exception_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23634,7 +23634,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TraceLogStream_Error_mF351BB
 		return;
 	}
 }
-// Method Definition Index: 126858
+// Method Definition Index: 126859
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugLogStream_Warn_m6A7E40AC8F989DDF607E73636D6560AE304704EB_inline (DebugLogStream_t5286222338FBE750E9E56E264790C4D9049CED3D* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -23741,7 +23741,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t StunErrorAttribute_get_Co
 		return L_0;
 	}
 }
-// Method Definition Index: 126855
+// Method Definition Index: 126856
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugLogStream_Error_m90849833CF158303A7E67995C74915942801F2E1_inline (DebugLogStream_t5286222338FBE750E9E56E264790C4D9049CED3D* __this, Exception_t* ___0_message, const RuntimeMethod* method) 
 {
 	{

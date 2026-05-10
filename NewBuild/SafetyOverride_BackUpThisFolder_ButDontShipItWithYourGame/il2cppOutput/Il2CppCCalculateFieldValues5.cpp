@@ -13122,7 +13122,7 @@ struct SpaceSharingInfo_t8859D951A4E8EDABABD21B97822F283E66EF9AE7
 	Guid_t ___RoomId;
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___FloorAnchor;
 };
-struct U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410 
+struct U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759 
 {
 	int32_t ___U3CU3E1__state;
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder;
@@ -16132,10 +16132,8 @@ struct ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7  : public Mon
 {
 	NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___runner;
 	String_t* ___sessionName;
-	bool ___waitForCalibration;
 	bool ____isConnecting;
 	bool ____isConnected;
-	bool ____calibrationComplete;
 };
 struct ControllerButtonsMapper_t4A5D9B27D6ACD9CE0B2141CA0F2F5DA565C1A8F2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -21374,10 +21372,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16312[3] =
 	static_cast<int32_t>(offsetof(SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE, ___separator)),static_cast<int32_t>(offsetof(SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE, ___buffer)),static_cast<int32_t>(offsetof(SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE, ___bufferUsed)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16314[4] = 
 {
-	static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410, ___U3CU3E1__state)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410, ___U3CU3Et__builder)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410, ___U3CU3E4__this)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__10_t3067F4054788860DA7D12A28BFBDF123BA168410, ___U3CU3Eu__1)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16315[6] = 
+	static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759, ___U3CU3E1__state)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759, ___U3CU3Et__builder)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759, ___U3CU3E4__this)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759, ___U3CU3Eu__1)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16315[4] = 
 {
-	static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ___runner)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ___sessionName)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ___waitForCalibration)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ____isConnecting)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ____isConnected)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ____calibrationComplete)),};
+	static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ___runner)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ___sessionName)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ____isConnecting)),static_cast<int32_t>(offsetof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7, ____isConnected)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable16316[8] = 
 {
 	static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ___gameContentParent)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ___connectionManager)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ___cameraRig)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ___instructionCanvas)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ___contentDistance)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ___heightOffset)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ____isCalibrated)),static_cast<int32_t>(offsetof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B, ____isReady)),};

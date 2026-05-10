@@ -3,12 +3,10 @@ using Fusion;
 using Fusion.Sockets;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Handles Photon Fusion networking for the SafetyOverride experience.
-/// Waits for manual calibration to complete before starting network connection.
+/// Uses Shared Mode for colocation with building blocks.
 /// </summary>
 public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
 {
@@ -18,15 +16,13 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     [Tooltip("Fixed session name for all devices to join")]
     public string sessionName = "SafetyRoom";
 
-    [Header("Calibration")]
-    [Tooltip("If true, waits for StartNetworkAfterCalibration() to be called")]
-    public bool waitForCalibration = true;
-
     private bool _isConnecting = false;
     private bool _isConnected = false;
-    private bool _calibrationComplete = false;
 
     public bool IsConnected => _isConnected;
+
+    // Kept for ManualCalibrationManager compatibility (script is disabled but still compiles)
+    public void StartNetworkAfterCalibration() { }
 
     private void Start()
     {
@@ -34,28 +30,12 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
 
-        if (!waitForCalibration)
-        {
-            // Legacy mode: auto-start after delay
-            float delay = 5f;
-            #if UNITY_EDITOR
-            delay = 12f;
-            #endif
-            Invoke(nameof(StartConnection), delay);
-        }
-        // Otherwise, wait for StartNetworkAfterCalibration() to be called
-    }
-
-    /// <summary>
-    /// Called by ManualCalibrationManager after calibration is complete.
-    /// </summary>
-    public void StartNetworkAfterCalibration()
-    {
-        if (_calibrationComplete) return;
-        _calibrationComplete = true;
-
-        Debug.Log("[ConnectionManager] Calibration complete - starting network connection...");
-        StartConnection();
+        // Auto-start after delay to let tracking initialize
+        float delay = 5f;
+        #if UNITY_EDITOR
+        delay = 8f;
+        #endif
+        Invoke(nameof(StartConnection), delay);
     }
 
     private async void StartConnection()
@@ -63,38 +43,29 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         if (_isConnecting || _isConnected) return;
         _isConnecting = true;
 
-        Debug.Log($"[ConnectionManager] Starting Photon connection...");
+        Debug.Log($"[ConnectionManager] Starting Photon connection in Shared mode...");
 
-        // Get or create NetworkRunner
-        if (runner == null)
-        {
-            runner = GetComponent<NetworkRunner>();
-        }
-
-        if (runner == null)
-        {
-            runner = gameObject.AddComponent<NetworkRunner>();
-        }
-
-        // Add callbacks
+        // Create a fresh NetworkRunner on a new child object to avoid reuse errors
+        var runnerObj = new GameObject("NetworkRunner");
+        runnerObj.transform.SetParent(transform);
+        runner = runnerObj.AddComponent<NetworkRunner>();
         runner.AddCallbacks(this);
 
-        // Determine game mode
-        #if UNITY_EDITOR
-        GameMode mode = GameMode.Client; // Editor always joins as client
-        Debug.Log("[ConnectionManager] Editor mode - connecting as Client");
-        #else
-        GameMode mode = GameMode.AutoHostOrClient; // Quest devices auto-determine
-        Debug.Log("[ConnectionManager] Quest mode - connecting as AutoHostOrClient");
-        #endif
+        // Shared mode for all platforms (colocation building blocks require this)
+        GameMode mode = GameMode.Shared;
+        Debug.Log("[ConnectionManager] Connecting as Shared mode");
 
-        // Start the game
+        // Get or add scene manager
+        var sceneManager = runner.GetComponent<INetworkSceneManager>();
+        if (sceneManager == null)
+            sceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>();
+
+        // Start the game - no Scene passed to avoid additive scene reload
         var result = await runner.StartGame(new StartGameArgs()
         {
             GameMode = mode,
             SessionName = sessionName,
-            Scene = SceneRef.FromIndex(SceneManager.GetActiveScene().buildIndex),
-            SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
+            SceneManager = sceneManager
         });
 
         _isConnecting = false;
@@ -102,13 +73,11 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         if (result.Ok)
         {
             _isConnected = true;
-            Debug.Log($"[ConnectionManager] Connected! IsServer: {runner.IsServer}, IsClient: {runner.IsClient}");
+            Debug.Log($"[ConnectionManager] Connected! IsSharedModeMasterClient: {runner.IsSharedModeMasterClient}");
         }
         else
         {
             Debug.LogError($"[ConnectionManager] Connection failed: {result.ShutdownReason}");
-
-            // Retry after delay
             Debug.Log("[ConnectionManager] Retrying in 5 seconds...");
             Invoke(nameof(StartConnection), 5f);
         }
@@ -124,8 +93,6 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         Debug.Log($"[ConnectionManager] Disconnected from server: {reason}");
         _isConnected = false;
-
-        // Try to reconnect
         Invoke(nameof(StartConnection), 3f);
     }
 

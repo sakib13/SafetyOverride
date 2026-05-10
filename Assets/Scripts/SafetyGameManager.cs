@@ -40,9 +40,18 @@ public class SafetyGameManager : NetworkBehaviour
     private Renderer _supervisorButtonRenderer;
     private Renderer _clientButtonRenderer;
 
+    private void Awake()
+    {
+        // Hide all role-specific objects until networking assigns roles
+        if (greenZone) greenZone.gameObject.SetActive(false);
+        if (needle) needle.gameObject.SetActive(false);
+        if (confirmButton) confirmButton.SetActive(false);
+        if (clientButton) clientButton.SetActive(false);
+    }
+
     public override void Spawned()
     {
-        if (Runner.IsServer) // SUPERVISOR (Host)
+        if (Runner.IsSharedModeMasterClient) // SUPERVISOR (first player)
         {
             if (greenZone) greenZone.gameObject.SetActive(true);
             if (confirmButton) confirmButton.SetActive(true);
@@ -61,7 +70,7 @@ public class SafetyGameManager : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-        if (!Runner.IsServer) return;
+        if (!Runner.IsSharedModeMasterClient) return;
 
         float dt = Runner.DeltaTime;
 
@@ -108,7 +117,7 @@ public class SafetyGameManager : NetworkBehaviour
     #if UNITY_EDITOR
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && Runner != null && !Runner.IsServer)
+        if (Input.GetKeyDown(KeyCode.C) && Runner != null && !Runner.IsSharedModeMasterClient)
         {
             Debug.Log("[DEBUG] Simulating client button press via keyboard");
             OnClientButtonPressed();
@@ -153,7 +162,7 @@ public class SafetyGameManager : NetworkBehaviour
         }
 
         // Supervisor button: swap material to red or green based on client confirmation
-        if (Runner != null && Runner.IsServer && confirmButton != null)
+        if (Runner != null && Runner.IsSharedModeMasterClient && confirmButton != null)
         {
             if (_supervisorButtonRenderer == null)
             {
@@ -167,7 +176,7 @@ public class SafetyGameManager : NetworkBehaviour
         }
 
         // Client button: swap material to yellow once
-        if (Runner != null && !Runner.IsServer && clientButton != null)
+        if (Runner != null && !Runner.IsSharedModeMasterClient && clientButton != null)
         {
             if (_clientButtonRenderer == null)
             {
@@ -185,7 +194,7 @@ public class SafetyGameManager : NetworkBehaviour
             float syncedValue = arduinoController.NetKnobValue;
             float targetX = Remap(syncedValue, 0, 1023, minX, maxX);
             // Negate X for client to fix face-to-face mirroring
-            float displayX = Runner.IsServer ? targetX : -targetX;
+            float displayX = Runner.IsSharedModeMasterClient ? targetX : -targetX;
             needle.localPosition = new Vector3(displayX, needle.localPosition.y, needle.localPosition.z);
         }
     }
