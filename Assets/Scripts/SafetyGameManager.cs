@@ -12,12 +12,21 @@ public class SafetyGameManager : NetworkBehaviour
     public GameObject confirmButton;
     public GameObject clientButton;
 
+    [Header("Shared Difficulty Cube")]
+    [Tooltip("Drag the shared cube here. Its X position controls green zone speed.")]
+    public Transform difficultyCube;
+    [Tooltip("Cube X position that maps to minimum speed")]
+    public float cubeMinX = -0.3f;
+    [Tooltip("Cube X position that maps to maximum speed")]
+    public float cubeMaxX = 0.3f;
+    [Tooltip("Slowest green zone speed")]
+    public float minSpeed = 0.1f;
+    [Tooltip("Fastest green zone speed")]
+    public float maxSpeed = 1.0f;
+
     [Header("Green Zone Movement")]
     [Tooltip("Speed of green zone oscillation. Higher = faster.")]
     public float greenZoneSpeed = 0.3f;
-
-    [Tooltip("How long the green zone pauses when it stops (seconds).")]
-    public float pauseDuration = 5f;
 
     [Header("Game Logic")]
     public float zoneWidth = 0.15f;
@@ -27,10 +36,6 @@ public class SafetyGameManager : NetworkBehaviour
 
     [Networked] private float GreenZoneX { get; set; }
     [Networked] public NetworkBool ClientConfirmed { get; set; }
-    [Networked] private NetworkBool GreenZonePaused { get; set; }
-
-    private float _pauseTimer;
-    private float _nextPauseTime;
 
     [Header("Button Materials")]
     public Material redMaterial;
@@ -39,6 +44,8 @@ public class SafetyGameManager : NetworkBehaviour
 
     private Renderer _supervisorButtonRenderer;
     private Renderer _clientButtonRenderer;
+    private Renderer _cubeRenderer;
+    private MaterialPropertyBlock _cubeMPB;
 
     private void Awake()
     {
@@ -57,7 +64,6 @@ public class SafetyGameManager : NetworkBehaviour
             if (confirmButton) confirmButton.SetActive(true);
             if (needle) needle.gameObject.SetActive(false);
             if (clientButton) clientButton.SetActive(false);
-            _nextPauseTime = Random.Range(3f, 8f);
         }
         else // TECHNICIAN (Client)
         {
@@ -72,27 +78,12 @@ public class SafetyGameManager : NetworkBehaviour
     {
         if (!Runner.IsSharedModeMasterClient) return;
 
-        float dt = Runner.DeltaTime;
-
-        if (GreenZonePaused)
+        // Update green zone speed based on cube position
+        if (difficultyCube != null)
         {
-            // Count down pause timer
-            _pauseTimer -= dt;
-            if (_pauseTimer <= 0f)
-            {
-                GreenZonePaused = false;
-                _nextPauseTime = Random.Range(3f, 8f);
-            }
-            return;
-        }
-
-        // Count down until next pause
-        _nextPauseTime -= dt;
-        if (_nextPauseTime <= 0f)
-        {
-            GreenZonePaused = true;
-            _pauseTimer = pauseDuration;
-            return;
+            float cubeX = Mathf.Clamp(difficultyCube.localPosition.x, cubeMinX, cubeMaxX);
+            float t = (cubeX - cubeMinX) / (cubeMaxX - cubeMinX);
+            greenZoneSpeed = Mathf.Lerp(minSpeed, maxSpeed, t);
         }
 
         float amplitude = (maxX - minX) / 2f - zoneWidth / 2f;
@@ -185,6 +176,26 @@ public class SafetyGameManager : NetworkBehaviour
                     _clientButtonRenderer = cap.GetComponent<MeshRenderer>();
                 if (_clientButtonRenderer != null)
                     _clientButtonRenderer.sharedMaterial = yellowMaterial;
+            }
+        }
+
+        // Update cube color based on difficulty
+        if (difficultyCube != null)
+        {
+            if (_cubeRenderer == null)
+            {
+                _cubeRenderer = difficultyCube.GetComponent<Renderer>();
+                _cubeMPB = new MaterialPropertyBlock();
+            }
+            if (_cubeRenderer != null)
+            {
+                float cubeX = Mathf.Clamp(difficultyCube.localPosition.x, cubeMinX, cubeMaxX);
+                float t = (cubeX - cubeMinX) / (cubeMaxX - cubeMinX);
+                Color difficultyColor = Color.Lerp(Color.green, Color.red, t);
+                _cubeRenderer.GetPropertyBlock(_cubeMPB);
+                _cubeMPB.SetColor("_BaseColor", difficultyColor);
+                _cubeMPB.SetColor("_Color", difficultyColor);
+                _cubeRenderer.SetPropertyBlock(_cubeMPB);
             }
         }
 

@@ -282,3 +282,866 @@ Design, development, and implementation - Sakib Ahsan Dipto |
 MSc in Design for Creative and Immersive Technology, Stockholm University
 
 Contact: sakibahsandipto@gmail.com
+
+--------
+ADB stuffs 
+
+--------- beginning of main
+05-10 23:25:42.293 16640 16640 V Unity   : Context Type: GameActivity
+05-10 23:25:42.299 16640 16669 I Unity   : UnityApplication::CreateInstance
+05-10 23:25:42.299 16640 16669 I Unity   : GameActivity Package Version '3.0.5'
+05-10 23:25:42.301 16640 16669 I Unity   : Starting Game Loop
+05-10 23:25:42.303 16640 16669 I Unity   : Handle cmd APP_CMD_START(11)
+05-10 23:25:42.306 16640 16669 I Unity   : Handle cmd APP_CMD_RESUME(12)
+05-10 23:25:42.313 16640 16669 I Unity   : Handle cmd APP_CMD_GAINED_FOCUS(7)
+05-10 23:25:42.313 16640 16669 I Unity   : Handle cmd APP_CMD_LOST_FOCUS(8)
+05-10 23:25:42.315 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:42.320 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:42.320 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:42.320 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:42.320 16640 16669 I Unity   : Handle cmd APP_CMD_CONTENT_RECT_CHANGED(5)
+05-10 23:25:42.322 16640 16669 I Unity   : Handle cmd APP_CMD_INIT_WINDOW(1)
+05-10 23:25:42.333 16640 16669 I Unity   : MemoryManager: Using 'Dynamic Heap' Allocator.
+05-10 23:25:42.353 16640 16669 I Unity   : SystemInfo CPU = ARM64 FP ASIMD AES, Cores = 6, Memory = 7756mb
+05-10 23:25:42.353 16640 16669 I Unity   : SystemInfo ARM big.LITTLE configuration: 4 big (mask: 0x3c), 2 little (mask: 0x3)
+05-10 23:25:42.353 16640 16669 I Unity   : XR UsableCoreMask: 0x3f
+05-10 23:25:42.353 16640 16669 I Unity   : ApplicationInfo 'com.sakib.dcdc', Version '0.1.0', Min API Level '32', Target API Level '32'
+05-10 23:25:42.353 16640 16669 I Unity   : Built from '6000.2/staging' branch, Version '6000.2.10f1 (d3d30d158480)', Build type 'Release', Scripting Backend 'il2cpp', CPU 'arm64-v8a', Stripping 'Enabled'
+05-10 23:25:42.353 16640 16669 I Unity   : Device Model 'Oculus Quest 3', OS 'Android OS 14 (API 34)'
+05-10 23:25:42.600 16640 16669 I Unity   : Unity memory allocator detected: MetaXRAudio native memory allocations will be tracked.
+05-10 23:25:42.602 16640 16669 I Unity   : Company Name: GlitchVein
+05-10 23:25:42.602 16640 16669 I Unity   : Product Name: SafetyOverride
+05-10 23:25:42.604 16640 16669 D Unity   : loading library OVRPlugin
+05-10 23:25:43.033 16640 16669 I Unity   : XRGeneral Settings awakening...
+05-10 23:25:43.033 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.033 16640 16669 I Unity   : UnityEngine.XR.Management.XRGeneralSettings:Awake()
+05-10 23:25:43.033 16640 16669 I Unity   : 
+05-10 23:25:43.257 16640 16669 I Unity   :     HasWindow = 1, HasFocus = 0
+05-10 23:25:43.257 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_RESIZED(3)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_REDRAW_NEEDED(4)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_GAINED_FOCUS(7)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.258 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:43.425 16640 16669 D Unity   : initOculus Java!
+05-10 23:25:43.425 16640 16640 D Unity   : Oculus UI thread done.
+05-10 23:25:43.444 16640 16669 W Unity   : MRUK Shared: Unable to bind OpenXR function
+05-10 23:25:43.444 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.444 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:OnSharedLibLog(MrukLogLevel, Char*, UInt32)
+05-10 23:25:43.444 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:InitializeSharedLibrary()
+05-10 23:25:43.444 16640 16669 W Unity   : 
+05-10 23:25:43.444 16640 16669 W Unity   : MRUK Shared: Unable to bind OpenXR function
+05-10 23:25:43.444 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.444 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:OnSharedLibLog(MrukLogLevel, Char*, UInt32)
+05-10 23:25:43.444 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:InitializeSharedLibrary()
+05-10 23:25:43.444 16640 16669 W Unity   : 
+05-10 23:25:43.444 16640 16669 W Unity   : MRUK Shared: Unable to bind OpenXR function
+05-10 23:25:43.444 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.444 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:OnSharedLibLog(MrukLogLevel, Char*, UInt32)
+05-10 23:25:43.444 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:InitializeSharedLibrary()
+05-10 23:25:43.444 16640 16669 W Unity   : 
+05-10 23:25:43.445 16640 16669 W Unity   : MRUK Shared: Unable to bind OpenXR function
+05-10 23:25:43.445 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.445 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:OnSharedLibLog(MrukLogLevel, Char*, UInt32)
+05-10 23:25:43.445 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:InitializeSharedLibrary()
+05-10 23:25:43.445 16640 16669 W Unity   : 
+05-10 23:25:43.445 16640 16669 W Unity   : MRUK Shared: Unable to bind OpenXR function
+05-10 23:25:43.445 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.445 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:OnSharedLibLog(MrukLogLevel, Char*, UInt32)
+05-10 23:25:43.445 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:InitializeSharedLibrary()
+05-10 23:25:43.445 16640 16669 W Unity   : 
+05-10 23:25:43.691 16640 16669 I Unity   : Applying Acoustic Propagation Settings: [acoustic model = Automatic], [diffraction = True], 
+05-10 23:25:43.691 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.691 16640 16669 I Unity   : MetaXRAcousticSettings:ApplyAllSettings()
+05-10 23:25:43.691 16640 16669 I Unity   : 
+05-10 23:25:43.704 16640 16669 I Unity   : Meta XR Audio Native Interface initialized with Unity plugin
+05-10 23:25:43.704 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.704 16640 16669 I Unity   : MetaXRAcousticNativeInterface:FindInterface()
+05-10 23:25:43.704 16640 16669 I Unity   : MetaXRAcousticNativeInterface:get_Interface()
+05-10 23:25:43.704 16640 16669 I Unity   : MetaXRAcousticSettings:ApplyAllSettings()
+05-10 23:25:43.704 16640 16669 I Unity   : 
+05-10 23:25:43.705 16640 16669 I Unity   : Setting spatial voice limit: 64
+05-10 23:25:43.705 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.705 16640 16669 I Unity   : MetaXRAudioSource:OnBeforeSceneLoadRuntimeMethod()
+05-10 23:25:43.705 16640 16669 I Unity   : 
+05-10 23:25:43.717 16640 16669 I Unity   : Unity v6000.2.10f1, Oculus Utilities v1.115.0, OVRPlugin v1.115.0, SDK v1.1.51.
+05-10 23:25:43.717 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.717 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.717 16640 16669 I Unity   : 
+05-10 23:25:43.718 16640 16669 I Unity   : SystemHeadset Meta_Quest_3, API OpenXR
+05-10 23:25:43.718 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.718 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.718 16640 16669 I Unity   : 
+05-10 23:25:43.718 16640 16669 I Unity   : OpenXR instance 0x2 session 0x50
+05-10 23:25:43.718 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.718 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.718 16640 16669 I Unity   : 
+05-10 23:25:43.720 16640 16669 I Unity   : OVRPlugin.Media not initialized
+05-10 23:25:43.720 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.720 16640 16669 I Unity   : OVRManager:StaticInitializeMixedRealityCapture(OVRMixedRealityCaptureConfiguration)
+05-10 23:25:43.720 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.720 16640 16669 I Unity   : 
+05-10 23:25:43.729 16640 16669 I Unity   : Current display frequency 90, available frequencies [72, 80, 90, 120]
+05-10 23:25:43.729 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.729 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.729 16640 16669 I Unity   : 
+05-10 23:25:43.740 16640 16669 W Unity   : Local Dimming feature is not supported
+05-10 23:25:43.740 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.740 16640 16669 W Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.740 16640 16669 W Unity   : 
+05-10 23:25:43.742 16640 16669 I Unity   : [OVRManager] Current hand skeleton version is OpenXR
+05-10 23:25:43.742 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.742 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.742 16640 16669 I Unity   : 
+05-10 23:25:43.742 16640 16669 I Unity   : Oculus XR Runtime Settings:
+05-10 23:25:43.742 16640 16669 I Unity   : Depth Submission - False
+05-10 23:25:43.742 16640 16669 I Unity   : Foveated Rendering Method - FixedFoveatedRendering
+05-10 23:25:43.742 16640 16669 I Unity   : Optimize Buffer Discards - True
+05-10 23:25:43.742 16640 16669 I Unity   : Symmetric Projection - True
+05-10 23:25:43.742 16640 16669 I Unity   : Subsampled Layout - True
+05-10 23:25:43.742 16640 16669 I Unity   : Space Warp - False
+05-10 23:25:43.742 16640 16669 I Unity   : Late Latching - False
+05-10 23:25:43.742 16640 16669 I Unity   : Low Overhead Mode - True
+05-10 23:25:43.742 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.742 16640 16669 I Unity   : OVRManager:InitOVRManager()
+05-10 23:25:43.742 16640 16669 I Unity   : 
+05-10 23:25:43.757 16640 16669 I Unity   : Found IOVRSkeletonDataProvider reference in [BuildingBlock] Hand Tracking left due to unassigned field.
+05-10 23:25:43.757 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.757 16640 16669 I Unity   : OVRSkeleton:Awake()
+05-10 23:25:43.757 16640 16669 I Unity   : 
+05-10 23:25:43.759 16640 16669 I Unity   : Found IOVRSkeletonDataProvider reference in [BuildingBlock] Hand Tracking right due to unassigned field.
+05-10 23:25:43.759 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.759 16640 16669 I Unity   : OVRSkeleton:Awake()
+05-10 23:25:43.759 16640 16669 I Unity   : 
+05-10 23:25:43.773 16640 16811 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:43.773 16640 16811 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:43.773 16640 16811 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:43.773 16640 16811 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:43.773 16640 16811 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.773 16640 16811 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:43.773 16640 16811 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:43.773 16640 16811 W Unity   : 
+05-10 23:25:43.773 16640 16669 W Unity   : There can be only one active Event System.
+05-10 23:25:43.773 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.773 16640 16669 W Unity   : UnityEngine.UIElements.UIElementsRuntimeUtility:RegisterEventSystem(Object)
+05-10 23:25:43.773 16640 16669 W Unity   : UnityEngine.Object:Internal_CloneSingle(Object)
+05-10 23:25:43.773 16640 16669 W Unity   : UnityEngine.Object:Instantiate(T)
+05-10 23:25:43.773 16640 16669 W Unity   : 
+05-10 23:25:43.795 16640 16669 I Unity   : No Meta XR Audio Room found, setting default room
+05-10 23:25:43.795 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.795 16640 16669 I Unity   : MetaXRAudioRoomAcousticProperties:CheckSceneHasRoom()
+05-10 23:25:43.795 16640 16669 I Unity   : 
+05-10 23:25:43.803 16640 16669 I Unity   : Meta XR Audio Native Interface initialized with Unity plugin
+05-10 23:25:43.803 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.803 16640 16669 I Unity   : MetaXRAudioNativeInterface:FindInterface()
+05-10 23:25:43.803 16640 16669 I Unity   : MetaXRAudioNativeInterface:get_Interface()
+05-10 23:25:43.803 16640 16669 I Unity   : MetaXRAudioRoomAcousticProperties:Update()
+05-10 23:25:43.803 16640 16669 I Unity   : MetaXRAudioRoomAcousticProperties:CheckSceneHasRoom()
+05-10 23:25:43.803 16640 16669 I Unity   : 
+05-10 23:25:43.814 16640 16669 I Unity   : [OVRManager] OnApplicationPause(false)
+05-10 23:25:43.814 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.814 16640 16669 I Unity   : 
+05-10 23:25:43.815 16640 16669 I Unity   : [OVRManager] OnApplicationFocus(true)
+05-10 23:25:43.815 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.815 16640 16669 I Unity   : 
+05-10 23:25:43.832 16640 16669 I Unity   : [ColocationDiag] === DIAGNOSTICS STARTED ===
+05-10 23:25:43.832 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.832 16640 16669 I Unity   : ColocationDiagnostics:Start()
+05-10 23:25:43.832 16640 16669 I Unity   : 
+05-10 23:25:43.832 16640 16669 I Unity   : [ColocationDiag] Device: Oculus Quest 3, DeviceID hash: 18446744071973403474
+05-10 23:25:43.832 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.832 16640 16669 I Unity   : ColocationDiagnostics:Start()
+05-10 23:25:43.832 16640 16669 I Unity   : 
+05-10 23:25:43.832 16640 16669 E Unity   : [ColocationDiag] META_PLATFORM_SDK_DEFINED is NOT defined! Colocation cannot work.
+05-10 23:25:43.832 16640 16669 E Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.832 16640 16669 E Unity   : ColocationDiagnostics:CheckEntitlement()
+05-10 23:25:43.832 16640 16669 E Unity   : ColocationDiagnostics:Start()
+05-10 23:25:43.832 16640 16669 E Unity   : 
+05-10 23:25:43.833 16640 16669 I Unity   : [ConnectionManager] Networking delegated to Auto Matchmaking building block.
+05-10 23:25:43.833 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.833 16640 16669 I Unity   : 
+05-10 23:25:43.851 16640 16669 I Unity   : OVRControllerHelp: Active controller type: TouchPlus for product Meta Quest (headset Meta_Quest_3, hand HandRight)
+05-10 23:25:43.851 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.851 16640 16669 I Unity   : OVRControllerHelper:InitializeControllerModels()
+05-10 23:25:43.851 16640 16669 I Unity   : 
+05-10 23:25:43.859 16640 16669 I Unity   : OVRControllerHelp: Active controller type: TouchPlus for product Meta Quest (headset Meta_Quest_3, hand HandLeft)
+05-10 23:25:43.859 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.859 16640 16669 I Unity   : OVRControllerHelper:InitializeControllerModels()
+05-10 23:25:43.859 16640 16669 I Unity   : 
+05-10 23:25:43.877 16640 16669 I Unity   : [OVRManager] HMDAcquired event
+05-10 23:25:43.877 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.877 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:43.877 16640 16669 I Unity   : 
+05-10 23:25:43.877 16640 16669 I Unity   : [OVRManager] HMDMounted event
+05-10 23:25:43.877 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.877 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:43.877 16640 16669 I Unity   : 
+05-10 23:25:43.878 16640 16669 I Unity   : [OVRManager] VrFocusAcquired event
+05-10 23:25:43.878 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.878 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:43.878 16640 16669 I Unity   : 
+05-10 23:25:43.879 16640 16669 I Unity   : [OVRManager] InputFocusLost event
+05-10 23:25:43.879 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.879 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:43.879 16640 16669 I Unity   : 
+05-10 23:25:43.881 16640 16669 I Unity   : Recenter event detected
+05-10 23:25:43.881 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.881 16640 16669 I Unity   : OVRDisplay:Update()
+05-10 23:25:43.881 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:43.881 16640 16669 I Unity   : 
+05-10 23:25:43.885 16640 16669 W Unity   : MRUK Shared: World Lock anchor handle is null
+05-10 23:25:43.885 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.885 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:OnSharedLibLog(MrukLogLevel, Char*, UInt32)
+05-10 23:25:43.885 16640 16669 W Unity   : Meta.XR.MRUtilityKit.MRUK:Update()
+05-10 23:25:43.885 16640 16669 W Unity   : 
+05-10 23:25:43.891 16640 16669 I Unity   : Unable to process a controller whose SampleRateHz is 0 now.
+05-10 23:25:43.891 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.891 16640 16669 I Unity   : OVRHapticsOutput:Process()
+05-10 23:25:43.891 16640 16669 I Unity   : OVRHaptics:Process()
+05-10 23:25:43.891 16640 16669 I Unity   : OVRManager:LateUpdate()
+05-10 23:25:43.891 16640 16669 I Unity   : 
+05-10 23:25:43.891 16640 16669 I Unity   : Unable to process a controller whose SampleRateHz is 0 now.
+05-10 23:25:43.891 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.891 16640 16669 I Unity   : OVRHapticsOutput:Process()
+05-10 23:25:43.891 16640 16669 I Unity   : OVRHaptics:Process()
+05-10 23:25:43.891 16640 16669 I Unity   : OVRManager:LateUpdate()
+05-10 23:25:43.891 16640 16669 I Unity   : 
+05-10 23:25:43.972 16640 16669 I Unity   : RenderGraph is now enabled.
+05-10 23:25:43.972 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:43.972 16640 16669 I Unity   : UnityEngine.Rendering.Universal.UniversalRenderPipeline:.ctor(UniversalRenderPipelineAsset)
+05-10 23:25:43.972 16640 16669 I Unity   : UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset:CreatePipeline()
+05-10 23:25:43.972 16640 16669 I Unity   : UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+05-10 23:25:43.972 16640 16669 I Unity   : UnityEngine.Rendering.RenderPipelineManager:TryPrepareRenderPipeline(RenderPipelineAsset)
+05-10 23:25:43.972 16640 16669 I Unity   : UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, Object)
+05-10 23:25:43.972 16640 16669 I Unity   : 
+05-10 23:25:44.041 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:44.041 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:44.064 16640 16669 I Unity   : [OVRManager] InputFocusAcquired event
+05-10 23:25:44.064 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:44.064 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:44.064 16640 16669 I Unity   : 
+05-10 23:25:44.064 16640 16669 I Unity   : [OVRManager] TrackingAcquired event
+05-10 23:25:44.064 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:44.064 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:44.064 16640 16669 I Unity   : 
+05-10 23:25:44.208 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:44.209 16640 16669 I Unity   : Handle cmd APP_CMD_WINDOW_INSETS_CHANGED(17)
+05-10 23:25:44.774 16640 16811 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:44.774 16640 16811 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:44.774 16640 16811 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:44.774 16640 16811 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:44.774 16640 16811 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:44.774 16640 16811 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:44.774 16640 16811 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:44.774 16640 16811 W Unity   : 
+05-10 23:25:44.889 16640 16669 W Unity   : The referenced script (Unknown) on this Behaviour is missing!
+05-10 23:25:44.889 16640 16669 W Unity   : UnityEngine.ResourcesAPIInternal:Load(String, Type)
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObjectResourceAttribute:Load(Type)
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:LoadPlayerInstance(FusionGlobalScriptableObjectUnloadDelegate&)
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:GetOrLoadGlobalInstance()
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:get_GlobalInternal()
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.NetworkProjectConfig:get_Global()
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.NetworkRunner:StartGame(StartGameArgs)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.<JoinRoom>d__12:MoveNext()
+05-10 23:25:44.889 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.CustomMatchmakingFusion:JoinRoom(String, String)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<JoinRoom>d__27:MoveNext()
+05-10 23:25:44.889 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.CustomMatchmaking:JoinRoom(String, String)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<OnColocationSessionFound>d__18:MoveNext()
+05-10 23:25:44.889 16640 16669 W Unity   : System.Runtime.Compil
+05-10 23:25:44.889 16640 16669 W Unity   : The referenced script on this Behaviour (Game Object 'FusionAvatarSdk28Plus') is missing!
+05-10 23:25:44.889 16640 16669 W Unity   : UnityEngine.ResourcesAPIInternal:Load(String, Type)
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObjectResourceAttribute:Load(Type)
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:LoadPlayerInstance(FusionGlobalScriptableObjectUnloadDelegate&)
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:GetOrLoadGlobalInstance()
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:get_GlobalInternal()
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.NetworkProjectConfig:get_Global()
+05-10 23:25:44.889 16640 16669 W Unity   : Fusion.NetworkRunner:StartGame(StartGameArgs)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.<JoinRoom>d__12:MoveNext()
+05-10 23:25:44.889 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.CustomMatchmakingFusion:JoinRoom(String, String)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<JoinRoom>d__27:MoveNext()
+05-10 23:25:44.889 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.CustomMatchmaking:JoinRoom(String, String)
+05-10 23:25:44.889 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<OnColocationSessionFound>d__18:Move
+05-10 23:25:44.890 16640 16669 W Unity   : The referenced script on this Behaviour (Game Object 'FusionAvatarSdk28Plus') is missing!
+05-10 23:25:44.890 16640 16669 W Unity   : UnityEngine.ResourcesAPIInternal:Load(String, Type)
+05-10 23:25:44.890 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObjectResourceAttribute:Load(Type)
+05-10 23:25:44.890 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:LoadPlayerInstance(FusionGlobalScriptableObjectUnloadDelegate&)
+05-10 23:25:44.890 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:GetOrLoadGlobalInstance()
+05-10 23:25:44.890 16640 16669 W Unity   : Fusion.FusionGlobalScriptableObject`1:get_GlobalInternal()
+05-10 23:25:44.890 16640 16669 W Unity   : Fusion.NetworkProjectConfig:get_Global()
+05-10 23:25:44.890 16640 16669 W Unity   : Fusion.NetworkRunner:StartGame(StartGameArgs)
+05-10 23:25:44.890 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.<JoinRoom>d__12:MoveNext()
+05-10 23:25:44.890 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.890 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.CustomMatchmakingFusion:JoinRoom(String, String)
+05-10 23:25:44.890 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<JoinRoom>d__27:MoveNext()
+05-10 23:25:44.890 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.890 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.CustomMatchmaking:JoinRoom(String, String)
+05-10 23:25:44.890 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<OnColocationSessionFound>d__18:Move
+05-10 23:25:44.895 16640 16669 W Unity   : <color=#144078>[Fusion]</color> Invalid TickRate. Shared Mode started with TickRate in NetworkProjectConfig set to:
+05-10 23:25:44.895 16640 16669 W Unity   : [ClientTickRate = 64, ClientSendRate = 32, ServerTickRate = 64, ServerSendRate = 32]
+05-10 23:25:44.895 16640 16669 W Unity   : Overriding with Shared Mode TickRate:
+05-10 23:25:44.895 16640 16669 W Unity   : [ClientTickRate = 32, ClientSendRate = 16, ServerTickRate = 32, ServerSendRate = 16].
+05-10 23:25:44.895 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:44.895 16640 16669 W Unity   : Fusion.UnityLogStream:Log(ILogSource, String)
+05-10 23:25:44.895 16640 16669 W Unity   : Fusion.<StartGameModeCloud>d__436:MoveNext()
+05-10 23:25:44.895 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.895 16640 16669 W Unity   : Fusion.NetworkRunner:StartGameModeCloud(StartGameArgs)
+05-10 23:25:44.895 16640 16669 W Unity   : Fusion.NetworkRunner:StartGame(StartGameArgs)
+05-10 23:25:44.895 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.<JoinRoom>d__12:MoveNext()
+05-10 23:25:44.895 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:44.895 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Fusion.CustomMatchmakingFusion:JoinRoom(String, String)
+05-10 23:25:44.895 16640 16669 W Unity   : Meta.XR.MultiplayerBlocks.Shared.<JoinRoom>d__27:MoveNext()
+05-10 23:25:44.895 16640 16669 W Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TState
+05-10 23:25:44.925 16640 16669 I Unity   : [ConnectionManager] Networking delegated to Auto Matchmaking building block.
+05-10 23:25:44.925 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:44.925 16640 16669 I Unity   : 
+05-10 23:25:44.940 16640 16669 W Unity   : <color=#144078>[Fusion]</color> [0.0] SupportLogger Info: AppID: "fc903ab6***" AppVersion: "" Client: v4.1.8.16 (NetStandard20) Build: 6000.2.10f1, Android, ENABLE_IL2CPP, DEBUG, NET_4_6 Socket: SocketUdp UserId: "" AuthType: N/A AuthMode: Auth PayloadEncryption State: ConnectingToNameServer PeerID: 65535 NameServer: ns.photonengine.io Current Server: ns.photonengine.io:27000 IP: 216.120.180.19:27000 Region:  05/10/2026 21:25:44 UTC
+05-10 23:25:44.940 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:44.940 16640 16669 W Unity   : Fusion.UnityLogStream:Log(String)
+05-10 23:25:44.940 16640 16669 W Unity   : Fusion.Photon.Realtime.SupportLogger:LogBasics()
+05-10 23:25:44.940 16640 16669 W Unity   : Fusion.Photon.Realtime.SupportLogger:Start()
+05-10 23:25:44.940 16640 16669 W Unity   : 
+05-10 23:25:45.776 16640 16811 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:45.776 16640 16811 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:45.776 16640 16811 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:45.776 16640 16811 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:45.776 16640 16811 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:45.776 16640 16811 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:45.776 16640 16811 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:45.776 16640 16811 W Unity   : 
+05-10 23:25:45.981 16640 16669 I Unity   : Recenter event detected
+05-10 23:25:45.981 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:45.981 16640 16669 I Unity   : OVRDisplay:Update()
+05-10 23:25:45.981 16640 16669 I Unity   : OVRManager:Update()
+05-10 23:25:45.981 16640 16669 I Unity   : 
+05-10 23:25:46.777 16640 16811 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:46.777 16640 16811 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:46.777 16640 16811 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:46.777 16640 16811 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:46.777 16640 16811 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:46.777 16640 16811 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:46.777 16640 16811 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:46.777 16640 16811 W Unity   : 
+05-10 23:25:47.778 16640 16811 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:47.778 16640 16811 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:47.778 16640 16811 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:47.778 16640 16811 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:47.778 16640 16811 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:47.778 16640 16811 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:47.778 16640 16811 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:47.778 16640 16811 W Unity   : 
+05-10 23:25:48.107 16640 16669 W Unity   : <color=#144078>[Fusion]</color> [3.167] SupportLogger Info: AppID: "fc903ab6***" AppVersion: "" Client: v4.1.8.16 (NetStandard20) Build: 6000.2.10f1, Android, ENABLE_IL2CPP, DEBUG, NET_4_6 Socket: SocketUdp UserId: "a6daa239-ace4-4e4d-b6ae-9b924a531f95" AuthType: None AuthMode: Auth PayloadEncryption State: ConnectingToMasterServer PeerID: 2623 NameServer: ns.photonengine.io Current Server: 87.120.167.220:27001 IP: 87.120.167.220:27001 Region: eu 05/10/2026 21:25:48 UTC
+05-10 23:25:48.107 16640 16669 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:48.107 16640 16669 W Unity   : Fusion.UnityLogStream:Log(String)
+05-10 23:25:48.107 16640 16669 W Unity   : Fusion.Photon.Realtime.SupportLogger:LogBasics()
+05-10 23:25:48.107 16640 16669 W Unity   : Fusion.Photon.Realtime.SupportLogger:OnConnected()
+05-10 23:25:48.107 16640 16669 W Unity   : Fusion.Photon.Realtime.ConnectionCallbacksContainer:OnConnected()
+05-10 23:25:48.107 16640 16669 W Unity   : Fusion.Photon.Realtime.LoadBalancingClient:OnStatusChanged(StatusCode)
+05-10 23:25:48.107 16640 16669 W Unity   : ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(StreamBuffer)
+05-10 23:25:48.107 16640 16669 W Unity   : ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+05-10 23:25:48.107 16640 16669 W Unity   : ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+05-10 23:25:48.107 16640 16669 W Unity   : E
+05-10 23:25:48.780 16640 16811 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:48.780 16640 16811 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:48.780 16640 16811 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:48.780 16640 16811 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:48.780 16640 16811 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:48.780 16640 16811 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:48.780 16640 16811 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:48.780 16640 16811 W Unity   : 
+05-10 23:25:48.849 16640 16669 I Unity   : <color=#144078>[Fusion]</color> adding player [Player:2]
+05-10 23:25:48.849 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.UnityLogStream:Log(String)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Simulation:PlayerAdd(PlayerRef, SimulationConnection)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Simulation:Fusion.Sockets.INetPeerGroupCallbacks.OnConnected(NetConnection*)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Sockets.NetPeerGroup:HandlePacketCommand(NetPeerGroup*, INetPeerGroupCallbacks, NetConnection*, NetBitBuffer*)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Sockets.NetPeerGroup:Receive(NetPeerGroup*, INetPeerGroupCallbacks)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Sockets.NetPeerGroup:Update(NetPeerGroup*, INetPeerGroupCallbacks)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Simulation:NetworkRecv()
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.Simulation:Update(Double)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.NetworkRunner:UpdateInternal(Double)
+05-10 23:25:48.849 16640 16669 I Unity   : Fusion.NetworkRunnerUpdaterDefault:InvokeUpdate()
+05-10 23:25:48.849 16640 16669 I Unity   : 
+05-10 23:25:48.850 16640 16669 I Unity   : [ConnectionManager] Connected to server!
+05-10 23:25:48.850 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.NetworkRunner:Fusion.Simulation.ICallbacks.OnConnectedToServer()
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.Simulation:Fusion.Sockets.INetPeerGroupCallbacks.OnConnected(NetConnection*)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.Sockets.NetPeerGroup:HandlePacketCommand(NetPeerGroup*, INetPeerGroupCallbacks, NetConnection*, NetBitBuffer*)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.Sockets.NetPeerGroup:Receive(NetPeerGroup*, INetPeerGroupCallbacks)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.Sockets.NetPeerGroup:Update(NetPeerGroup*, INetPeerGroupCallbacks)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.Simulation:NetworkRecv()
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.Simulation:Update(Double)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.NetworkRunner:UpdateInternal(Double)
+05-10 23:25:48.850 16640 16669 I Unity   : Fusion.NetworkRunnerUpdaterDefault:InvokeUpdate()
+05-10 23:25:48.850 16640 16669 I Unity   : 
+05-10 23:25:49.784 16640 16669 I Unity   : [ConnectionManager] Player joined: [Player:2]
+05-10 23:25:49.784 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.784 16640 16669 I Unity   : ConnectionManager:OnPlayerJoined(NetworkRunner, PlayerRef)
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.NetworkRunner:Fusion.Simulation.ICallbacks.PlayerJoined(PlayerRef)
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.Simulation:InvokePlayerJoinedLeft()
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.Simulation:InvokeTick(SimulationStages, Boolean)
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.Simulation:StepSimulation(SimulationStages, Boolean, Boolean, Boolean)
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.Simulation:Update(Double)
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.NetworkRunner:UpdateInternal(Double)
+05-10 23:25:49.784 16640 16669 I Unity   : Fusion.NetworkRunnerUpdaterDefault:InvokeUpdate()
+05-10 23:25:49.784 16640 16669 I Unity   : 
+05-10 23:25:49.785 16640 16669 I Unity   : [ConnectionManager] Player joined: [Player:1]
+05-10 23:25:49.785 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.785 16640 16669 I Unity   : ConnectionManager:OnPlayerJoined(NetworkRunner, PlayerRef)
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.NetworkRunner:Fusion.Simulation.ICallbacks.PlayerJoined(PlayerRef)
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.Simulation:InvokePlayerJoinedLeft()
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.Simulation:InvokeTick(SimulationStages, Boolean)
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.Simulation:StepSimulation(SimulationStages, Boolean, Boolean, Boolean)
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.Simulation:Update(Double)
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.NetworkRunner:UpdateInternal(Double)
+05-10 23:25:49.785 16640 16669 I Unity   : Fusion.NetworkRunnerUpdaterDefault:InvokeUpdate()
+05-10 23:25:49.785 16640 16669 I Unity   : 
+05-10 23:25:49.800 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:49.800 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:49.800 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:49.800 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:49.800 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.800 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:49.800 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:49.800 16640 16869 W Unity   : 
+05-10 23:25:49.870 16640 16669 I Unity   : [ColocationDiag] === STATE CHECK (5s) ===
+05-10 23:25:49.870 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.870 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.870 16640 16669 I Unity   : 
+05-10 23:25:49.870 16640 16669 I Unity   : [ColocationDiag] Entitlement checked: True, result: False
+05-10 23:25:49.870 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.870 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.870 16640 16669 I Unity   : 
+05-10 23:25:49.870 16640 16669 I Unity   : [ColocationDiag] NetworkRunner instances: 2
+05-10 23:25:49.870 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.870 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.870 16640 16669 I Unity   : 
+05-10 23:25:49.871 16640 16669 I Unity   : [ColocationDiag] Runner '[BuildingBlock] Network Manager' - IsRunning: False, IsMaster: False, PlayerCount: 0
+05-10 23:25:49.871 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.871 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.871 16640 16669 I Unity   : 
+05-10 23:25:49.871 16640 16669 I Unity   : [ColocationDiag] Runner 'Temporary Runner Prefab' - IsRunning: True, IsMaster: False, PlayerCount: 2
+05-10 23:25:49.871 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.871 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.871 16640 16669 I Unity   : 
+05-10 23:25:49.872 16640 16669 I Unity   : [ColocationDiag] FusionNetworkBootstrapper count: 1
+05-10 23:25:49.872 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.872 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.872 16640 16669 I Unity   : 
+05-10 23:25:49.872 16640 16669 I Unity   : [ColocationDiag]   Bootstrapper on 'FusionColocationDriver' - active: True, enabled: True, NetworkObject: True, NO.IsValid: True
+05-10 23:25:49.872 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.872 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.872 16640 16669 I Unity   : 
+05-10 23:25:49.873 16640 16669 I Unity   : [ColocationDiag] ColocationController count: 1
+05-10 23:25:49.873 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.873 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.873 16640 16669 I Unity   : 
+05-10 23:25:49.873 16640 16669 I Unity   : [ColocationDiag] SharedSpatialAnchorCore count: 1
+05-10 23:25:49.873 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.873 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.873 16640 16669 I Unity   : 
+05-10 23:25:49.874 16640 16669 I Unity   : [ColocationDiag] === END STATE CHECK ===
+05-10 23:25:49.874 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:49.874 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:49.874 16640 16669 I Unity   : 
+05-10 23:25:50.801 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:50.801 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:50.801 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:50.801 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:50.801 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:50.801 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:50.801 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:50.801 16640 16869 W Unity   : 
+05-10 23:25:51.803 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:51.803 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:51.803 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:51.803 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:51.803 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:51.803 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:51.803 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:51.803 16640 16869 W Unity   : 
+05-10 23:25:52.804 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:52.804 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:52.804 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:52.804 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:52.804 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:52.804 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:52.804 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:52.804 16640 16869 W Unity   : 
+05-10 23:25:53.804 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:53.804 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:53.804 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:53.804 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:53.804 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.804 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:53.804 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:53.804 16640 16869 W Unity   : 
+05-10 23:25:53.950 16640 16669 I Unity   : [Verbose] FusionMessenger: RegisterLocalPlayer: localPlayerId 18446744071973403474
+05-10 23:25:53.950 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:RegisterLocalPlayer(UInt64)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.NetworkBootstrapperUtils:SetUpAndStartAutomaticColocation(NetworkBootstrapperParams&, GameObject, INetworkData, INetworkMessenger)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.950 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.950 16640 16669 I Unity   : Oculus.Platform.Callback:RunCallbacks()
+05-10 23:25:53.950 16640 16669 I Unity   : 
+05-10 23:25:53.950 16640 16669 I Unity   : [Verbose] FusionMessenger RegisterLocalPlayer: fusionId 2
+05-10 23:25:53.950 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:RegisterLocalPlayer(UInt64)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.NetworkBootstrapperUtils:SetUpAndStartAutomaticColocation(NetworkBootstrapperParams&, GameObject, INetworkData, INetworkMessenger)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.950 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.950 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.950 16640 16669 I Unity   : Oculus.Platform.Callback:RunCallbacks()
+05-10 23:25:53.950 16640 16669 I Unity   : 
+05-10 23:25:53.952 16640 16669 I Unity   : [Verbose] AutomaticColocationLauncher: Init function called
+05-10 23:25:53.952 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:Init(INetworkData, INetworkMessenger, SharedAnchorManager, GameObject, UInt64, UInt64)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.NetworkBootstrapperUtils:SetUpAndStartAutomaticColocation(NetworkBootstrapperParams&, GameObject, INetworkData, INetworkMessenger)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.952 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.952 16640 16669 I Unity   : Oculus.Platform.Callback:RunCallbacks()
+05-10 23:25:53.952 16640 16669 I Unity   : 
+05-10 23:25:53.952 16640 16669 I Unity   : [Verbose] AutomaticColocationLauncher: Called Init Anchor Flow
+05-10 23:25:53.952 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:53.952 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ColocateAutomaticallyInternal()
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.952 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.952 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.952 16640 16669 I Unity   : Oculus.Platform.Callback:RunCallbacks()
+05-10 23:25:53.952 16640 16669 I Unity   : 
+05-10 23:25:53.954 16640 16669 I Unity   : [Verbose] AutomaticColocationLauncher: Called SendAnchorShareRequest with anchor id: 056c1193-39c4-324a-a3d2-5400c99a7e7a, playerId: 18446744071973403474, oculusId: 26732436676405643
+05-10 23:25:53.954 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:SendAnchorShareRequest(Anchor)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ShareAndLocalizeAnchor(Anchor)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:53.954 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ColocateAutomaticallyInternal()
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.954 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.954 16640 16669 I Unity   : Oculus.Platform.Callback:RunCallbacks()
+05-10 23:25:53.954 16640 16669 I Unity   : 
+05-10 23:25:53.954 16640 16669 I Unity   : [Info] AutomaticColocationLauncher: Request anchor sharing from playerId: 317844548, oculusId: 25341508182212030
+05-10 23:25:53.954 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:SendAnchorShareRequest(Anchor)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ShareAndLocalizeAnchor(Anchor)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:53.954 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ColocateAutomaticallyInternal()
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.954 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.954 16640 16669 I Unity   : Oculus.Platform.Callback:RunCallbacks()
+05-10 23:25:53.954 16640 16669 I Unity   : 
+05-10 23:25:53.954 16640 16669 I Unity   : [Verbose] FusionMessenger: Sending anchor share request to player 317844548. (anchorID 056c1193-39c4-324a-a3d2-5400c99a7e7a)
+05-10 23:25:53.954 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:SendAnchorShareRequest(UInt64, ShareAndLocalizeParams)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:SendAnchorShareRequest(Anchor)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ShareAndLocalizeAnchor(Anchor)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:53.954 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ColocateAutomaticallyInternal()
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation>b__3(Message`1)
+05-10 23:25:53.954 16640 16669 I Unity   : Oculus.Platform.Callback:HandleMessage(Message)
+05-10 23:25:53.954 16640 16669 I Unity   : Oculus.Platform.Callb
+05-10 23:25:53.955 16640 16669 I Unity   : [Verbose] Calling SendMessageToPlayer with MessageEvent: AnchorShareRequest, to playerId 317844548
+05-10 23:25:53.955 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:SendMessageToPlayer(MessageEvent, UInt64, FusionShareAndLocalizeParams)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:SendAnchorShareRequest(UInt64, ShareAndLocalizeParams)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:SendAnchorShareRequest(Anchor)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ShareAndLocalizeAnchor(Anchor)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:53.955 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ColocateAutomaticallyInternal()
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEn
+05-10 23:25:53.955 16640 16669 I Unity   : [Verbose] Calling FindRPCToCallServerRPC playerId 317844548 maps to fusionId 1
+05-10 23:25:53.955 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:SendMessageToPlayer(MessageEvent, UInt64, FusionShareAndLocalizeParams)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:SendAnchorShareRequest(UInt64, ShareAndLocalizeParams)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:SendAnchorShareRequest(Anchor)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ShareAndLocalizeAnchor(Anchor)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:53.955 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:ColocateAutomaticallyInternal()
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Fusion.FusionNetworkBootstrapper:<Spawned>b__5_0(PlatformInfo)
+05-10 23:25:53.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Shared.<>c__DisplayClass5_1:<GetEntitlementInformation
+05-10 23:25:54.805 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:54.805 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:54.805 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:54.805 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:54.805 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:54.805 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:54.805 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:54.805 16640 16869 W Unity   : 
+05-10 23:25:54.954 16640 16669 I Unity   : [Verbose] HandleMessageClientRPC: AnchorShareComplete
+05-10 23:25:54.954 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:54.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC(PlayerRef, MessageEvent, FusionShareAndLocalizeParams)
+05-10 23:25:54.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC@Invoker(NetworkBehaviour, SimulationMessage*)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.NetworkRunner:Fusion.Simulation.ICallbacks.OnMessage(SimulationMessage*)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:DeliverMessages(Int32)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:InvokeTick(SimulationStages, Boolean)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:StepSimulation(SimulationStages, Boolean, Boolean, Boolean)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:Update(Double)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.NetworkRunner:UpdateInternal(Double)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.NetworkRunnerUpdaterDefault:InvokeUpdate()
+05-10 23:25:54.954 16640 16669 I Unity   : 
+05-10 23:25:54.954 16640 16669 I Unity   : [Info] AutomaticColocationLauncher: Called OnAnchorShareRequestCompleted with playerId: 18446744071973403474, oculusId: 26732436676405643
+05-10 23:25:54.954 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:54.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:OnAnchorShareRequestCompleted(ShareAndLocalizeParams)
+05-10 23:25:54.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC(PlayerRef, MessageEvent, FusionShareAndLocalizeParams)
+05-10 23:25:54.954 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC@Invoker(NetworkBehaviour, SimulationMessage*)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.NetworkRunner:Fusion.Simulation.ICallbacks.OnMessage(SimulationMessage*)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:DeliverMessages(Int32)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:InvokeTick(SimulationStages, Boolean)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:StepSimulation(SimulationStages, Boolean, Boolean, Boolean)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.Simulation:Update(Double)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.NetworkRunner:UpdateInternal(Double)
+05-10 23:25:54.954 16640 16669 I Unity   : Fusion.NetworkRunnerUpdaterDefault:InvokeUpdate()
+05-10 23:25:54.954 16640 16669 I Unity   : 
+05-10 23:25:54.955 16640 16669 I Unity   : [Verbose] AutomaticColocationLauncher: Localize Anchor Called id: 26732436676405643
+05-10 23:25:54.955 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:54.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<LocalizeAnchor>d__31:MoveNext()
+05-10 23:25:54.955 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:54.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:LocalizeAnchor(Guid)
+05-10 23:25:54.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:OnAnchorShareRequestCompleted(ShareAndLocalizeParams)
+05-10 23:25:54.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC(PlayerRef, MessageEvent, FusionShareAndLocalizeParams)
+05-10 23:25:54.955 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC@Invoker(NetworkBehaviour, SimulationMessage*)
+05-10 23:25:54.955 16640 16669 I Unity   : Fusion.NetworkRunner:Fusion.Simulation.ICallbacks.OnMessage(SimulationMessage*)
+05-10 23:25:54.955 16640 16669 I Unity   : Fusion.Simulation:DeliverMessages(Int32)
+05-10 23:25:54.955 16640 16669 I Unity   : Fusion.Simulation:InvokeTick(SimulationStages, Boolean)
+05-10 23:25:54.955 16640 16669 I Unity   : Fusion.Simulation:StepSimulation(SimulationStages, Boolean, Boolea
+05-10 23:25:54.956 16640 16669 I Unity   : [Verbose] SharedAnchorManager: Querying anchors: 056c1193-39c4-324a-a3d2-5400c99a7e7a
+05-10 23:25:54.956 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<RetrieveAnchors>d__24:MoveNext()
+05-10 23:25:54.956 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:Start(TStateMachine&)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.SharedAnchorManager:RetrieveAnchors(List`1)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<LocalizeAnchor>d__31:MoveNext()
+05-10 23:25:54.956 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:LocalizeAnchor(Guid)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:OnAnchorShareRequestCompleted(ShareAndLocalizeParams)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC(PlayerRef, MessageEvent, FusionShareAndLocalizeParams)
+05-10 23:25:54.956 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.Fusion.FusionMessenger:HandleMessageClientRPC@Invoker(NetworkBehaviour, SimulationMessage*)
+05-10 23:25:54.956 16640 16669 I Unity   : Fusion.Net
+05-10 23:25:55.806 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:55.806 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:55.806 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:55.806 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:55.806 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:55.806 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:55.806 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:55.806 16640 16869 W Unity   : 
+05-10 23:25:56.807 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:56.807 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:56.807 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:56.807 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:56.807 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:56.807 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:56.807 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.807 16640 16869 W Unity   : 
+05-10 23:25:56.929 16640 16669 I Unity   : [Verbose] AutomaticColocationLauncher: Localizing Anchors is Successful
+05-10 23:25:56.929 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:56.929 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<LocalizeAnchor>d__31:MoveNext()
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.929 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.Tasks.Task:FinishContinuations()
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.Tasks.Task`1:TrySetResult(TResult)
+05-10 23:25:56.929 16640 16669 I Unity   : System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1:SetResult(TResult)
+05-10 23:25:56.929 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<RetrieveAnchors>d__24:MoveNext()
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.929 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.Tasks.Task:FinishContinuations()
+05-10 23:25:56.929 16640 16669 I Unity   : System.Threading.Tasks.Ta
+05-10 23:25:56.930 16640 16669 I Unity   : [Info] AutomaticColocationLauncher: successfully aligned to anchor with id: 056c1193-39c4-324a-a3d2-5400c99a7e7a
+05-10 23:25:56.930 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:56.930 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.Task:FinishContinuations()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.Task`1:TrySetResult(TResult)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.TaskCompletionSource`1:TrySetResult(TResult)
+05-10 23:25:56.930 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<LocalizeAnchor>d__31:MoveNext()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.Task:
+05-10 23:25:56.930 16640 16669 I Unity   : [Verbose] AutomaticColocationLauncher AlignPlayerToAnchor was called
+05-10 23:25:56.930 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:56.930 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.AutomaticColocationLauncher:AlignPlayerToAnchor()
+05-10 23:25:56.930 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.Task:FinishContinuations()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.Task`1:TrySetResult(TResult)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.TaskCompletionSource`1:TrySetResult(TResult)
+05-10 23:25:56.930 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<LocalizeAnchor>d__31:MoveNext()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.930 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.930 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, 
+05-10 23:25:56.931 16640 16669 I Unity   : [Info] FusionNetworkBootstrapper: Colocation is successful and ready
+05-10 23:25:56.931 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:56.931 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<ColocateAutomaticallyInternal>d__20:MoveNext()
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.931 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks.Task:FinishContinuations()
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks.Task`1:TrySetResult(TResult)
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks.TaskCompletionSource`1:TrySetResult(TResult)
+05-10 23:25:56.931 16640 16669 I Unity   : Meta.XR.MultiplayerBlocks.Colocation.<LocalizeAnchor>d__31:MoveNext()
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:56.931 16640 16669 I Unity   : System.Runtime.CompilerServices.MoveNextRunner:Run()
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks.AwaitTaskContinuation:RunCallback(ContextCallback, Object, Task&)
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks.Task:FinishContinuations()
+05-10 23:25:56.931 16640 16669 I Unity   : System.Threading.Tasks
+05-10 23:25:57.807 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:57.807 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:57.807 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:57.807 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:57.807 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:57.807 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:57.807 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:57.807 16640 16869 W Unity   : 
+05-10 23:25:58.809 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:58.809 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:58.809 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:58.809 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:58.809 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:58.809 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:58.809 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:58.809 16640 16869 W Unity   : 
+05-10 23:25:59.663 16640 16669 I Unity   : [ColocationDiag] === STATE CHECK (15s) ===
+05-10 23:25:59.663 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.663 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.663 16640 16669 I Unity   : 
+05-10 23:25:59.664 16640 16669 I Unity   : [ColocationDiag] Entitlement checked: True, result: False
+05-10 23:25:59.664 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.664 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.664 16640 16669 I Unity   : 
+05-10 23:25:59.664 16640 16669 I Unity   : [ColocationDiag] NetworkRunner instances: 2
+05-10 23:25:59.664 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.664 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.664 16640 16669 I Unity   : 
+05-10 23:25:59.664 16640 16669 I Unity   : [ColocationDiag] Runner '[BuildingBlock] Network Manager' - IsRunning: False, IsMaster: False, PlayerCount: 0
+05-10 23:25:59.664 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.664 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.664 16640 16669 I Unity   : 
+05-10 23:25:59.664 16640 16669 I Unity   : [ColocationDiag] Runner 'Temporary Runner Prefab' - IsRunning: True, IsMaster: False, PlayerCount: 2
+05-10 23:25:59.664 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.664 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.664 16640 16669 I Unity   : 
+05-10 23:25:59.665 16640 16669 I Unity   : [ColocationDiag] FusionNetworkBootstrapper count: 1
+05-10 23:25:59.665 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.665 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.665 16640 16669 I Unity   : 
+05-10 23:25:59.665 16640 16669 I Unity   : [ColocationDiag]   Bootstrapper on 'FusionColocationDriver' - active: True, enabled: True, NetworkObject: True, NO.IsValid: True
+05-10 23:25:59.665 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.665 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.665 16640 16669 I Unity   : 
+05-10 23:25:59.666 16640 16669 I Unity   : [ColocationDiag] ColocationController count: 1
+05-10 23:25:59.666 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.666 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.666 16640 16669 I Unity   : 
+05-10 23:25:59.666 16640 16669 I Unity   : [ColocationDiag] SharedSpatialAnchorCore count: 1
+05-10 23:25:59.666 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.666 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.666 16640 16669 I Unity   : 
+05-10 23:25:59.666 16640 16669 I Unity   : [ColocationDiag] === END STATE CHECK ===
+05-10 23:25:59.666 16640 16669 I Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.666 16640 16669 I Unity   : ColocationDiagnostics:LogColocationState()
+05-10 23:25:59.666 16640 16669 I Unity   : 
+05-10 23:25:59.810 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:59.810 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:59.810 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:59.810 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:25:59.810 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:25:59.810 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:25:59.810 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:25:59.810 16640 16869 W Unity   : 
+05-10 23:26:00.811 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:00.811 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:00.811 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:00.811 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:00.811 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:00.811 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:00.811 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:00.811 16640 16869 W Unity   : 
+05-10 23:26:01.812 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:01.812 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:01.812 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:01.812 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:01.812 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:01.812 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:01.812 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:01.812 16640 16869 W Unity   : 
+05-10 23:26:02.813 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:02.813 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:02.813 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:02.813 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:02.813 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:02.813 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:02.813 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:02.813 16640 16869 W Unity   : 
+05-10 23:26:03.813 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:03.813 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:03.813 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:03.813 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:03.813 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:03.813 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:03.813 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:03.813 16640 16869 W Unity   : 
+05-10 23:26:04.815 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:04.815 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:04.815 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:04.815 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:04.815 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:04.815 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:04.815 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:04.815 16640 16869 W Unity   : 
+05-10 23:26:05.815 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:05.815 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:05.815 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:05.815 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:05.815 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:05.815 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:05.815 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:05.815 16640 16869 W Unity   : 
+05-10 23:26:06.816 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:06.816 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:06.816 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:06.816 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:06.816 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:06.816 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:06.816 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:06.816 16640 16869 W Unity   : 
+05-10 23:26:07.818 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:07.818 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:07.818 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:07.818 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:07.818 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:07.818 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:07.818 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:07.818 16640 16869 W Unity   : 
+05-10 23:26:08.819 16640 16869 W Unity   : Exception: System.IO.Ports.SerialPort::.ctor StackTrace:   at System.IO.Ports.SerialPort..ctor (System.String portName, System.Int32 baudRate) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:08.819 16640 16869 W Unity   :   at AbstractSerialThread.AttemptConnection () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:08.819 16640 16869 W Unity   :   at AbstractSerialThread.RunForever () [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:08.819 16640 16869 W Unity   :   at System.Threading.ExecutionContext.RunInternal (System.Threading.ExecutionContext executionContext, System.Threading.ContextCallback callback, System.Object state, System.Boolean preserveSyncCtx) [0x00000] in <00000000000000000000000000000000>:0 
+05-10 23:26:08.819 16640 16869 W Unity   : UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
+05-10 23:26:08.819 16640 16869 W Unity   : AbstractSerialThread:RunForever()
+05-10 23:26:08.819 16640 16869 W Unity   : System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+05-10 23:26:08.819 16640 16869 W Unity   : 

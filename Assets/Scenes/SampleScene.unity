@@ -628,6 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194892688}
   - component: {fileID: 194892687}
+  - component: {fileID: 194892689}
   m_Layer: 0
   m_Name: CalibrationManager
   m_TagString: Untagged
@@ -668,6 +669,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &194892689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194892686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5767225ba529944ad8f0a89e1bd646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColocationDiagnostics
 --- !u!1 &209742000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3784,8 +3797,12 @@ MonoBehaviour:
   needle: {fileID: 344122510}
   confirmButton: {fileID: 6328583757663073177}
   clientButton: {fileID: 1595123992}
+  difficultyCube: {fileID: 1196196583}
+  cubeMinX: -0.3
+  cubeMaxX: 0.3
+  minSpeed: 0.1
+  maxSpeed: 1
   greenZoneSpeed: 0.3
-  pauseDuration: 7
   zoneWidth: 0.15
   _ClientConfirmed:
     _value: 0
@@ -6330,8 +6347,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   DebuggingOptions:
-    visualizeAlignmentAnchor: 0
-    enableVerboseLogging: 0
+    visualizeAlignmentAnchor: 1
+    enableVerboseLogging: 1
 --- !u!1 &3954689323620263650
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,7 +6830,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6163226273575011161}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4157a8a4b7d44f59c8cd6a79f9d818e, type: 3}
   m_Name: 

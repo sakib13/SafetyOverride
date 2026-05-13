@@ -30,12 +30,9 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
 
-        // Auto-start after delay to let tracking initialize
-        float delay = 5f;
-        #if UNITY_EDITOR
-        delay = 8f;
-        #endif
-        Invoke(nameof(StartConnection), delay);
+        // Auto Matchmaking building block handles Fusion connection.
+        // Do NOT start a second runner here — it conflicts and causes OperationTimeout.
+        Debug.Log("[ConnectionManager] Networking delegated to Auto Matchmaking building block.");
     }
 
     private async void StartConnection()
@@ -93,7 +90,6 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         Debug.Log($"[ConnectionManager] Disconnected from server: {reason}");
         _isConnected = false;
-        Invoke(nameof(StartConnection), 3f);
     }
 
     public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)

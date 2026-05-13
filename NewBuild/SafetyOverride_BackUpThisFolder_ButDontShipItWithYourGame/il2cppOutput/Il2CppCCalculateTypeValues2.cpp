@@ -322,7 +322,6 @@ struct Dictionary_2_t4EA9AD1CE2AFC89E3D45CC6B304852F86460AB0A;
 struct Dictionary_2_t7AA034DE4DDAD09A66DC2F8F35FABAA84F54A04E;
 struct Dictionary_2_t5B1389A75440FFF31F0C10DDF1AF78511CC6CAA0;
 struct Dictionary_2_tCDC65F572855EBDD1C12CEE33EBEBE0131F60C9C;
-struct Dictionary_2_t384D2A0FF42BF1302A3F513FC32DB105F1CD5455;
 struct Dictionary_2_t954AEC357FE7190582B8255D4ACEF81F5E94A6A5;
 struct Dictionary_2_tB4EE9E1FEFC4DA9733FDA0866945A0C2F84B0DC5;
 struct Dictionary_2_tFA5E03354423C94DC3899BB6C353B5CBFE767263;
@@ -551,7 +550,6 @@ struct IList_1_tC6A4EDD62342554401E70A406F334BBA30180338;
 struct IList_1_t1DB1967F94A916D737CB01DC943A5D47F1363F52;
 struct IList_1_t41B700AA42A1779B29D644B2E6DAC0CFEB517141;
 struct IList_1_tC37F2CDD4C5A3C66311AE2E51E29AB83511CEA54;
-struct IMemoryOwner_1_t2BF3923A5C95378D9DF8D8669EB3B355463F346E;
 struct IObjectPool_1_tAEB41C083C98E1FD942ED08171F3CC5E1EE78D79;
 struct IOrderedEnumerable_1_tC9F0A12162DCD59B555B0727A93DECF9082C971C;
 struct IReadOnlyDictionary_2_tBBB2461AF6A79AB52730721FE187516AD6248413;
@@ -1370,6 +1368,7 @@ struct TrackingConfidenceU5BU5D_t6B1A6ADEF3656B62D4BE66AE16338E2001714B37;
 struct Vector3fU5BU5D_tD8395E99259411E2F0A4F513559CC986FD7AB92E;
 struct AffordanceU5BU5D_tA00E6D47489006FC6450B6B539E19ADC6294AF87;
 struct PoolDescU5BU5D_t142B5E470103B300AA597EFABE91DE091385454F;
+struct SectionU5BU5D_t9D3017555FFF42E71BE91904A2486EAF429F24C4;
 struct ParamInfoU5BU5D_t04997454CB57D422798CB09352BA40CEF46EC967;
 struct TagTypeInfoU5BU5D_t74D146542BA39E421745D69062E8C3C3618DE860;
 struct SceneInfoU5BU5D_t8425801365E4DDC5CD2A53CDEEBFFA18D52A7391;
@@ -1509,6 +1508,7 @@ struct ComputeBuffer_t51EADA9015EBCC1B982C5584E9AB2734415A8233;
 struct ComputeShader_tA7BDD0F6EE879D149480F5890BA2E665C50CFBF8;
 struct ConnectionCallbacksContainer_t7A71E7FACE6ED7C06954A14F9A631D661BE820B3;
 struct ConnectionHandler_t6F4F077AF80B482DF9ECF104DAEF9A934B33B18A;
+struct ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7;
 struct Console_t7B498D4AF713E682D3A4D7393D472584D4834673;
 struct ConsoleLine_t352877A96E166E5B17F9615CACC8F245F4874168;
 struct ConstantExpression_t4BE6B7DFD889CC0EA42B45C32BD511F2764E1547;
@@ -1690,13 +1690,7 @@ struct HandGrabPoseLiveRecorder_t38B5FD61423BB257E7FBFFCDD0C1FE2FAF6E1793;
 struct HandPose_t0B0F57FC79F74C9D20E54C6999A45D59FDDAC733;
 struct Hashtable_tD626399B3ADFD501225241D7366103F35472542A;
 struct Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D;
-struct Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E;
-struct HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8;
-struct HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD;
-struct HierarchyFlattenedNode_t793C747B4D66D72DE99572428261F0A6E59A4300;
 struct HierarchyItemButton_tD9751C469FE2DFEDC4E15BE64CFCDFCDF7884FA7;
-struct HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704;
-struct HierarchyViewModel_t818D495B7E4AFC2E498598998847F9779E0DA317;
 struct HmdDataAsset_tD78CD64BF92E02FF803F48F1CD8B1B6476167EED;
 struct HmdDataSourceConfig_tDF44AA08CCE0251849B4951A28930B6405B7C51F;
 struct HttpTransferUpdate_tFB05B6D5CE5A057D3D52E9A1205BD399AEE7CE9A;
@@ -2020,6 +2014,7 @@ struct QuaternionControl_t18A2F742850FC2FD82A1F980A35C188A29F1A0B1;
 struct QueryExpression_t0A0887F8997D64D7F6176B7DCB47EA4A29F8F3B3;
 struct QueryFilter_t9B1B799527B4277D566E5DE1EE64D33006CE8064;
 struct QueryScanFilter_tE342C7B59C939C289F93E4B1FB587E29D2523A3D;
+struct Queue_t82FD2BE12D138AF4D22C801CB5044DAEC2BA66BC;
 struct RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A;
 struct RTHandle_t135537761C47BC929F032B3C8F4D55EA1111B07B;
 struct RaiseEventOptions_tDB107A869F285AD2BAF75ACE34072454ADA1D643;
@@ -2084,6 +2079,11 @@ struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
 struct SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2;
 struct SendInvitesResult_tB23FB5C9DE0FC2887C864FBF518B4937ED59C078;
 struct SendOrPostCallback_t5C292A12062F24027A98492F52ECFE9802AA6F0E;
+struct SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5;
+struct SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF;
+struct SerialPort_t4443B0B7B94397C8CD2E0C3534510613EBA2DD82;
+struct SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE;
+struct SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10;
 struct SerializationBinder_tB959BF0F4EF3F8611E5891A7011DD99F9FD69E2A;
 struct SerializeMethod_t6B83E64D8BAEA06077590E15A0206704853E71F2;
 struct SerializeStreamMethod_tE9A207ADBB74A63C939A741C47F75676E0A82BEF;
@@ -2194,6 +2194,7 @@ struct TryFaultHandler_t600645BC04EBB0AF2E3FB58B10C70D6F120AAA2D;
 struct TubeRenderer_t8ECAC5265D79682F4C5489928DA33D4F089A6362;
 struct Tweak_t4CDB122769009EF11EC6604D9A27E8C56B4E3574;
 struct TweakEnum_tC3BA2C8CDD8B2EEDBAC4E0CCA4F63C43A7174CCD;
+struct TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12;
 struct Type_t;
 struct Type2Message_t2B675F8672CFEC6E19474A238FA02DCEDB0209BE;
 struct TypeConverter_t5257E1653EB845D0044BBEDEB7B8AED7A061592C;
@@ -2363,7 +2364,6 @@ struct LayoutCache_tF844B2FAD6933B78FD5EFEBDE0529BCBAC19BA60;
 struct SkinChangedDelegate_tA6D456E853D58AD2EF8A599F543C7E5BA8E94B98;
 struct GenericParameterDataContractCriticalHelper_tE9007E8E4D5DB36D1B1C9E92BCC4F8B0C3628E8E;
 struct U3CU3Ec__DisplayClass4_0_t615E8A3DD8D908CE52F3EC12F3F0BA052FD0CF6F;
-struct Predicate_t612371B4E4AB9B82C5A20A85C98A94799CE951C1;
 struct IndexTree_t5A9D1B6E4C2AF3B18E6CC799F1A38063EAA53887;
 struct EndEditEvent_t946A962BA13CF60BB0BE7AD091DA041FD788E655;
 struct OnChangeEvent_tE4829F88300B0E0E0D1B78B453AF25FC1AA55E2F;
@@ -2493,6 +2493,8 @@ struct TagValue_tB20CF236F5A47E5F5B7E110BBFB7C066D866D4C2;
 struct ISceneInfo_tC91EBE6B2CAAC83042A47242DB6DE80503FAF598;
 struct ScrollRectEvent_t812C011901E6101F2A0FFC34C66AC5F65C0DEC26;
 struct ScrollEvent_tDDBE21D44D65DF069C54FE3ACF7668D976E6BBB6;
+struct TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0;
+struct TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6;
 struct U3CU3Ec__DisplayClass21_0_tD56B110D00E3A7DA2E0E9700B3985E916AE8B2C7;
 struct U3CU3Ec__DisplayClass23_0_t40E769C75AAD3136E45E26C5A67ECBE5D4FEF824;
 struct U3CU3Ec__DisplayClass24_0_tDB50D4D047BC40A3C33D7A732A52CD655D44E615;
@@ -2569,13 +2571,6 @@ struct GUIStyleState_t7A948723D9DCDFD8EE4F418B6EC909C18E023F95_marshaled_pinvoke
 struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_com;
 struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_marshaled_pinvoke;
 struct Glyph_t700CF8EBE04ED4AEAB520885AAA1B309E02A103F_marshaled_com;
-struct HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8_marshaled_com;
-struct HierarchyFlattenedNode_t793C747B4D66D72DE99572428261F0A6E59A4300;
-struct HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_com;
-struct HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704;
-struct HierarchyViewModel_t818D495B7E4AFC2E498598998847F9779E0DA317_marshaled_com;
-struct HierarchyViewModel_t818D495B7E4AFC2E498598998847F9779E0DA317_marshaled_pinvoke;
-struct Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_com;
 struct MarkupAttribute_t256C4CC81B7FA20F3EE3A142770ECB3EEC3BCB10;
 struct NativeTextElementInfo_t22D74EF7B1ACD2E352A7F6EBEB13B6421F0916A9;
 struct NetBitBufferBlock_tF5C722B414B07454534F96063A2A033BB96F5DBA;
@@ -2606,6 +2601,9 @@ IL2CPP_EXTERN_C_END
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+struct U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B 
+{
+};
 struct U3CModuleU3E_tCDB14A2ED363F8E55BD7DC33DF87C9331BF33A37 
 {
 };
@@ -2691,9 +2689,6 @@ struct U3CModuleU3E_t853A105E2E1595E463CC860AFEE0FB13A177A12C
 {
 };
 struct U3CModuleU3E_t72288DCFA45FEA57618C4D622E6CC0D7F3747E3F 
-{
-};
-struct U3CModuleU3E_t1776CA9A887474A48B0C9B2CD80A59537910C40E 
 {
 };
 struct U3CModuleU3E_tB500DDB8D220627F9BFAF448763790F027856F11 
@@ -3216,6 +3211,18 @@ struct ASN1Convert_tDA6D2B7710D7868F3D559D5BE7F2C7816BB50AB6  : public RuntimeOb
 struct AbstractEventData_tAE1A127ED657117548181D29FFE4B1B14D8E67F7  : public RuntimeObject
 {
 	bool ___m_Used;
+};
+struct AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640  : public RuntimeObject
+{
+	String_t* ___portName;
+	int32_t ___baudRate;
+	int32_t ___delayBeforeReconnecting;
+	int32_t ___maxUnreadMessages;
+	SerialPort_t4443B0B7B94397C8CD2E0C3534510613EBA2DD82* ___serialPort;
+	Queue_t82FD2BE12D138AF4D22C801CB5044DAEC2BA66BC* ___inputQueue;
+	Queue_t82FD2BE12D138AF4D22C801CB5044DAEC2BA66BC* ___outputQueue;
+	bool ___stopRequested;
+	bool ___enqueueStatusMessages;
 };
 struct AbuseReport_tA1A05FCFCAAE0A1F9575EBE3C1DF17F7A92492EA  : public RuntimeObject
 {
@@ -3879,9 +3886,6 @@ struct Debug__t9E5D1032A2315C2909385B2AF661480F9128859B  : public RuntimeObject
 {
 };
 struct DefaultControls_tF734E6C7A5AD303C9C3DAD3028668A1717F6964E  : public RuntimeObject
-{
-};
-struct DefaultHierarchySearchQueryParser_t650A707671879288E1220306A75432DAC121CF06  : public RuntimeObject
 {
 };
 struct DefaultReferenceResolver_t2F8577BD7BE87EF2232A84B848D164DD192EE2CA  : public RuntimeObject
@@ -6173,6 +6177,9 @@ struct UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8  : public Runtim
 	PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25* ___m_PersistentCalls;
 	bool ___m_CallsDirty;
 };
+struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E  : public RuntimeObject
+{
+};
 struct UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t443F8724D5F9E3ACC8248DAF5014F1FD9D6E3765  : public RuntimeObject
 {
 };
@@ -7286,15 +7293,6 @@ struct U3CDelayedSnapshotU3Ed__31_t8118B15799DC8CB7538F82BAA842A4C9590BAD45  : p
 	HandGrabPoseLiveRecorder_t38B5FD61423BB257E7FBFFCDD0C1FE2FAF6E1793* ___U3CU3E4__this;
 	int32_t ___U3CiU3E5__2;
 };
-struct BindingsMarshaller_t371538C315DEE3364CA381BC2E15E4EC2A0DEA48  : public RuntimeObject
-{
-};
-struct BindingsMarshaller_t152867C47EA565F410B642FBCD7A53E1FCB262D4  : public RuntimeObject
-{
-};
-struct BindingsMarshaller_tB3DB2F7860BFB10DD569624A7B1AEDEA4B6905D9  : public RuntimeObject
-{
-};
 struct TextHandleTuple_t0CFBF92DB45281CC684373BE4A40C825E1EAF436  : public RuntimeObject
 {
 	float ___lastTimeUsed;
@@ -7930,6 +7928,13 @@ struct U3CExecuteFilterU3Ed__2_tC2F410FC4662D960E3CB5F5997AA87FE86C645D3  : publ
 	JsonSelectSettings_t68DCE783389F877260ECC4B049F1E53B20216E36* ___U3CU3E3__settings;
 	RuntimeObject* ___U3CU3E7__wrap1;
 	RuntimeObject* ___U3CU3E7__wrap2;
+};
+struct Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401  : public RuntimeObject
+{
+	String_t* ___heading;
+	String_t* ___text;
+	String_t* ___linkText;
+	String_t* ___url;
 };
 struct U3CU3Ec_t6D8C492F99FC36E8E3C273660058AF34514E0523  : public RuntimeObject
 {
@@ -10213,9 +10218,6 @@ struct EmbeddedAttribute_t02DB10C6AF87332FEE7D19025B26687C7B784141  : public Att
 struct EmbeddedAttribute_t171FAD3F0A9037364390EA7F0CFB04FA3A5E50DC  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
 };
-struct EmbeddedAttribute_t8F3DB42A8EBDE32BC5B3F7D3277651B0B4B6647C  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
-{
-};
 struct EmbeddedAttribute_tA73E2D8186539EC8ED586C6462C35A399580E62C  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
 };
@@ -11219,11 +11221,6 @@ struct Hash128_t93367F504B687578F893CDBCD13FB95AC8A87A40
 struct Hashtable_tD626399B3ADFD501225241D7366103F35472542A  : public Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA
 {
 };
-struct HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 
-{
-	int32_t ___m_Id;
-	int32_t ___m_Version;
-};
 struct ISerializableDataNode_t86DA60D66F35698D68C48762C771638CED3CDFD6  : public DataNode_1_t915936D4B0DE62AE9BF99EE0AA41786C7906CCFF
 {
 	String_t* ___factoryTypeName;
@@ -11514,9 +11511,6 @@ struct IsUnmanagedAttribute_tA4BF73E3582F0C271AD8AD4501C839CE5D557059  : public 
 {
 };
 struct IsUnmanagedAttribute_tEE5C387E7B5D53E2EFA065C9BF88361CFE29FD96  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
-{
-};
-struct IsUnmanagedAttribute_tF7B94B7441AB687B71FCD6B6FB72B7BC2929A47F  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
 {
 };
 struct JContainer_tFD3E2CD9B9D8D3CD73133B11A1F6BE77C5C8F95A  : public JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3
@@ -12932,6 +12926,15 @@ struct SdkAccountList_tB87C3051AF648ADB7117F740409210943B6E9792  : public Deseri
 {
 };
 struct SequentialSearchPrimeGeneratorBase_t8A6B934B933C9FB775BAB1447E9B3B2F9C949175  : public PrimeGeneratorBase_tF3B59CDEC773B15DE6B497796F6776E493C9E372
+{
+};
+struct SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE  : public AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640
+{
+	uint8_t ___separator;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buffer;
+	int32_t ___bufferUsed;
+};
+struct SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10  : public AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640
 {
 };
 struct SerializableType_t4F4B9813D3CD21D0ED53AB156D6F8372A0F1C59D 
@@ -17658,45 +17661,6 @@ struct GenericParameterDataContractCriticalHelper_tE9007E8E4D5DB36D1B1C9E92BCC4F
 {
 	int32_t ___parameterPosition;
 };
-struct U3CReservedU3Ee__FixedBuffer_t9C78A5981BEB928368944424738AF30519D0E591 
-{
-	union
-	{
-		struct
-		{
-			int32_t ___FixedElementField;
-		};
-		uint8_t U3CReservedU3Ee__FixedBuffer_t9C78A5981BEB928368944424738AF30519D0E591__padding[12];
-	};
-};
-struct ConstructorScope_t243AC9846E4D3E3E27A0608F35BA425299DDE392 
-{
-	union
-	{
-		struct
-		{
-		};
-		uint8_t ConstructorScope_t243AC9846E4D3E3E27A0608F35BA425299DDE392__padding[1];
-	};
-};
-struct Enumerator_t24AA5F11ED3A2E12B531F60032DED228CA0EFD26 
-{
-	RuntimeObject* ___m_Handlers;
-	int32_t ___m_Count;
-	int32_t ___m_Index;
-};
-struct Enumerator_t24AA5F11ED3A2E12B531F60032DED228CA0EFD26_marshaled_pinvoke
-{
-	RuntimeObject* ___m_Handlers;
-	int32_t ___m_Count;
-	int32_t ___m_Index;
-};
-struct Enumerator_t24AA5F11ED3A2E12B531F60032DED228CA0EFD26_marshaled_com
-{
-	RuntimeObject* ___m_Handlers;
-	int32_t ___m_Count;
-	int32_t ___m_Index;
-};
 struct DebugAction_tDA3ABBCFFDEAC0C53E5AD5C0B9C03C5DD997E9FA 
 {
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ____setup;
@@ -18978,6 +18942,30 @@ struct Comparison_t8926BD187CC7CEF468E3592AD18DFFB21C62C487_marshaled_com
 struct Rune_tE8DB196113D1DBF48E710C120CC50D2AD7D5915E 
 {
 	int32_t ___value;
+};
+struct MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E 
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___FilePathsData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	bool ___IsEditorOnly;
+};
+struct MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_marshaled_pinvoke
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_marshaled_com
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
 };
 struct MonoScriptData_tD27D5F56BBC8A8410AD441A876812BA2D317F5B0 
 {
@@ -30028,119 +30016,6 @@ struct Handedness_t3D27C7A62DAA8535C3D73CFD454999B05EB847E9
 {
 	int32_t ___value__;
 };
-struct Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E  : public RuntimeObject
-{
-	intptr_t ___m_Ptr;
-	intptr_t ___m_RootPtr;
-	intptr_t ___m_VersionPtr;
-	bool ___m_IsOwner;
-};
-struct Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_pinvoke
-{
-	intptr_t ___m_Ptr;
-	intptr_t ___m_RootPtr;
-	intptr_t ___m_VersionPtr;
-	int32_t ___m_IsOwner;
-};
-struct Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_com
-{
-	intptr_t ___m_Ptr;
-	intptr_t ___m_RootPtr;
-	intptr_t ___m_VersionPtr;
-	int32_t ___m_IsOwner;
-};
-struct HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8  : public RuntimeObject
-{
-	intptr_t ___m_Ptr;
-	bool ___m_IsOwner;
-};
-struct HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8_marshaled_pinvoke
-{
-	intptr_t ___m_Ptr;
-	int32_t ___m_IsOwner;
-};
-struct HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8_marshaled_com
-{
-	intptr_t ___m_Ptr;
-	int32_t ___m_IsOwner;
-};
-#pragma pack(push, tp, 1)
-struct HierarchyNodeChildrenAlloc_t142E22729631D9801D92179DD54705B830F8C8F9 
-{
-	union
-	{
-		struct
-		{
-			union
-			{
-				#pragma pack(push, tp, 1)
-				struct
-				{
-					HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704* ___Ptr;
-				};
-				#pragma pack(pop, tp)
-				struct
-				{
-					HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704* ___Ptr_forAlignmentOnly;
-				};
-				#pragma pack(push, tp, 1)
-				struct
-				{
-					char ___Size_OffsetPadding[8];
-					int32_t ___Size;
-				};
-				#pragma pack(pop, tp)
-				struct
-				{
-					char ___Size_OffsetPadding_forAlignmentOnly[8];
-					int32_t ___Size_forAlignmentOnly;
-				};
-				#pragma pack(push, tp, 1)
-				struct
-				{
-					char ___Capacity_OffsetPadding[12];
-					int32_t ___Capacity;
-				};
-				#pragma pack(pop, tp)
-				struct
-				{
-					char ___Capacity_OffsetPadding_forAlignmentOnly[12];
-					int32_t ___Capacity_forAlignmentOnly;
-				};
-				#pragma pack(push, tp, 1)
-				struct
-				{
-					char ___RemovedCount_OffsetPadding[16];
-					int32_t ___RemovedCount;
-				};
-				#pragma pack(pop, tp)
-				struct
-				{
-					char ___RemovedCount_OffsetPadding_forAlignmentOnly[16];
-					int32_t ___RemovedCount_forAlignmentOnly;
-				};
-				#pragma pack(push, tp, 1)
-				struct
-				{
-					char ___Reserved_OffsetPadding[20];
-					U3CReservedU3Ee__FixedBuffer_t9C78A5981BEB928368944424738AF30519D0E591 ___Reserved;
-				};
-				#pragma pack(pop, tp)
-				struct
-				{
-					char ___Reserved_OffsetPadding_forAlignmentOnly[20];
-					U3CReservedU3Ee__FixedBuffer_t9C78A5981BEB928368944424738AF30519D0E591 ___Reserved_forAlignmentOnly;
-				};
-			};
-		};
-		uint8_t HierarchyNodeChildrenAlloc_t142E22729631D9801D92179DD54705B830F8C8F9__padding[32];
-	};
-};
-#pragma pack(pop, tp)
-struct HierarchyNodeFlags_t58CA16569BE33484BCA4F7BEA5022DE99DB8671D 
-{
-	uint32_t ___value__;
-};
 struct HighlightState_tE4F50287E5E2E91D42AB77DEA281D88D3AD6A28B 
 {
 	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___color;
@@ -31762,6 +31637,9 @@ struct ScriptableRenderPassInput_t2E28A5DE1B3B8001EE14298E0133EFF3204DE645
 struct SdkAccountType_t928A606AB40464D66731157CCE2E795FCDAE08BC 
 {
 	int32_t ___value__;
+};
+struct SerialThread_tC16BDEF059CF437D23E6D549FDCCE343ABFB6485  : public SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10
+{
 };
 struct SerializationFormat_t8DE772A549550C2629CA1B299B732E17DCF2B140 
 {
@@ -39231,102 +39109,6 @@ struct GotoExpression_t5124FE521C74BE1B7F79BA766FA8FCF0771FB36C  : public Expres
 struct HexBinaryDataContract_t2448FF6939212F9F9BFE159F011BE1DA00077C1D  : public StringDataContract_tBE18488EE9D327EDF8504FD331915BB7DA04CC09
 {
 };
-struct HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD  : public RuntimeObject
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E* ___m_Hierarchy;
-	intptr_t ___m_NodesPtr;
-	int32_t ___m_NodesCount;
-	int32_t ___m_Version;
-	bool ___m_IsOwner;
-};
-struct HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_pinvoke
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_pinvoke ___m_Hierarchy;
-	intptr_t ___m_NodesPtr;
-	int32_t ___m_NodesCount;
-	int32_t ___m_Version;
-	int32_t ___m_IsOwner;
-};
-struct HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_com
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_com* ___m_Hierarchy;
-	intptr_t ___m_NodesPtr;
-	int32_t ___m_NodesCount;
-	int32_t ___m_Version;
-	int32_t ___m_IsOwner;
-};
-struct HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666 
-{
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E* ___m_Hierarchy;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704* ___m_Ptr;
-	int32_t ___m_Version;
-	int32_t ___m_Count;
-};
-struct HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666_marshaled_pinvoke
-{
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_pinvoke ___m_Hierarchy;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704* ___m_Ptr;
-	int32_t ___m_Version;
-	int32_t ___m_Count;
-};
-struct HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666_marshaled_com
-{
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_com* ___m_Hierarchy;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704* ___m_Ptr;
-	int32_t ___m_Version;
-	int32_t ___m_Count;
-};
-struct HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9  : public RuntimeObject
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E* ___m_Hierarchy;
-	HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8* ___m_CommandList;
-};
-struct HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9_marshaled_pinvoke
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_pinvoke ___m_Hierarchy;
-	HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8_marshaled_pinvoke ___m_CommandList;
-};
-struct HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9_marshaled_com
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_com* ___m_Hierarchy;
-	HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8_marshaled_com* ___m_CommandList;
-};
-struct HierarchyNodeTypeHandlerBaseEnumerable_t26ADB6758ABA4C29812D07C8087A05BBBC7DEA83 
-{
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E* ___m_Hierarchy;
-};
-struct HierarchyNodeTypeHandlerBaseEnumerable_t26ADB6758ABA4C29812D07C8087A05BBBC7DEA83_marshaled_pinvoke
-{
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_pinvoke ___m_Hierarchy;
-};
-struct HierarchyNodeTypeHandlerBaseEnumerable_t26ADB6758ABA4C29812D07C8087A05BBBC7DEA83_marshaled_com
-{
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_com* ___m_Hierarchy;
-};
-struct HierarchyViewNodesEnumerable_tC2AB0595EDEF417F3D13A545828731ED5D94B79A 
-{
-	HierarchyViewModel_t818D495B7E4AFC2E498598998847F9779E0DA317* ___m_HierarchyViewModel;
-	Predicate_t612371B4E4AB9B82C5A20A85C98A94799CE951C1* ___m_Predicate;
-	uint32_t ___m_Flags;
-};
-struct HierarchyViewNodesEnumerable_tC2AB0595EDEF417F3D13A545828731ED5D94B79A_marshaled_pinvoke
-{
-	HierarchyViewModel_t818D495B7E4AFC2E498598998847F9779E0DA317_marshaled_pinvoke* ___m_HierarchyViewModel;
-	Il2CppMethodPointer ___m_Predicate;
-	uint32_t ___m_Flags;
-};
-struct HierarchyViewNodesEnumerable_tC2AB0595EDEF417F3D13A545828731ED5D94B79A_marshaled_com
-{
-	HierarchyViewModel_t818D495B7E4AFC2E498598998847F9779E0DA317_marshaled_com* ___m_HierarchyViewModel;
-	Il2CppMethodPointer ___m_Predicate;
-	uint32_t ___m_Flags;
-};
 struct IDDataContract_t0E53AF6C4E7C9D748F789215B095D209BB1E5B8D  : public StringDataContract_tBE18488EE9D327EDF8504FD331915BB7DA04CC09
 {
 };
@@ -44027,6 +43809,13 @@ struct SpaceSharingInfo_t8859D951A4E8EDABABD21B97822F283E66EF9AE7
 	Guid_t ___RoomId;
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 ___FloorAnchor;
 };
+struct U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759 
+{
+	int32_t ___U3CU3E1__state;
+	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder;
+	ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* ___U3CU3E4__this;
+	TaskAwaiter_1_tB1D9F1D80534EA53C0930F25EB3FDA08979733D1 ___U3CU3Eu__1;
+};
 struct U3CU3Ec__DisplayClass7_0_t933548B330551387E9A8153CC5391D770F00FFA4  : public RuntimeObject
 {
 	String_t* ___logString;
@@ -46744,27 +46533,6 @@ struct GUISkin_t8C65CE1424D4B5D8D73022E266BDAD3BDE8612D9  : public ScriptableObj
 struct HideArrayElementLabelAttribute_t3376B0AD97AAC538B29E3D11CC94064265DA5A45  : public DecoratingPropertyAttribute_t7F092534E1DCC6B54BE6D1B19C7AA95319210A21
 {
 };
-struct HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9 
-{
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD* ___m_HierarchyFlattened;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 ___m_Node;
-	int32_t ___m_Version;
-	int32_t ___m_Count;
-};
-struct HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9_marshaled_pinvoke
-{
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_pinvoke ___m_HierarchyFlattened;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 ___m_Node;
-	int32_t ___m_Version;
-	int32_t ___m_Count;
-};
-struct HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9_marshaled_com
-{
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_com* ___m_HierarchyFlattened;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 ___m_Node;
-	int32_t ___m_Version;
-	int32_t ___m_Count;
-};
 struct Hook_t594A5EDA9F346C9861C3F6FCFD55FD5558101052  : public RuntimeObject
 {
 	InstanceHandle_tE6B8E29890FB27E3E1824A634157E596584E0CFA ____instanceHandle;
@@ -47859,6 +47627,13 @@ struct ReadOnlyAttribute_t94490F5D18F7298B5BCA0594DC26569659206A3D  : public Dec
 {
 	bool ___U3CInPlayModeU3Ek__BackingField;
 	bool ___U3CInEditModeU3Ek__BackingField;
+};
+struct Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___icon;
+	String_t* ___title;
+	SectionU5BU5D_t9D3017555FFF42E71BE91904A2486EAF429F24C4* ___sections;
+	bool ___loadedLayout;
 };
 struct ReflectionProbeManager_tBCF8C782A572C4DFFD98CC746C17B7DB6F6B6B5D 
 {
@@ -49554,54 +49329,6 @@ struct U3CU3Ec__DisplayClass1_0_tBA775D0554C63C078D853F985DBC4B2CF81BD875  : pub
 	MemberInfo_t* ___memberInfo;
 	InstanceHandle_tE6B8E29890FB27E3E1824A634157E596584E0CFA ___handle;
 };
-struct Enumerator_tB394F581EA54AC1A1E8074FCA63A756754BD1235 
-{
-	HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666 ___m_Enumerable;
-	int32_t ___m_Index;
-};
-struct Enumerator_tB394F581EA54AC1A1E8074FCA63A756754BD1235_marshaled_pinvoke
-{
-	HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666_marshaled_pinvoke ___m_Enumerable;
-	int32_t ___m_Index;
-};
-struct Enumerator_tB394F581EA54AC1A1E8074FCA63A756754BD1235_marshaled_com
-{
-	HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666_marshaled_com ___m_Enumerable;
-	int32_t ___m_Index;
-};
-struct Enumerator_t9B85D1C674017B6711471BDA153360DDCD5DD2FD 
-{
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD* ___m_HierarchyFlattened;
-	Predicate_t612371B4E4AB9B82C5A20A85C98A94799CE951C1* ___m_Predicate;
-	uint32_t ___m_Flags;
-	HierarchyFlattenedNode_t793C747B4D66D72DE99572428261F0A6E59A4300* ___m_NodesPtr;
-	int32_t ___m_NodesCount;
-	int32_t ___m_Version;
-	int32_t ___m_Index;
-};
-struct Enumerator_t9B85D1C674017B6711471BDA153360DDCD5DD2FD_marshaled_pinvoke
-{
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_pinvoke ___m_HierarchyFlattened;
-	Il2CppMethodPointer ___m_Predicate;
-	uint32_t ___m_Flags;
-	HierarchyFlattenedNode_t793C747B4D66D72DE99572428261F0A6E59A4300* ___m_NodesPtr;
-	int32_t ___m_NodesCount;
-	int32_t ___m_Version;
-	int32_t ___m_Index;
-};
-struct Enumerator_t9B85D1C674017B6711471BDA153360DDCD5DD2FD_marshaled_com
-{
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_com* ___m_HierarchyFlattened;
-	Il2CppMethodPointer ___m_Predicate;
-	uint32_t ___m_Flags;
-	HierarchyFlattenedNode_t793C747B4D66D72DE99572428261F0A6E59A4300* ___m_NodesPtr;
-	int32_t ___m_NodesCount;
-	int32_t ___m_Version;
-	int32_t ___m_Index;
-};
-struct Predicate_t612371B4E4AB9B82C5A20A85C98A94799CE951C1  : public MulticastDelegate_t
-{
-};
 struct IndexTree_t5A9D1B6E4C2AF3B18E6CC799F1A38063EAA53887  : public RBTree_1_t8713B62AA89A0F1666C324D828FF52CBB922114D
 {
 	Index_tB35755A4A90336B5A005AD1320AAF1219DEE2483* ____index;
@@ -50665,6 +50392,12 @@ struct U3CLoadRoomMeshU3Ed__6_tC0A196FB362010FA0902D59742A2297AB275BC71  : publi
 	Enumerator_t0CAA0F17DF73003A901F5A160D3C75AD45AB68AC ___U3CU3E7__wrap4;
 	OVRAnchor_tC6603E0C1628ACAA50D8CCDCC267BFD246F5A061 ___U3CanchorU3E5__6;
 	OVRTask_1_tAF5413F2901FDD0987C924E6A3573C1FFEC4AFB9 ___U3ClocalizeTaskU3E5__7;
+};
+struct TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0  : public MulticastDelegate_t
+{
+};
+struct TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6  : public MulticastDelegate_t
+{
 };
 struct U3CInitSpatialAnchorU3Ed__16_t375ED1EC003786E218F91470CE6E9FFA086CB704 
 {
@@ -52446,33 +52179,6 @@ struct PassData_tD366FA555BBB5E9EA116F4553DA083826230EB0B  : public RuntimeObjec
 	RendererList_t608CE60421616EF4211F5B8AC62E3C36D4BDDF85 ___rendererList;
 	RendererList_t608CE60421616EF4211F5B8AC62E3C36D4BDDF85 ___objectsWithErrorRendererList;
 };
-struct Enumerator_tE3E095AEEEF9266D1B71529275B51FCD45FF78A4 
-{
-	HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9 ___m_Enumerable;
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD* ___m_HierarchyFlattened;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 ___m_Node;
-	int32_t ___m_CurrentIndex;
-	int32_t ___m_ChildrenIndex;
-	int32_t ___m_ChildrenCount;
-};
-struct Enumerator_tE3E095AEEEF9266D1B71529275B51FCD45FF78A4_marshaled_pinvoke
-{
-	HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9_marshaled_pinvoke ___m_Enumerable;
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_pinvoke ___m_HierarchyFlattened;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 ___m_Node;
-	int32_t ___m_CurrentIndex;
-	int32_t ___m_ChildrenIndex;
-	int32_t ___m_ChildrenCount;
-};
-struct Enumerator_tE3E095AEEEF9266D1B71529275B51FCD45FF78A4_marshaled_com
-{
-	HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9_marshaled_com ___m_Enumerable;
-	HierarchyFlattened_t465DE25ECB06310A69E88D6BE1770EA7DBBF74BD_marshaled_com* ___m_HierarchyFlattened;
-	HierarchyNode_t6A6A738223CC5D7FB463CAF6F379C48726891704 ___m_Node;
-	int32_t ___m_CurrentIndex;
-	int32_t ___m_ChildrenIndex;
-	int32_t ___m_ChildrenCount;
-};
 struct SetupCullingJobInput_0000014DU24PostfixBurstDelegate_t8B23CBD7B20B4D79AFE49A3AA7536C371CE6D5C2  : public MulticastDelegate_t
 {
 };
@@ -52950,6 +52656,13 @@ struct ColocationController_tF1697E79768714F097AA1CE639CB13EEB7A9D7E7  : public 
 	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___ColocationReadyCallbacks;
 	ColocationDebuggingOptions_t2DCF9664C37C22BA1FF67002FCB9A6A994C0B9E2* ___DebuggingOptions;
 };
+struct ColocationDiagnostics_t22EB406F323B39612F0126E31E19284BCEEA84B7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	bool ____entitlementChecked;
+	bool ____entitlementResult;
+	float ____checkTimer;
+	int32_t ____checkCount;
+};
 struct ColocationSessionEventHandler_t091A75EEE4EB421B70D72C27D5DD5BE3CFE3D79C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	int32_t ___basis;
@@ -53000,6 +52713,13 @@ struct ConnectionHandler_t6F4F077AF80B482DF9ECF104DAEF9A934B33B18A  : public Mon
 	bool ___didSendAcks;
 	Stopwatch_tA188A210449E22C07053A7D3014DD182C7369043* ___backgroundStopwatch;
 	Timer_t763C1D5F5A36087DC92C7DA4D1F8AB578F83AB00* ___stateTimer;
+};
+struct ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___runner;
+	String_t* ___sessionName;
+	bool ____isConnecting;
+	bool ____isConnected;
 };
 struct ConstantRotation_tF77711F8CA22DA4471ADA24C610B0A2EAB4EE73F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -53918,6 +53638,17 @@ struct ManipulatorAffordanceController_t30730E1225F12DBC30B5641DAF721B808F91A147
 	AnimatorU5BU5D_tC96418EE48F8DA017567CAE0235488C27640E759* ____animators;
 	PanelHoverState_t0091418F09363778E57679321B39DE691ED2738B* ____panelHoverState;
 };
+struct ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___gameContentParent;
+	ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7* ___connectionManager;
+	OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* ___cameraRig;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___instructionCanvas;
+	float ___contentDistance;
+	float ___heightOffset;
+	bool ____isCalibrated;
+	bool ____isReady;
+};
 struct MatchNonDominantPalmWorldSpaceTransform_tCE0DE65626E6A0963AF81A34EB8B501256843469  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ____leftHand;
@@ -54567,6 +54298,25 @@ struct RuntimeAPIExample_tC733A85D6B2C72BEC9F10A89F1FAA9DEA65A8DE6  : public Mon
 	bool ___exampleBool;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___exampleVector;
 };
+struct SampleCustomDelimiter_t89EA2379539676F0DBCF2714745A226F84FB3C10  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF* ___serialController;
+};
+struct SampleMessageListener_t247BBCF6C6E353992EFEB8F8BDE97126F1E75B6C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+struct SampleTearDown_t601B0471D81EEB39F80F48292A7EF12BDCEB1D98  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* ___serialController;
+};
+struct SampleUserPolling_JustRead_tC1B97AAE77BC237F9E16ACE3566D4121F3AE823A  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* ___serialController;
+};
+struct SampleUserPolling_ReadWrite_t61B1CD1F017C00B7F1436447ABAD455429ECD952  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* ___serialController;
+};
 struct SamplesInfoPanel_t23F466AED29F2BF06A927F5DD4F3802021EFA7D6  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 };
@@ -54704,6 +54454,29 @@ struct SceneNavigation_tEF7C808A6D34656017379E20A2720BAF81BDE6EC  : public MonoB
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____obstaclesRoot;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ____surfacesRoot;
 	int32_t ____cachedNavigableSceneLabels;
+};
+struct SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	String_t* ___portName;
+	int32_t ___baudRate;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___messageListener;
+	int32_t ___reconnectionDelay;
+	int32_t ___maxUnreadMessages;
+	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___thread;
+	SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10* ___serialThread;
+	TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0* ___userDefinedTearDownFunction;
+};
+struct SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	String_t* ___portName;
+	int32_t ___baudRate;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___messageListener;
+	int32_t ___reconnectionDelay;
+	int32_t ___maxUnreadMessages;
+	uint8_t ___separator;
+	Thread_t0A773B9DE873D2DCAA7D229EAB36757B500E207F* ___thread;
+	SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE* ___serialThread;
+	TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6* ___userDefinedTearDownFunction;
 };
 struct SetDisplayRefresh_t1F83887BC4D7009A3C0A6C7404A6E972B75B5719  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -56646,6 +56419,32 @@ struct RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179  : public MaskableGrap
 	Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* ___m_Texture;
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___m_UVRect;
 };
+struct SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595  : public NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3
+{
+	TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12* ___arduinoController;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___greenZone;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___needle;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___confirmButton;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___clientButton;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___difficultyCube;
+	float ___cubeMinX;
+	float ___cubeMaxX;
+	float ___minSpeed;
+	float ___maxSpeed;
+	float ___greenZoneSpeed;
+	float ___zoneWidth;
+	float ___minX;
+	float ___maxX;
+	float ____GreenZoneX;
+	NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ____ClientConfirmed;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___redMaterial;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___greenMaterial;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___yellowMaterial;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ____supervisorButtonRenderer;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ____clientButtonRenderer;
+	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ____cubeRenderer;
+	MaterialPropertyBlock_t2308669579033A857EFE6E4831909F638B27411D* ____cubeMPB;
+};
 struct Slider_tEFB2AEE6ABFDCF038F300A383ACD1A390EE133BE  : public Button_t984BE5477A00895DC1D250AFB95D546D3B38823D
 {
 	Background_tF1D3244F4C00D703D9ECA4355B93D009A87D4C79* ____emptyBackground;
@@ -56671,6 +56470,20 @@ struct StandaloneInputModule_tD8B581E4A0A2A25B99EB002FF669C4EEED350530  : public
 	float ___m_InputActionsPerSecond;
 	float ___m_RepeatDelay;
 	bool ___m_ForceModuleActive;
+};
+struct SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9  : public NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3
+{
+	float ___laserLength;
+	float ___laserWidth;
+	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___laserColor;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___gameContent;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____LaserOrigin;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____LaserDirection;
+	NetworkBool_tEB9244C9F8B69F9EB13B27A49BC3DAAFB7A3346F ____LaserActive;
+	LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* ____lineRenderer;
+	OVRCameraRig_t7FC2BB0D30DED2B7F0C8914AF2B66E9F4CF891A9* ____cameraRig;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____hostGcPosition;
+	bool ____hostGcReceived;
 };
 struct TMP_SelectionCaret_tCDD93BB06825C506A7D3E06648FB33E3D61981EB  : public MaskableGraphic_tFC5B6BE351C90DE53744DF2A70940242774B361E
 {
@@ -56927,6 +56740,11 @@ struct TouchInputModule_t154B7CF685F02D5B9529572B1A96EBD75AAA945C  : public Poin
 };
 struct TransferOwnershipFusion_t6EA479BD1428EFCE507A233872B0D70B4FA6E2C1  : public NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3
 {
+};
+struct TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12  : public NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3
+{
+	SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5* ___serialController;
+	float ____NetKnobValue;
 };
 struct VerticalLayoutGroup_t06B5E51FC8051BF2009E6494876FBB9F3E5320B8  : public HorizontalOrVerticalLayoutGroup_tF1A06BC885BD6E7F38A8C43815549C111EEDEF2E
 {
@@ -57669,10 +57487,6 @@ struct DefaultControls_tF734E6C7A5AD303C9C3DAD3028668A1717F6964E_StaticFields
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___s_DefaultSelectableColor;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___s_PanelColor;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___s_TextColor;
-};
-struct DefaultHierarchySearchQueryParser_t650A707671879288E1220306A75432DAC121CF06_StaticFields
-{
-	Regex_tE773142C2BE45C5D362B0F815AFF831707A51772* ___s_Filter;
 };
 struct DeferredConfig_t784C35EEF9B410E6B061E6CAECCF40BF31EFB3F1_StaticFields
 {
@@ -61228,12 +61042,6 @@ struct EnumDataContractCriticalHelper_t4BBBE2809201936D2E22770D41E3605DAD666C6E_
 	Dictionary_2_tD44A186DF7851733B8E126AF34802C1B0BADFC9F* ___typeToName;
 	Dictionary_2_tFDC9761EEDF2902D6A00A7C41432547F5BAE7FB7* ___nameToType;
 };
-struct ConstructorScope_t243AC9846E4D3E3E27A0608F35BA425299DDE392_ThreadStaticFields
-{
-	intptr_t ___m_Ptr;
-	Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E* ___m_Hierarchy;
-	HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8* ___m_CommandList;
-};
 struct PointSamplingConfig_tAC1E6AF0B6FFD53EEAE75E3C52FD3F833F0BDCD8_StaticFields
 {
 	PointSamplingConfig_tAC1E6AF0B6FFD53EEAE75E3C52FD3F833F0BDCD8 ___DefaultConfig;
@@ -61660,10 +61468,6 @@ struct GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580_StaticFields
 {
 	bool ___showKeyboardFocus;
 	GUIStyle_t20BA2F9F3FE9D13AAA607EEEBE5547835A6F6580* ___s_None;
-};
-struct HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9_StaticFields
-{
-	Dictionary_2_t384D2A0FF42BF1302A3F513FC32DB105F1CD5455* ___s_NodeTypes;
 };
 struct IPhotonSocket_t6A0296888E3EF101268457B4C80B266EE7176F34_StaticFields
 {
@@ -73332,55 +73136,55 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize16173 = { sizeof(__StaticArr
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16174;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize16174 = { sizeof(U3CPrivateImplementationDetailsU3E_t6B29E28CA76F0BA495BF5BCF159255818D90CA55), -1, sizeof(U3CPrivateImplementationDetailsU3E_t6B29E28CA76F0BA495BF5BCF159255818D90CA55_StaticFields), 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16175;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16175 = { sizeof(U3CModuleU3E_t1776CA9A887474A48B0C9B2CD80A59537910C40E), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16175 = { sizeof(U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16176;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16176 = { sizeof(EmbeddedAttribute_t8F3DB42A8EBDE32BC5B3F7D3277651B0B4B6647C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16176 = { sizeof(SampleCustomDelimiter_t89EA2379539676F0DBCF2714745A226F84FB3C10), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16177;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16177 = { sizeof(IsUnmanagedAttribute_tF7B94B7441AB687B71FCD6B6FB72B7BC2929A47F), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16177 = { sizeof(SampleMessageListener_t247BBCF6C6E353992EFEB8F8BDE97126F1E75B6C), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16178;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16178 = { sizeof(Enumerator_tE3E095AEEEF9266D1B71529275B51FCD45FF78A4)+ sizeof(RuntimeObject), sizeof(Enumerator_tE3E095AEEEF9266D1B71529275B51FCD45FF78A4_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16178 = { sizeof(SampleTearDown_t601B0471D81EEB39F80F48292A7EF12BDCEB1D98), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16179;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16179 = { sizeof(HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9)+ sizeof(RuntimeObject), sizeof(HierarchyFlattenedNodeChildren_t3A3B418C11A351E8DF2C875440AF084D0306C7F9_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16179 = { sizeof(SampleUserPolling_JustRead_tC1B97AAE77BC237F9E16ACE3566D4121F3AE823A), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16180;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16180 = { sizeof(Enumerator_tB394F581EA54AC1A1E8074FCA63A756754BD1235)+ sizeof(RuntimeObject), sizeof(Enumerator_tB394F581EA54AC1A1E8074FCA63A756754BD1235_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16180 = { sizeof(SampleUserPolling_ReadWrite_t61B1CD1F017C00B7F1436447ABAD455429ECD952), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16181;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16181 = { sizeof(HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666)+ sizeof(RuntimeObject), sizeof(HierarchyNodeChildren_t550A622C571274E0C78E7E1265D58E1D88C4E666_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16181 = { sizeof(TearDownFunction_tA8E266349220E0A9249BB5CC8D069395AB3392A0), sizeof(Il2CppMethodPointer), 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16182;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16182 = { sizeof(U3CReservedU3Ee__FixedBuffer_t9C78A5981BEB928368944424738AF30519D0E591)+ sizeof(RuntimeObject), sizeof(U3CReservedU3Ee__FixedBuffer_t9C78A5981BEB928368944424738AF30519D0E591), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16182 = { sizeof(SerialController_t313DBF7A5B6CDFDCF88AF42C6E33740DBD7D21E5), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16183;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16183 = { sizeof(HierarchyNodeChildrenAlloc_t142E22729631D9801D92179DD54705B830F8C8F9)+ sizeof(RuntimeObject), sizeof(HierarchyNodeChildrenAlloc_t142E22729631D9801D92179DD54705B830F8C8F9), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16183 = { sizeof(TearDownFunction_t47904F87F51E4B9EB6A22912C59E2B34190CF4A6), sizeof(Il2CppMethodPointer), 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16184;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16184 = { sizeof(BindingsMarshaller_tB3DB2F7860BFB10DD569624A7B1AEDEA4B6905D9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16184 = { sizeof(SerialControllerCustomDelimiter_t386FC14B76C7EF585E388DED7BBEE5009413B6FF), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16185;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16185 = { sizeof(ConstructorScope_t243AC9846E4D3E3E27A0608F35BA425299DDE392)+ sizeof(RuntimeObject), sizeof(ConstructorScope_t243AC9846E4D3E3E27A0608F35BA425299DDE392), 0, sizeof(ConstructorScope_t243AC9846E4D3E3E27A0608F35BA425299DDE392_ThreadStaticFields) };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16185 = { sizeof(AbstractSerialThread_tFF720FC0B634B768194C2C742F5A284F1B7CE640), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16186;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16186 = { sizeof(HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9), sizeof(HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9_marshaled_pinvoke), sizeof(HierarchyNodeTypeHandlerBase_tFBC87BEE2FAA4002BAF4B067DEBEEB69BAF1E7A9_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16186 = { sizeof(SerialThread_tC16BDEF059CF437D23E6D549FDCCE343ABFB6485), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16187;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16187 = { sizeof(Enumerator_t24AA5F11ED3A2E12B531F60032DED228CA0EFD26)+ sizeof(RuntimeObject), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16187 = { sizeof(SerialThreadBinaryDelimited_t757E01AE9AC17A265CC4CAB75619D6DC58BF21EE), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16188;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16188 = { sizeof(HierarchyNodeTypeHandlerBaseEnumerable_t26ADB6758ABA4C29812D07C8087A05BBBC7DEA83)+ sizeof(RuntimeObject), sizeof(HierarchyNodeTypeHandlerBaseEnumerable_t26ADB6758ABA4C29812D07C8087A05BBBC7DEA83_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16188 = { sizeof(SerialThreadLines_tB8898A8224BD0253A6F86096F50623DCBA1BDB10), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16189;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16189 = { 0, 0, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16189 = { sizeof(ColocationDiagnostics_t22EB406F323B39612F0126E31E19284BCEEA84B7), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16190;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16190 = { 0, -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16190 = { sizeof(U3CStartConnectionU3Ed__8_tB49BC93457579424B08EE4BD7D82EECFBD6C6759)+ sizeof(RuntimeObject), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16191;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16191 = { sizeof(DefaultHierarchySearchQueryParser_t650A707671879288E1220306A75432DAC121CF06), -1, sizeof(DefaultHierarchySearchQueryParser_t650A707671879288E1220306A75432DAC121CF06_StaticFields), 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16191 = { sizeof(ConnectionManager_tE1F6C44B2BDD2E1B1D9E676AD43A80DCB17FBCE7), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16192;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16192 = { sizeof(Predicate_t612371B4E4AB9B82C5A20A85C98A94799CE951C1), sizeof(Il2CppMethodPointer), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16192 = { sizeof(ManualCalibrationManager_t304F9CDD7DB7443B917BBAB1926FA143DE61935B), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16193;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16193 = { sizeof(Enumerator_t9B85D1C674017B6711471BDA153360DDCD5DD2FD)+ sizeof(RuntimeObject), sizeof(Enumerator_t9B85D1C674017B6711471BDA153360DDCD5DD2FD_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16193 = { sizeof(SafetyGameManager_t8FB93FFD21E41FA3556856B96844DCC2F2DE0595), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16194;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16194 = { sizeof(HierarchyViewNodesEnumerable_tC2AB0595EDEF417F3D13A545828731ED5D94B79A)+ sizeof(RuntimeObject), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16194 = { sizeof(SupervisorLaser_t5A7FA73AC7BE9BD8628E425AC602EF84DF0481D9), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16195;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16195 = { 0, 0, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16195 = { sizeof(TwinController_tC5BFC7D7AF7727E54B845399028AB2EB1B3F6C12), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16196;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16196 = { sizeof(BindingsMarshaller_t371538C315DEE3364CA381BC2E15E4EC2A0DEA48), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16196 = { sizeof(Section_t50C894D0A717C2368EBAAE5477D4E8626D0B5401), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16197;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16197 = { sizeof(Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E), sizeof(Hierarchy_t6C500307C045A73F46DA5BBF9EF6F56DB365B04E_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16197 = { sizeof(Readme_tE17B99201D0F52BD5727638AD3F41072A65B3BBB), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16198;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16198 = { sizeof(BindingsMarshaller_t152867C47EA565F410B642FBCD7A53E1FCB262D4), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16198 = { sizeof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E)+ sizeof(RuntimeObject), sizeof(MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_marshaled_pinvoke), 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize16199;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize16199 = { sizeof(HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8), sizeof(HierarchyCommandList_tCB0973CD2E5ADE0F39F3BA4503F5278BA35883E8_marshaled_pinvoke), 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize16199 = { sizeof(UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E), -1, 0, 0 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

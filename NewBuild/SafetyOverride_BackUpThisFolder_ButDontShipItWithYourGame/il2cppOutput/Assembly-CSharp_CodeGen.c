@@ -62,6 +62,11 @@ extern void SerialThreadBinaryDelimited_IsSeparator_mE89BA9C02347508823EE838BFFC
 extern void SerialThreadLines__ctor_m72DB46F16688BEC87BCAFC7B44D225749B754A48 (void);
 extern void SerialThreadLines_SendToWire_m31760135FAF06B64BB9CB075966A169129A5E55C (void);
 extern void SerialThreadLines_ReadFromWire_mCAA7CFD9C505FFC3A29A6ED1E2DC460BEDD6A132 (void);
+extern void ColocationDiagnostics_Start_m6388ACEEFBFEE2C9AF531BC305752828D67B67FA (void);
+extern void ColocationDiagnostics_CheckEntitlement_mB28680D64AA836C85C313008212199885A8B1B8B (void);
+extern void ColocationDiagnostics_Update_m3FB04FB9D1F4D3BD1A31DEDEB349C356AEB910AD (void);
+extern void ColocationDiagnostics_LogColocationState_mBBA3EAC1A2AD47398857D5524BFCC9E52081DC67 (void);
+extern void ColocationDiagnostics__ctor_mC889A662404C4EF6544C35D7D7BB31E95700BFC3 (void);
 extern void ConnectionManager_get_IsConnected_m357AA54CA353A4E3609F2E0965AF9074C906141F (void);
 extern void ConnectionManager_StartNetworkAfterCalibration_m1F75A48E653B3C63EE97557DB19A1D31DC3DF1DD (void);
 extern void ConnectionManager_Start_m898E15A514850DC21941BA2008B0A10D2D2DAE97 (void);
@@ -99,8 +104,6 @@ extern void SafetyGameManager_get_GreenZoneX_mC96562C62623C4C9EA411B942E744416CE
 extern void SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733 (void);
 extern void SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2 (void);
 extern void SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1 (void);
-extern void SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C (void);
-extern void SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD (void);
 extern void SafetyGameManager_Awake_m3F6EB0788BA52131B82A7D6D67377D63534ED841 (void);
 extern void SafetyGameManager_Spawned_m38D4A713150BC13FBF66CA3C82AA2F8AC2211B03 (void);
 extern void SafetyGameManager_FixedUpdateNetwork_mE6BA78741C104C00A3FD11E98529604366629ED1 (void);
@@ -143,7 +146,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[138] = 
+static Il2CppMethodPointer s_methodPointers[141] = 
 {
 	SampleCustomDelimiter_Start_m651BC0B591BA8940D456E0F9081C1A175B6FAED8,
 	SampleCustomDelimiter_Update_m6DF3C3A39061157980E0433E4723129194A7AB32,
@@ -202,6 +205,11 @@ static Il2CppMethodPointer s_methodPointers[138] =
 	SerialThreadLines__ctor_m72DB46F16688BEC87BCAFC7B44D225749B754A48,
 	SerialThreadLines_SendToWire_m31760135FAF06B64BB9CB075966A169129A5E55C,
 	SerialThreadLines_ReadFromWire_mCAA7CFD9C505FFC3A29A6ED1E2DC460BEDD6A132,
+	ColocationDiagnostics_Start_m6388ACEEFBFEE2C9AF531BC305752828D67B67FA,
+	ColocationDiagnostics_CheckEntitlement_mB28680D64AA836C85C313008212199885A8B1B8B,
+	ColocationDiagnostics_Update_m3FB04FB9D1F4D3BD1A31DEDEB349C356AEB910AD,
+	ColocationDiagnostics_LogColocationState_mBBA3EAC1A2AD47398857D5524BFCC9E52081DC67,
+	ColocationDiagnostics__ctor_mC889A662404C4EF6544C35D7D7BB31E95700BFC3,
 	ConnectionManager_get_IsConnected_m357AA54CA353A4E3609F2E0965AF9074C906141F,
 	ConnectionManager_StartNetworkAfterCalibration_m1F75A48E653B3C63EE97557DB19A1D31DC3DF1DD,
 	ConnectionManager_Start_m898E15A514850DC21941BA2008B0A10D2D2DAE97,
@@ -239,8 +247,6 @@ static Il2CppMethodPointer s_methodPointers[138] =
 	SafetyGameManager_set_GreenZoneX_mAACD3A00C48AFC591745B8B083E2FE84DA753733,
 	SafetyGameManager_get_ClientConfirmed_m88ECB455E59C923E5CD80DBCB95B20BE42CEE4B2,
 	SafetyGameManager_set_ClientConfirmed_m1349F7F20A6B90E2A08A733789F77FBB68162DB1,
-	SafetyGameManager_get_GreenZonePaused_mE47D536DCD232D6B96447872E0D4D98DBAE7029C,
-	SafetyGameManager_set_GreenZonePaused_m7F249115B67DBB3E6C49E92FDFB6D51FE4E68BAD,
 	SafetyGameManager_Awake_m3F6EB0788BA52131B82A7D6D67377D63534ED841,
 	SafetyGameManager_Spawned_m38D4A713150BC13FBF66CA3C82AA2F8AC2211B03,
 	SafetyGameManager_FixedUpdateNetwork_mE6BA78741C104C00A3FD11E98529604366629ED1,
@@ -288,10 +294,10 @@ extern void U3CStartConnectionU3Ed__8_MoveNext_m119C8CA6A8271C9732FB014042F17654
 extern void U3CStartConnectionU3Ed__8_SetStateMachine_mA5CCE0DE38845D88AAFA77368D6B773C8E368AB7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] = 
 {
-	{ 0x06000052, U3CStartConnectionU3Ed__8_MoveNext_m119C8CA6A8271C9732FB014042F17654614D08A5_AdjustorThunk },
-	{ 0x06000053, U3CStartConnectionU3Ed__8_SetStateMachine_mA5CCE0DE38845D88AAFA77368D6B773C8E368AB7_AdjustorThunk },
+	{ 0x06000057, U3CStartConnectionU3Ed__8_MoveNext_m119C8CA6A8271C9732FB014042F17654614D08A5_AdjustorThunk },
+	{ 0x06000058, U3CStartConnectionU3Ed__8_SetStateMachine_mA5CCE0DE38845D88AAFA77368D6B773C8E368AB7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[138] = 
+static const int32_t s_InvokerIndices[141] = 
 {
 	20865,
 	20865,
@@ -350,6 +356,11 @@ static const int32_t s_InvokerIndices[138] =
 	2756,
 	8399,
 	14019,
+	20865,
+	20865,
+	20865,
+	20865,
+	20865,
 	20362,
 	20865,
 	20865,
@@ -385,8 +396,6 @@ static const int32_t s_InvokerIndices[138] =
 	20865,
 	20741,
 	16171,
-	20598,
-	16033,
 	20598,
 	16033,
 	20865,
@@ -436,7 +445,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	138,
+	141,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,
