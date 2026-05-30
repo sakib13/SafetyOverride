@@ -17,17 +17,18 @@ public class SupervisorLaser : NetworkBehaviour
     [Tooltip("The GameContent parent - used for face-to-face mirroring")]
     public Transform gameContent;
 
-    [Networked] private Vector3 LaserOrigin { get; set; }
-    [Networked] private Vector3 LaserDirection { get; set; }
+    // Network the offset from GC rather than world position - avoids sync issues
+    [Networked] private Vector3 LaserLocalOffset { get; set; }
+    [Networked] private Vector3 LaserLocalDirection { get; set; }
     [Networked] private NetworkBool LaserActive { get; set; }
 
     private LineRenderer _lineRenderer;
     private OVRCameraRig _cameraRig;
-    private Vector3 _hostGcPosition;
-    private bool _hostGcReceived;
 
     public override void Spawned()
     {
+        enabled = false;
+        return;
         _cameraRig = FindFirstObjectByType<OVRCameraRig>();
 
         // Create LineRenderer on this GameObject
@@ -48,28 +49,16 @@ public class SupervisorLaser : NetworkBehaviour
     public override void FixedUpdateNetwork()
     {
         if (!Runner.IsSharedModeMasterClient) return;
-        if (_cameraRig == null) return;
+        if (_cameraRig == null || gameContent == null) return;
 
         Transform rightHand = _cameraRig.rightHandAnchor;
 
-        // Store world-space positions
-        LaserOrigin = rightHand.position;
-        LaserDirection = rightHand.forward;
+        // Store hand position as offset from own gameContent - no host GC sync needed
+        LaserLocalOffset = rightHand.position - gameContent.position;
+        LaserLocalDirection = rightHand.forward;
 
-        // Activate laser and send host gameContent position once
         if (!LaserActive)
-        {
             LaserActive = true;
-            if (gameContent != null)
-                Rpc_SendHostGcPosition(gameContent.position);
-        }
-    }
-
-    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
-    private void Rpc_SendHostGcPosition(Vector3 pos)
-    {
-        _hostGcPosition = pos;
-        _hostGcReceived = true;
     }
 
     private void EnsureLineRenderer()
@@ -93,33 +82,21 @@ public class SupervisorLaser : NetworkBehaviour
 
         _lineRenderer.enabled = LaserActive;
 
-        if (LaserActive)
+        if (LaserActive && gameContent != null)
         {
-            Vector3 origin = LaserOrigin;
-            Vector3 dir = LaserDirection;
+            Vector3 offset = LaserLocalOffset;
+            Vector3 dir = LaserLocalDirection;
 
-            // Client: proper local-space conversion for face-to-face mirroring
-            if (!Runner.IsSharedModeMasterClient && _hostGcReceived && gameContent != null)
+            // Client: negate X and Z for face-to-face (180 degree Y rotation)
+            if (!Runner.IsSharedModeMasterClient)
             {
-                // Convert host world-space to local offset
-                Vector3 localOrigin = origin - _hostGcPosition;
-
-                // Negate X and Z for face-to-face (180 degree Y flip)
-                localOrigin.x = -localOrigin.x;
-                localOrigin.z = -localOrigin.z;
+                offset.x = -offset.x;
+                offset.z = -offset.z;
                 dir.x = -dir.x;
                 dir.z = -dir.z;
-
-                // Convert back using client's gameContent position
-                origin = localOrigin + gameContent.position;
-            }
-            else if (!Runner.IsSharedModeMasterClient)
-            {
-                // Fallback: simple X negation if host GC not received yet
-                origin.x = -origin.x;
-                dir.x = -dir.x;
             }
 
+            Vector3 origin = gameContent.position + offset;
             _lineRenderer.SetPosition(0, origin);
             _lineRenderer.SetPosition(1, origin + dir * laserLength);
         }

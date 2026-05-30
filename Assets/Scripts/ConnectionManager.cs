@@ -3,10 +3,16 @@ using Fusion;
 using Fusion.Sockets;
 using System;
 using System.Collections.Generic;
+#if UNITY_EDITOR
+using System.Linq;
+using System.Threading.Tasks;
+#endif
 
 /// <summary>
 /// Handles Photon Fusion networking for the SafetyOverride experience.
-/// Uses Shared Mode for colocation with building blocks.
+/// On Quest: Local Matchmaking building block handles connection.
+/// In Editor: Disables building block matchmaking, waits for Quest to create a session,
+/// then joins it directly via Photon lobby discovery as the Arduino serial bridge.
 /// </summary>
 public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
 {
@@ -16,7 +22,6 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     [Tooltip("Fixed session name for all devices to join")]
     public string sessionName = "SafetyRoom";
 
-    private bool _isConnecting = false;
     private bool _isConnected = false;
 
     public bool IsConnected => _isConnected;
@@ -24,61 +29,67 @@ public class ConnectionManager : MonoBehaviour, INetworkRunnerCallbacks
     // Kept for ManualCalibrationManager compatibility (script is disabled but still compiles)
     public void StartNetworkAfterCalibration() { }
 
+    private void Awake()
+    {
+#if UNITY_EDITOR
+        // Disable building block matchmaking in Editor — OVR APIs don't work
+        // and LocalMatchmaking would create its own separate session
+        var localMatchmaking = FindObjectOfType<Meta.XR.MultiplayerBlocks.Shared.LocalMatchmaking>();
+        if (localMatchmaking != null)
+        {
+            localMatchmaking.gameObject.SetActive(false);
+            Debug.Log("[ConnectionManager] Disabled LocalMatchmaking for Editor mode");
+        }
+#endif
+    }
+
     private void Start()
     {
         Application.runInBackground = true;
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
 
-        // Auto Matchmaking building block handles Fusion connection.
-        // Do NOT start a second runner here — it conflicts and causes OperationTimeout.
-        Debug.Log("[ConnectionManager] Networking delegated to Auto Matchmaking building block.");
+#if UNITY_EDITOR
+        JoinQuestSession();
+#else
+        Debug.Log("[ConnectionManager] Networking delegated to Local Matchmaking building block.");
+#endif
     }
 
-    private async void StartConnection()
+#if UNITY_EDITOR
+    private async void JoinQuestSession()
     {
-        if (_isConnecting || _isConnected) return;
-        _isConnecting = true;
+        Debug.Log("[ConnectionManager] Editor: waiting 8s for Quest to create session...");
+        await Task.Delay(8000);
 
-        Debug.Log($"[ConnectionManager] Starting Photon connection in Shared mode...");
+        if (this == null) return; // Play mode stopped
 
-        // Create a fresh NetworkRunner on a new child object to avoid reuse errors
-        var runnerObj = new GameObject("NetworkRunner");
-        runnerObj.transform.SetParent(transform);
+        // Create a standalone runner — don't use building block runners
+        var runnerObj = new GameObject("EditorRunner");
         runner = runnerObj.AddComponent<NetworkRunner>();
         runner.AddCallbacks(this);
+        var sceneManager = runnerObj.AddComponent<NetworkSceneManagerDefault>();
 
-        // Shared mode for all platforms (colocation building blocks require this)
-        GameMode mode = GameMode.Shared;
-        Debug.Log("[ConnectionManager] Connecting as Shared mode");
-
-        // Get or add scene manager
-        var sceneManager = runner.GetComponent<INetworkSceneManager>();
-        if (sceneManager == null)
-            sceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>();
-
-        // Start the game - no Scene passed to avoid additive scene reload
-        var result = await runner.StartGame(new StartGameArgs()
+        // Shared mode with lobby name matching Quest's CustomMatchmaking lobby
+        // No session name = auto-join first available session in this lobby
+        var result = await runner.StartGame(new StartGameArgs
         {
-            GameMode = mode,
-            SessionName = sessionName,
+            GameMode = GameMode.Shared,
+            CustomLobbyName = "myLobby",
             SceneManager = sceneManager
         });
-
-        _isConnecting = false;
 
         if (result.Ok)
         {
             _isConnected = true;
-            Debug.Log($"[ConnectionManager] Connected! IsSharedModeMasterClient: {runner.IsSharedModeMasterClient}");
+            Debug.Log($"[ConnectionManager] Editor connected! Session: '{runner.SessionInfo?.Name}', Players: {runner.ActivePlayers?.Count()}");
         }
         else
         {
-            Debug.LogError($"[ConnectionManager] Connection failed: {result.ShutdownReason}");
-            Debug.Log("[ConnectionManager] Retrying in 5 seconds...");
-            Invoke(nameof(StartConnection), 5f);
+            Debug.LogError($"[ConnectionManager] Failed: {result.ShutdownReason} - {result.ErrorMessage}");
         }
     }
+#endif
 
     // INetworkRunnerCallbacks implementation
     public void OnConnectedToServer(NetworkRunner runner)

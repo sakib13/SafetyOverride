@@ -44,8 +44,11 @@ public class SafetyGameManager : NetworkBehaviour
 
     private Renderer _supervisorButtonRenderer;
     private Renderer _clientButtonRenderer;
+    private MaterialPropertyBlock _clientButtonMPB;
     private Renderer _cubeRenderer;
     private MaterialPropertyBlock _cubeMPB;
+    private bool _ledCommandSent = false;
+    [Networked] private NetworkBool GreenZoneFrozen { get; set; }
 
     private void Awake()
     {
@@ -86,6 +89,8 @@ public class SafetyGameManager : NetworkBehaviour
             greenZoneSpeed = Mathf.Lerp(minSpeed, maxSpeed, t);
         }
 
+        if (GreenZoneFrozen) return;
+
         float amplitude = (maxX - minX) / 2f - zoneWidth / 2f;
         GreenZoneX = Mathf.Sin((float)Runner.SimulationTime * greenZoneSpeed) * amplitude;
     }
@@ -100,11 +105,13 @@ public class SafetyGameManager : NetworkBehaviour
     private void Rpc_SetClientConfirmed()
     {
         ClientConfirmed = true;
+        _ledCommandSent = false; // Allow supervisor to send a new LED command
         Debug.Log("[SafetyGameManager] Client confirmed - supervisor button unlocked!");
     }
 
-    // ---- DEBUG SHORTCUT (REMOVABLE) ----
+    // ---- DEBUG SHORTCUTS (REMOVABLE) ----
     // Press C in Editor to simulate client button press
+    // Press F in Editor to freeze/unfreeze green zone for testing
     #if UNITY_EDITOR
     private void Update()
     {
@@ -113,17 +120,30 @@ public class SafetyGameManager : NetworkBehaviour
             Debug.Log("[DEBUG] Simulating client button press via keyboard");
             OnClientButtonPressed();
         }
+        if (Input.GetKeyDown(KeyCode.F) && Runner != null)
+        {
+            Rpc_ToggleGreenZoneFreeze();
+        }
     }
     #endif
-    // ---- END DEBUG SHORTCUT ----
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    private void Rpc_ToggleGreenZoneFreeze()
+    {
+        GreenZoneFrozen = !GreenZoneFrozen;
+        Debug.Log($"[DEBUG] Green zone {(GreenZoneFrozen ? "FROZEN" : "MOVING")}");
+    }
+    // ---- END DEBUG SHORTCUTS ----
 
     // Called by Supervisor's button UnityEvent (_whenSelect)
     public void OnConfirmButtonPressed()
     {
         if (!arduinoController) return;
+        if (_ledCommandSent) return; // Prevent repeated sends while button is held
 
         float currentNeedleX = needle.localPosition.x;
         float halfZone = zoneWidth / 2f;
+
+        Debug.Log($"[SafetyGameManager] NeedleX={currentNeedleX:F3}, GreenZoneX={GreenZoneX:F3}, halfZone={halfZone:F3}, range=[{(GreenZoneX - halfZone):F3}, {(GreenZoneX + halfZone):F3}], NetKnob={arduinoController.NetKnobValue:F1}");
 
         if (currentNeedleX >= (GreenZoneX - halfZone) && currentNeedleX <= (GreenZoneX + halfZone))
         {
@@ -136,6 +156,7 @@ public class SafetyGameManager : NetworkBehaviour
             arduinoController.Rpc_SendLedCommand("R");
         }
 
+        _ledCommandSent = true;
         // Reset for next attempt
         ClientConfirmed = false;
     }
@@ -166,7 +187,7 @@ public class SafetyGameManager : NetworkBehaviour
                 _supervisorButtonRenderer.sharedMaterial = ClientConfirmed ? greenMaterial : redMaterial;
         }
 
-        // Client button: swap material to yellow once
+        // Client button: force yellow every frame via MaterialPropertyBlock
         if (Runner != null && !Runner.IsSharedModeMasterClient && clientButton != null)
         {
             if (_clientButtonRenderer == null)
@@ -175,7 +196,15 @@ public class SafetyGameManager : NetworkBehaviour
                 if (cap != null)
                     _clientButtonRenderer = cap.GetComponent<MeshRenderer>();
                 if (_clientButtonRenderer != null)
-                    _clientButtonRenderer.sharedMaterial = yellowMaterial;
+                    _clientButtonMPB = new MaterialPropertyBlock();
+            }
+            if (_clientButtonRenderer != null)
+            {
+                Color yellow = yellowMaterial != null ? yellowMaterial.color : Color.yellow;
+                _clientButtonRenderer.GetPropertyBlock(_clientButtonMPB);
+                _clientButtonMPB.SetColor("_BaseColor", yellow);
+                _clientButtonMPB.SetColor("_Color", yellow);
+                _clientButtonRenderer.SetPropertyBlock(_clientButtonMPB);
             }
         }
 
@@ -204,9 +233,7 @@ public class SafetyGameManager : NetworkBehaviour
         {
             float syncedValue = arduinoController.NetKnobValue;
             float targetX = Remap(syncedValue, 0, 1023, minX, maxX);
-            // Negate X for client to fix face-to-face mirroring
-            float displayX = Runner.IsSharedModeMasterClient ? targetX : -targetX;
-            needle.localPosition = new Vector3(displayX, needle.localPosition.y, needle.localPosition.z);
+            needle.localPosition = new Vector3(targetX, needle.localPosition.y, needle.localPosition.z);
         }
     }
 
