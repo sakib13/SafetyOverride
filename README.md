@@ -28,16 +28,13 @@ The project set out to achieve the following:
 ### Challenges and Solutions
 
 **Colocation was the hardest part.**
-The project originally attempted to use Meta's Colocation Discovery API to align both headsets automatically. But it kept throwing error code 1002 and no fix could be found despite extensive troubleshooting. So the project went with a manual approach instead. Each user presses a button on their controller and the game content gets placed in front of them relative to where their head is. It is simple but it works. The downside is both users need to roughly face the same direction when they calibrate, but since they are sitting at a table this is not really a problem.
-
-**Why manual calibration and not shared spatial anchors?**
-Because the API was broken and the project needed something that works reliably every time. Manual calibration is more predictable. You press a button, content appears in front of you. No dependency on Meta's cloud services or anchor sharing. For a seated scenario at a table this approach works effectively.
+The project originally attempted to use Meta's Colocation Discovery API to align both headsets automatically. But it kept throwing error code -1002 and no fix could be found despite extensive troubleshooting. The project then used a manual calibration approach as a fallback, where each user presses a button and content appears relative to their head position. Eventually, Meta's shared spatial anchors were implemented successfully, which automatically aligns both headsets to a shared coordinate system. The first headset creates a spatial anchor, and the second headset receives it through the colocation system, so both users see the virtual content at the same physical location without any manual calibration step.
 
 **Handling role based visibility.**
 Instead of spawning separate objects for each player, all the game objects already exist in the scene. When a player connects, the code just turns on or off the relevant objects based on whether they are the host (supervisor) or client (technician). This keeps the networking simple because all the game state lives on one NetworkObject.
 
 **Why hand tracking instead of controllers?**
-For the supervisor, pointing at the gauge with your actual finger feels way more natural than using a controller joystick. For the technician, they already have a physical knob to turn, so using a controller on top of that would be unnecessary. Controllers are only used at the very beginning for the calibration step, and after that users put them down and switch to hand tracking.
+For the supervisor, pointing at the gauge with your actual finger feels way more natural than using a controller joystick. For the technician, they already have a physical knob to turn, so using a controller on top of that would be unnecessary. Hand tracking activates automatically once the users wave their hands in front of the headsets.
 
 **Why automatic role assignment instead of a role selection screen?**
 The project uses Photon Fusion's AutoHostOrClient mode which automatically makes the first device to connect the host (supervisor) and the second device the client (technician). This removes the need for a menu or role selection UI. Since both users are sitting at the same table, they can simply agree beforehand on who launches first. Adding a role selection screen would mean extra UI, extra networking logic to sync the choices, and extra complexity that does not add any real value in a two person seated scenario where the users can just talk to each other.
@@ -59,7 +56,7 @@ When two people sit across from each other, their left and right are flipped. So
 ### Collocated Mixed Reality
 - Two users share the same physical table wearing Meta Quest headsets
 - Virtual objects show up on top of the real environment through passthrough
-- Each user calibrates by pressing a button of the right controller and content appears at table height in front of them
+- Both headsets align automatically through Meta's shared spatial anchors, so both users see the virtual content at the same physical location
 
 ### Role Based Gameplay
 - **Supervisor (Host):** Sees the gauge with a moving green zone, a confirm button, and a difficulty cube that controls the speed of the green zone
@@ -174,12 +171,13 @@ When two people sit across from each other, their left and right are flipped. So
 3. Hit Play in the Unity Editor on the PC. This connects as a third client and handles the Arduino serial communication.
 4. The supervisor will then press space bar on keyboard for the arduino to become activated and to send serial commands.
 
-### Calibration
+### Colocation
 
 1. Both headset users sit at opposite sides of a table
-2. Each user presses the **right trigger** on their controller
-3. The game content shows up at table height in front of each user
-4. After that, users can put down their controllers and wave their hand in front of the headsets while they're in mixed reality for the hand tracking to get activated.
+2. The first headset to launch creates a shared spatial anchor
+3. The second headset automatically receives the anchor and aligns to the same coordinate system
+4. Both users now see the virtual content at the same physical location on the table
+5. Users wave their hands in front of the headsets to activate hand tracking
 
 ### Gameplay Flow
 
@@ -199,15 +197,13 @@ When two people sit across from each other, their left and right are flipped. So
 |---|---|---|---|
 | Green Zone Speed | DigitalTwin > SafetyGameManager | 0.3 | How fast the green zone moves |
 | Zone Width | DigitalTwin > SafetyGameManager | 0.15 | How wide the green zone is |
-| Content Distance | CalibrationManager | 0.5 | How far from the head the content appears (meters) |
-| Height Offset | CalibrationManager | -0.3 | How far below eye level the content sits |
 
 ### Best Practices
-  1. Both users should sit upright with a straight posture when pressing the calibration button. Since the game content is placed relative to the head position, slouching or leaning can cause the virtual objects to appear at an incorrect height or angle.
+  1. Both users should sit upright at the table. The shared spatial anchor aligns content to a fixed physical location, so consistent seating helps ensure the virtual objects appear at the expected position.
   2. Users should face each other directly across the table, not at an angle. The face to face layout assumes both users are looking straight at each other, so sitting off to one side can cause the needle positions to look misaligned.
   3. The table surface should be clear of clutter so the physical potentiometer is easy to reach and both users have room to use hand tracking comfortably.
   4. Both headsets should be connected to the same Wi-Fi network before launching the app. If one headset connects to a different network, they will not find each other in the Photon session.
-  5. The supervisor should launch the app first and complete calibration before the technician launches. The first device to connect becomes the host and the second becomes the client.
+  5. The supervisor should launch the app first. The first device to connect becomes the host and creates the spatial anchor. The second device joins as the client and receives the anchor.
 
 ## Project Structure
 
@@ -244,7 +240,7 @@ GameContent                        Parent for all game objects (moved by calibra
   ├── [BuildingBlock] Cube         Difficulty cube (controls green zone speed)
   ├── BigRedButton                 Supervisor's confirm button
   └── ClientYellowButton           Technician's confirm button
-CalibrationManager                 ManualCalibrationManager component
+ColocationManager                  Shared spatial anchor colocation
 [BuildingBlock] Network Manager    ConnectionManager + Photon NetworkRunner
 DigitalTwin                        SafetyGameManager + SupervisorLaser + NetworkObject
 ArduinoManager                     TwinController + SerialController
