@@ -231,7 +231,7 @@ Assets/
 
 ```
 [BuildingBlock] Camera Rig         OVRCameraRig with Eye Level tracking
-GameContent                        Parent for all game objects (moved by calibration)
+GameContent                        Parent for all game objects
   ├── LinearGauge                  The gauge
   │   ├── Track                    Gauge background
   │   ├── GreenZone                Moving target zone (networked)
