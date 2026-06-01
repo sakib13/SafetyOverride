@@ -169,7 +169,6 @@ When two people sit across from each other, their left and right are flipped. So
 1. Launch the app on the first Quest headset. This device becomes the Host and takes the Supervisor role.
 2. Launch the app on the second Quest headset. This one joins as the Client and takes the Technician role.
 3. Hit Play in the Unity Editor on the PC. This connects as a third client and handles the Arduino serial communication.
-4. The supervisor will then press space bar on keyboard for the arduino to become activated and to send serial commands.
 
 ### Colocation
 
