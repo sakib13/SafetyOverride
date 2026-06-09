@@ -1,46 +1,44 @@
 using UnityEngine;
 using Fusion;
-using System.Collections;
 
 public class TwinController : NetworkBehaviour
 {
     [Header("Ardity Setup")]
-    public SerialController serialController; // Drag Ardity Prefab here
+    public SerialController serialController;
 
-    // This is the variable SafetyGameManager reads
     [Networked] public float NetKnobValue { get; set; }
 
-    // --- READING FROM ARDUINO (Knob) ---
+    private bool IsSerialBridge => serialController != null && serialController.enabled;
+
     void Update()
     {
-        // Only the Host reads from Serial and updates the Network var
-        if (Object != null && Object.HasStateAuthority && serialController != null)
+        if (Object == null) return;
+
+        // Laptop (serial bridge) reads potentiometer and broadcasts to all
+        if (IsSerialBridge)
         {
             string message = serialController.ReadSerialMessage();
-
-            if (message == null)
-                return;
-
-            // Check if message is valid number
-            if (float.TryParse(message, out float parsedValue))
+            if (message != null && float.TryParse(message, out float parsedValue))
             {
-                NetKnobValue = parsedValue;
+                Rpc_UpdateKnobValue(parsedValue);
             }
         }
     }
 
-    // --- SENDING TO ARDUINO (LEDs) ---
-    // This is the function calling the error. It is now fixed.
-    public void SendLedCommand(string message)
+    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+    public void Rpc_UpdateKnobValue(float value)
     {
-        if (serialController != null)
+        NetKnobValue = value;
+    }
+
+    [Rpc(RpcSources.All, RpcTargets.All)]
+    public void Rpc_SendLedCommand(string command)
+    {
+        // Only the serial bridge executes the actual write
+        if (IsSerialBridge && serialController != null)
         {
-            serialController.SendSerialMessage(message);
-            Debug.Log($"Sent to Arduino: {message}");
-        }
-        else
-        {
-            Debug.LogWarning("Serial Controller is not assigned in TwinController!");
+            serialController.SendSerialMessage(command);
+            Debug.Log($"Sent to Arduino: {command}");
         }
     }
 }
